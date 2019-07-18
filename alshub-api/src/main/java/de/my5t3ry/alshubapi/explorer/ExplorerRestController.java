@@ -30,11 +30,11 @@ public class ExplorerRestController {
     }
 
     @GetMapping
-    public ResponseEntity<List<AbstractFsItem>> get() {
+    public ResponseEntity<ExplorerPathResult> get() {
         return new ResponseEntity<>(getCurrentItems(), HttpStatus.OK);
     }
 
-    private List<AbstractFsItem> getCurrentItems() {
+    private ExplorerPathResult getCurrentItems() {
         IOFileFilter filter = new AbstractFileFilter() {
             public boolean accept(File file) {
                 if (((file.isFile() && file.getName().contains("als")) || file.isDirectory()) && !file.isHidden() && file.getParent().equals(curPath) && !file.getAbsolutePath().equals(curPath)) {
@@ -52,21 +52,21 @@ public class ExplorerRestController {
                 result.add(new Directory(path.toPath()));
             }
         });
-        return result;
+        return new ExplorerPathResult(result,this.curPath);
     }
 
     @PostMapping(path = "/set-path")
-    public ResponseEntity<List<AbstractFsItem>> save(@RequestBody SetPathRequest setPathRequest) {
+    public ResponseEntity<ExplorerPathResult> save(@RequestBody SetPathRequest setPathRequest) {
         this.curPath = setPathRequest.getPath();
-        final List<AbstractFsItem> result = getCurrentItems();
+        final ExplorerPathResult result = getCurrentItems();
 
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
     @PostMapping(path = "/set-parent")
-    public ResponseEntity<List<AbstractFsItem>> setParent() {
+    public ResponseEntity<ExplorerPathResult> setParent() {
         this.curPath = Path.of(this.curPath).getParent().toAbsolutePath().toString();
-        final List<AbstractFsItem> result = getCurrentItems();
+        final ExplorerPathResult result = getCurrentItems();
 
         return new ResponseEntity<>(result, HttpStatus.OK);
     }

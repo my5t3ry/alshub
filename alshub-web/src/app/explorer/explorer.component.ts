@@ -14,18 +14,19 @@ export class ExplorerComponent implements OnInit {
     headers: new HttpHeaders({'Content-Type': 'application/json', 'Accept': 'application/json'})
   };
   private items: any;
+  path: any;
 
   constructor(private http: HttpClient) {
   }
 
   ngOnInit() {
-    this.refresh();
+    this.fetchItems();
   }
 
-  refresh() {
-    this.getClients().subscribe(value => {
-      this.items = value;
-      console.log(this.items);
+  fetchItems() {
+    this.getClients().subscribe(data => {
+      this.refresh(data);
+
     });
   }
 
@@ -37,15 +38,20 @@ export class ExplorerComponent implements OnInit {
     this.http.post(this.endpoint + '/set-path/', {path: item.absolutePath})
       .subscribe(
         data => {
-          this.items = data;
+          this.refresh(data);
         });
   }
 
+  refresh(data: Object) {
+    this.items = data.items;
+    this.path = data.path;
+  }
+
   selectParentDir() {
-    this.http.post(this.endpoint + '/set-parent/',null)
+    this.http.post(this.endpoint + '/set-parent/', null)
       .subscribe(
         data => {
-          this.items = data;
+          this.refresh(data);
         });
   }
 }

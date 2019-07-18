@@ -24,10 +24,18 @@
     "angular-notifier": "^4.1.1",
     "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
+    "evil-icons": "^1.10.1",
+    "feather-icons": "^4.22.1",
+    "font-awesome": "^4.7.0",
     "fs": "0.0.1-security",
+    "install": "^0.13.0",
     "keycloak-angular": "^7.0.1",
     "keycloak-js": "^6.0.1",
+    "ngx-icons": "^0.3.0",
+    "npm": "^6.10.1",
     "rxjs": "~6.3.3",
+    "typicons.font": "^2.0.9",
+    "uninstall": "0.0.0",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

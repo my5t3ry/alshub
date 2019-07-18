@@ -10,17 +10,21 @@ import {SpinnerService} from "../spinnner.service";
 import {RequestInterceptorService} from "../request-interceptor.service";
 import {KeycloakService, KeycloakAngularModule} from 'keycloak-angular';
 import {NotifierModule, NotifierService} from "angular-notifier";
+import { NavComponent } from './nav/nav.component';
+import {FontAwesomeModule} from "ngx-icons";
 
 declare var fs: any;
 
 @NgModule({
   declarations: [
     AppComponent,
-    ExplorerComponent
+    ExplorerComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
     KeycloakAngularModule,
+    FontAwesomeModule,
     AppRoutingModule,
     HttpClientModule,
     NotifierModule.withConfig({
