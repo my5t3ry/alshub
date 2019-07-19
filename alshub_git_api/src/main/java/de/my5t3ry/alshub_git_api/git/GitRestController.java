@@ -1,6 +1,7 @@
 package de.my5t3ry.alshub_git_api.git;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.filefilter.HiddenFileFilter;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.springframework.http.HttpStatus;
@@ -34,7 +35,7 @@ public class GitRestController {
             FileSystem fileSystem = localPath.toPath().getFileSystem();
             UserPrincipalLookupService service = fileSystem.getUserPrincipalLookupService();
             UserPrincipal userPrincipal = service.lookupPrincipalByName("git");
-            FileUtils.listFilesAndDirs(localPath, null, null).forEach(file -> {
+            FileUtils.listFilesAndDirs(localPath, HiddenFileFilter.VISIBLE, HiddenFileFilter.VISIBLE).forEach(file -> {
                 try {
                     Files.setOwner(file.toPath(), userPrincipal);
                 } catch (IOException e) {
