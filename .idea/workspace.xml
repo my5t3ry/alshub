@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60bb6e59-dc4d-4c7e-a355-d132b967a7b3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectMetaDataService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-meta-storage/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-meta-storage/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-meta-storage/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-meta-storage/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-meta-storage/etc/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-meta-storage/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-meta-storage/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-meta-storage/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-meta-storage/src/main/java/de/my5t3ry/AlshubMetaStorageApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-meta-storage/src/main/java/de/my5t3ry/alshub/project/ProjectMetaDataRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-meta-storage/src/main/java/de/my5t3ry/alshub/project/ProjectMetaDataRestService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-meta-storage/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-shared-model/alshub-shared-model.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-shared-model/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-shared-model/src/main/java/de/my5t3ry/alshub/project/ProjectMetaData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub_git_api/src/main/java/de/my5t3ry/alshub_git_api/AlshubGitApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub_git_api/src/main/java/de/my5t3ry/alshub/AlshubGitApiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub_git_api/src/main/java/de/my5t3ry/alshub_git_api/git/GitRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub_git_api/src/main/java/de/my5t3ry/alshub/git/GitRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -53,10 +28,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectService.java">
+        <entry file="file://$PROJECT_DIR$/alshub_git_api/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="36" column="113" selection-start-line="36" selection-start-column="113" selection-end-line="36" selection-end-column="113" />
+            <state relative-caret-position="513">
+              <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -134,7 +109,6 @@
         <option value="$PROJECT_DIR$/alshub-shared-model/src/main/java/de/my5t3ry/project/ProjectMetaData.java" />
         <option value="$PROJECT_DIR$/alshub-meta-storage/src/main/java/de/my5t3ry/alshub/project/ProjectMetaDataRestService.java" />
         <option value="$PROJECT_DIR$/alshub-api/pom.xml" />
-        <option value="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectMetaDataService.java" />
         <option value="$PROJECT_DIR$/alshub-shared-model/src/main/java/de/my5t3ry/alshub/project/ProjectMetaData.java" />
         <option value="$PROJECT_DIR$/alshub-meta-storage/src/main/java/de/my5t3ry/alshub/AlshubMetaStorageApplication.java" />
         <option value="$PROJECT_DIR$/alshub-meta-storage/src/main/java/de/my5t3ry/alshub/config/ElasticSearchConfig.java" />
@@ -145,12 +119,13 @@
         <option value="$PROJECT_DIR$/alshub-meta-storage/src/main/java/de/my5t3ry/alshub/ElasticsearchConfig.java" />
         <option value="$PROJECT_DIR$/alshub-meta-storage/src/main/java/de/my5t3ry/alshub/ElasticsearchConfiguration.java" />
         <option value="$PROJECT_DIR$/alshub-meta-storage/src/main/java/de/my5t3ry/AlshubMetaStorageApplication.java" />
-        <option value="$PROJECT_DIR$/alshub-shared-model/pom.xml" />
         <option value="$PROJECT_DIR$/alshub-meta-storage/etc/docker.yml" />
         <option value="$PROJECT_DIR$/alshub-meta-storage/pom.xml" />
-        <option value="$PROJECT_DIR$/alshub-meta-storage/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/alshub-meta-storage/etc/docker-compose.yml" />
         <option value="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectService.java" />
+        <option value="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectMetaDataService.java" />
+        <option value="$PROJECT_DIR$/alshub-meta-storage/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/alshub-shared-model/pom.xml" />
       </list>
     </option>
   </component>
@@ -699,7 +674,7 @@
       <workItem from="1563477091533" duration="14130000" />
       <workItem from="1563493742539" duration="16637000" />
       <workItem from="1563511146976" duration="21022000" />
-      <workItem from="1563536117791" duration="1048000" />
+      <workItem from="1563536117791" duration="3044000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore">
       <created>1563483607877</created>
@@ -820,11 +795,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563526559258</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="gitignore">
+      <created>1563537381241</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1563537381241</updated>
+    </task>
+    <task id="LOCAL-00019" summary="gitignore">
+      <created>1563539658149</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1563539658149</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62091000" />
+    <option name="totallyTimeSpent" value="64087000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="33" width="3206" height="1770" extended-state="6" />
@@ -887,13 +876,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/alshub-web/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/alshub-web/src/app/app-routing.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
@@ -1067,16 +1049,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectMetaDataService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="19" column="58" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/alshub-api/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="944">
@@ -1151,13 +1123,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-shared-model/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="20" column="34" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/alshub-meta-storage/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
@@ -1173,20 +1138,6 @@
             <element signature="e#906#907#0" expanded="true" />
             <element signature="e#954#955#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-meta-storage/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="52" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-meta-storage/etc/docker-compose.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -1225,6 +1176,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="36" column="113" selection-start-line="36" selection-start-column="113" selection-end-line="36" selection-end-column="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectMetaDataService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alshub-meta-storage/etc/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alshub-meta-storage/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alshub-shared-model/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alshub_git_api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
         </state>
       </provider>
     </entry>
