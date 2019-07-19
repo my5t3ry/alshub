@@ -2,7 +2,6 @@ package de.my5t3ry.alshubapi.project;
 
 import de.my5t3ry.als_parser.domain.AbletonProject.AbletonProject;
 import de.my5t3ry.alshubapi.explorer.SetPathRequest;
-import de.my5t3ry.alshubapi.user.User;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -19,8 +18,6 @@ public class Project {
     private String path;
     private String gitUuid;
     private String remoteGitUrl;
-    @ManyToOne
-    private User user;
     private String alsFile;
     @OneToOne(cascade = CascadeType.ALL)
     private AbletonProject abletonProject;
@@ -31,14 +28,6 @@ public class Project {
     public Project(final SetPathRequest setPathRequest) {
         this.path = setPathRequest.getPath();
         this.name = new File(setPathRequest.getPath()).getName();
-    }
-
-    public void setUser(final User user) {
-        this.user = user;
-    }
-
-    public User getUser() {
-        return user;
     }
 
     public void setAlsFile(final String alsFile) {

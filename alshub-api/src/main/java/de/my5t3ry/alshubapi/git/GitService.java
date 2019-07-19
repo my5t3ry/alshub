@@ -61,21 +61,37 @@ public class GitService {
             File f‌ile = new File(project.getPath().concat("/README"));
             f‌ile.createNewFile();
             Git newLocalRepository = Git.init().setDirectory(f‌ile.getParentFile()).call();
-            newLocalRepository.add().addFilepattern(".").call();
-            StoredConfig config = newLocalRepository.getRepository().getConfig();
-            final String remoteGitUrl = GIT_REPO_URL.concat(project.getGitUuid());
-            project.setRemoteGitUrl(remoteGitUrl);
-            config.setString("remote", "origin", "url", remoteGitUrl);
-            config.save();
-            newLocalRepository.commit()
-                    .setMessage("Initial commit")
-                    .setCommitter("auto", "commit")
-                    .call();
-            PushCommand pushCommand = newLocalRepository.push();
-            pushCommand.call();
+            setRemoteOrigin(project, newLocalRepository);
+            pushChanges(newLocalRepository);
         } catch (IOException | GitAPIException e) {
             e.printStackTrace();
         }
+    }
+
+    public void pushChanges(final Git newLocalRepository) throws GitAPIException {
+        newLocalRepository.add().addFilepattern(".").call();
+        newLocalRepository.commit()
+                .setMessage("Initial commit")
+                .setCommitter("auto", "commit")
+                .call();
+        PushCommand pushCommand = newLocalRepository.push();
+        pushCommand.call();
+    }
+
+    public void pushChanges(final Project project)  {
+        try {
+            pushChanges(Git.open(new File(project.getPath())));
+        } catch (IOException | GitAPIException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void setRemoteOrigin(final Project project, final Git newLocalRepository) throws IOException {
+        StoredConfig config = newLocalRepository.getRepository().getConfig();
+        final String remoteGitUrl = GIT_REPO_URL.concat(project.getGitUuid());
+        project.setRemoteGitUrl(remoteGitUrl);
+        config.setString("remote", "origin", "url", remoteGitUrl);
+        config.save();
     }
 
     public ProjectChanges checkChanges(Project project) {

@@ -4,7 +4,9 @@ import de.my5t3ry.alshubapi.explorer.fs_item.AbstractFsItem;
 import de.my5t3ry.alshubapi.explorer.fs_item.Directory;
 import de.my5t3ry.alshubapi.explorer.fs_item.FsFile;
 import de.my5t3ry.alshubapi.project.Project;
-import de.my5t3ry.alshubapi.project.ProjectController;
+import de.my5t3ry.alshubapi.project.ProjectService;
+import de.my5t3ry.alshubapi.response_entity.ResponseEntityFactory;
+import de.my5t3ry.alshubapi.response_entity.ResponseMessageType;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.filefilter.AbstractFileFilter;
 import org.apache.commons.io.filefilter.IOFileFilter;
@@ -27,7 +29,7 @@ import java.util.List;
 @Scope("singleton")
 public class ExplorerRestController {
     @Autowired
-    private ProjectController projectController;
+    private ProjectService projectService;
 
     private String curPath;
 
@@ -78,20 +80,21 @@ public class ExplorerRestController {
     public ResponseEntity<ExplorerPathResult> save(@RequestBody SetPathRequest setPathRequest) {
         this.curPath = setPathRequest.getPath();
         final ExplorerPathResult result = getCurrentItems();
-
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
     @PostMapping(path = "/add-project")
     public ResponseEntity<Project> addProject(@RequestBody SetPathRequest setPathRequest, Principal principal) {
-        return new ResponseEntity<>(projectController.addProject(setPathRequest, principal), HttpStatus.OK);
+        return ResponseEntityFactory.build("Project added",
+                ResponseMessageType.INFO,
+                projectService.addProject(setPathRequest, principal),
+                HttpStatus.OK);
     }
 
     @PostMapping(path = "/set-parent")
     public ResponseEntity<ExplorerPathResult> setParent() {
         this.curPath = Path.of(this.curPath).getParent().toAbsolutePath().toString();
         final ExplorerPathResult result = getCurrentItems();
-
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 }

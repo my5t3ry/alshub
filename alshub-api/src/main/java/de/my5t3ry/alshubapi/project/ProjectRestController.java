@@ -1,6 +1,8 @@
 package de.my5t3ry.alshubapi.project;
 
 import de.my5t3ry.alshubapi.git.GitService;
+import de.my5t3ry.alshubapi.response_entity.ResponseEntityFactory;
+import de.my5t3ry.alshubapi.response_entity.ResponseMessageType;
 import de.my5t3ry.alshubapi.user.UserController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -25,8 +27,7 @@ public class ProjectRestController {
 
     @GetMapping("/my-projects")
     public ResponseEntity<List<Project>> get(Principal principal) {
-        projectRepository.findByUser(userController.getUser(principal));
-        return new ResponseEntity<>(projectRepository.findByUser(userController.getUser(principal)), HttpStatus.OK);
+        return new ResponseEntity<>((userController.getUser(principal)).getProjects(), HttpStatus.OK);
     }
 
     @GetMapping("/{projectId}")
@@ -36,6 +37,15 @@ public class ProjectRestController {
 
     @GetMapping("/get-changes/{projectId}")
     public ResponseEntity<ProjectChanges> getChanges(@PathVariable("projectId") Integer projectId) {
-        return new ResponseEntity<>(gitService.checkChanges(projectRepository.findById(projectId).get()), HttpStatus.OK);
+        return ResponseEntityFactory.build("Changes refreshed added",
+                ResponseMessageType.INFO,
+                gitService.checkChanges(projectRepository.findById(projectId).get()),
+                HttpStatus.OK);
+    }
+
+    @GetMapping("/push-changes/{projectId}")
+    public ResponseEntity pushChanges(@PathVariable("projectId") Integer projectId) {
+        gitService.pushChanges(projectRepository.findById(projectId).get());
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }

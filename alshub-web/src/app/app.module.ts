@@ -16,6 +16,7 @@ import {MyProjectsComponent} from './my-projects/my-projects.component';
 import {ProjectDetailComponent} from './project-detail/project-detail.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {TabsModule} from "ngx-bootstrap";
+import {ErrorComponent} from "./error/error.component";
 
 declare var fs: any;
 
@@ -25,6 +26,7 @@ declare var fs: any;
     ExplorerComponent,
     SpinnerComponent,
     NavComponent,
+    ErrorComponent,
     MyProjectsComponent,
     ProjectDetailComponent
   ],

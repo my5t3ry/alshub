@@ -1,6 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {Observable} from "rxjs";
-import {HttpClient, HttpClientModule, HttpHeaders} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {Router} from "@angular/router";
+import {NotifierService} from "angular-notifier";
+import {RequestInterceptorService} from "../../request-interceptor.service";
 
 @Component({
   selector: 'app-explorer',
@@ -10,13 +13,11 @@ import {HttpClient, HttpClientModule, HttpHeaders} from '@angular/common/http';
 export class ExplorerComponent implements OnInit {
 
   private endpoint = 'http://localhost:8090/api/explorer';
-  private httpOptions = {
-    headers: new HttpHeaders({'Content-Type': 'application/json', 'Accept': 'application/json'})
-  };
+
   private items: any;
   path: any;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router,private notifierService:NotifierService) {
   }
 
   ngOnInit() {
@@ -26,12 +27,11 @@ export class ExplorerComponent implements OnInit {
   fetchItems() {
     this.getClients().subscribe(data => {
       this.refresh(data);
-
     });
   }
 
   getClients(): Observable<any> {
-    return this.http.get<any>(this.endpoint + "/", this.httpOptions).pipe();
+    return this.http.get<any>(this.endpoint + "/", RequestInterceptorService.httpOptions).pipe();
   }
 
   selectDir(item: any) {
@@ -56,10 +56,13 @@ export class ExplorerComponent implements OnInit {
   }
 
   addProject(item: any) {
+    this.notifierService.notify('info', "project created");
+
     this.http.post(this.endpoint + '/add-project/', {path: item.absolutePath})
       .subscribe(
         data => {
-          console.log(data)
+
+          this.router.navigateByUrl("/project-detail/" + data.id)
         });
   }
 }

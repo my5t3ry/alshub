@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {NotifierService} from "angular-notifier";
+import {RequestInterceptorService} from "../../request-interceptor.service";
 
 @Component({
   selector: 'app-project-detail',
@@ -11,13 +13,11 @@ import {Observable} from "rxjs";
 export class ProjectDetailComponent implements OnInit {
   projectId: any;
   private endpoint = 'http://localhost:8090/api/project';
-  private httpOptions = {
-    headers: new HttpHeaders({'Content-Type': 'application/json', 'Accept': 'application/json'})
-  };
+
   project: any;
   changes: any;
 
-  constructor(private http: HttpClient, private route: ActivatedRoute) {
+  constructor(private http: HttpClient, private route: ActivatedRoute, private notifierService: NotifierService) {
   }
 
   ngOnInit() {
@@ -26,7 +26,7 @@ export class ProjectDetailComponent implements OnInit {
       this.receiveProject(this.projectId).subscribe(data => {
         this.project = data;
       });
-      this.fetchChanges();
+      // this.fetchChanges();
     });
   }
 
@@ -37,14 +37,19 @@ export class ProjectDetailComponent implements OnInit {
   }
 
   receiveProject(id): Observable<any> {
-    return this.http.get<any>(this.endpoint + "/" + id, this.httpOptions).pipe();
+    return this.http.get<any>(this.endpoint + "/" + id, RequestInterceptorService.httpOptions).pipe();
   }
 
   receiveChanges(id): Observable<any> {
-    return this.http.get<any>(this.endpoint + "/get-changes/" + id, this.httpOptions).pipe();
+    return this.http.get<any>(this.endpoint + "/get-changes/" + id, RequestInterceptorService.httpOptions).pipe();
   }
 
   checkForChanges() {
     this.fetchChanges();
+  }
+
+  pushChanges(project: any) {
+    return this.http.get<any>(this.endpoint + "/push-changes/" + project.id, RequestInterceptorService.httpOptions).pipe().subscribe(value => this.checkForChanges());
+
   }
 }

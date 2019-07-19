@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {RequestInterceptorService} from "../../request-interceptor.service";
 
 @Component({
   selector: 'app-my-projects',
@@ -9,9 +10,7 @@ import {Observable} from "rxjs";
 })
 export class MyProjectsComponent implements OnInit {
   private endpoint = 'http://localhost:8090/api/project';
-  private httpOptions = {
-    headers: new HttpHeaders({'Content-Type': 'application/json', 'Accept': 'application/json'})
-  };
+
   private projects: any;
 
   constructor(private http: HttpClient) {
@@ -28,7 +27,7 @@ export class MyProjectsComponent implements OnInit {
   }
 
   getClients(): Observable<any> {
-    return this.http.get<any>(this.endpoint + "/my-projects", this.httpOptions).pipe();
+    return this.http.get<any>(this.endpoint + "/my-projects", RequestInterceptorService.httpOptions).pipe();
   }
 
 }
