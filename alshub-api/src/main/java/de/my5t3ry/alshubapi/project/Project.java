@@ -5,6 +5,7 @@ import de.my5t3ry.alshubapi.user.User;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.File;
 
 @Data
 @Entity
@@ -13,6 +14,7 @@ public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+    private  String name;
     private String path;
     private String gitUuid;
     private String remoteGitUrl;
@@ -24,6 +26,7 @@ public class Project {
 
     public Project(final SetPathRequest setPathRequest) {
         this.path = setPathRequest.getPath();
+        this.name = new File(setPathRequest.getPath()).getName();
     }
 
     public void setUser(final User user) {
