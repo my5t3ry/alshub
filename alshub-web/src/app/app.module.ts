@@ -12,6 +12,9 @@ import {KeycloakService, KeycloakAngularModule} from 'keycloak-angular';
 import {NotifierModule, NotifierService} from "angular-notifier";
 import { NavComponent } from './nav/nav.component';
 import {FontAwesomeModule} from "ngx-icons";
+import {SpinnerComponent} from "./spinner/spinner.component";
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { MyProjectsComponent } from './my-projects/my-projects.component';
 
 declare var fs: any;
 
@@ -19,7 +22,10 @@ declare var fs: any;
   declarations: [
     AppComponent,
     ExplorerComponent,
-    NavComponent
+    SpinnerComponent,
+    NavComponent,
+    SidebarComponent,
+    MyProjectsComponent
   ],
   imports: [
     BrowserModule,

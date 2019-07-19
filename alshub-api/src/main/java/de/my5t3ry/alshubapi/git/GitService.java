@@ -24,12 +24,12 @@ import java.net.http.HttpResponse;
 @Component
 public class GitService {
 
-
     private final String API_URL = "https://alshub-git.mikodump.org/api/git/";
     private final HttpRequest request = HttpRequest.newBuilder()
             .uri(URI.create(API_URL))
             .build();
     private final HttpClient client = HttpClient.newHttpClient();
+    private final String GIT_REPO_URL = "git@mikodump.org:/home/git/repos/";
 
     public GitService() {
         SshSessionFactory.setInstance(new JschConfigSessionFactory() {
@@ -56,7 +56,9 @@ public class GitService {
             Git newLocalRepository = Git.init().setDirectory(f‌ile.getParentFile()).call();
             newLocalRepository.add().addFilepattern(".").call();
             StoredConfig config = newLocalRepository.getRepository().getConfig();
-            config.setString("remote", "origin", "url", "git@mikodump.org:/home/git/repos/".concat(project.getGitUuid()));
+            final String remoteGitUrl = GIT_REPO_URL.concat(project.getGitUuid());
+            project.setRemoteGitUrl(remoteGitUrl);
+            config.setString("remote", "origin", "url", remoteGitUrl);
             config.save();
             newLocalRepository.commit()
                     .setMessage("Initial commit")
@@ -73,6 +75,5 @@ public class GitService {
         } catch (GitAPIException e) {
             e.printStackTrace();
         }
-
     }
 }

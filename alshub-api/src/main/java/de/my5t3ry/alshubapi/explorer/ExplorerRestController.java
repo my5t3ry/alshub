@@ -4,7 +4,7 @@ import de.my5t3ry.alshubapi.explorer.fs_item.AbstractFsItem;
 import de.my5t3ry.alshubapi.explorer.fs_item.Directory;
 import de.my5t3ry.alshubapi.explorer.fs_item.FsFile;
 import de.my5t3ry.alshubapi.project.Project;
-import de.my5t3ry.alshubapi.project.ProjectService;
+import de.my5t3ry.alshubapi.project.ProjectController;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.filefilter.AbstractFileFilter;
 import org.apache.commons.io.filefilter.IOFileFilter;
@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.security.Principal;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -26,11 +27,11 @@ import java.util.List;
 @Scope("singleton")
 public class ExplorerRestController {
     @Autowired
-    private ProjectService projectService;
+    private ProjectController projectController;
 
     private String curPath;
 
-//    public ExplorerRestController() {
+    //    public ExplorerRestController() {
 //        this.curPath = System.getProperty("user.home");
 //    }
     public ExplorerRestController() {
@@ -80,9 +81,10 @@ public class ExplorerRestController {
 
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
+
     @PostMapping(path = "/add-project")
-    public ResponseEntity<Project> addProject(@RequestBody SetPathRequest setPathRequest) {
-        return new ResponseEntity<>(projectService.addProject(setPathRequest), HttpStatus.OK);
+    public ResponseEntity<Project> addProject(@RequestBody SetPathRequest setPathRequest, Principal principal) {
+        return new ResponseEntity<>(projectController.addProject(setPathRequest, principal), HttpStatus.OK);
     }
 
     @PostMapping(path = "/set-parent")
