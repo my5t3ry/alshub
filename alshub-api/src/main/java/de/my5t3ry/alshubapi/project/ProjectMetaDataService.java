@@ -1,5 +1,6 @@
 package de.my5t3ry.alshubapi.project;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import de.my5t3ry.alshub.project.ProjectMetaData;
 import de.my5t3ry.alshubapi.error.ProcessingException;
@@ -23,12 +24,17 @@ import java.util.UUID;
 public class ProjectMetaDataService {
     private final String API_URL = "https://alshub-meta-storage.mikodump.org/api/project-metadata/";
     //    private final String API_URL = "https://alshub-meta-storage.mikodump.org/api/project-metadata/";
-    private HttpClient client = HttpClient.newHttpClient();
     private ObjectMapper objectMapper = new ObjectMapper();
     private HashMap<Integer, ProjectMetaData> cache = new HashMap<>();
 
     @Autowired
     private UserController userController;
+
+    public ProjectMetaDataService() {
+        objectMapper.configure(
+                DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        ;
+    }
 
     public ProjectMetaData getByProject(final Project project) throws IOException, InterruptedException {
         return getQueryProjectMetaData(project.getId());
