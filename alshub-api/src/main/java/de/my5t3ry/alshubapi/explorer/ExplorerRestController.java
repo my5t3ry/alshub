@@ -8,8 +8,6 @@ import de.my5t3ry.alshubapi.project.ProjectService;
 import de.my5t3ry.alshubapi.response_entity.ResponseEntityFactory;
 import de.my5t3ry.alshubapi.response_entity.ResponseMessageType;
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.filefilter.AbstractFileFilter;
-import org.apache.commons.io.filefilter.IOFileFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.http.HttpStatus;
@@ -21,7 +19,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.security.Principal;
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -47,22 +45,16 @@ public class ExplorerRestController {
 
     private ExplorerPathResult getCurrentItems() {
         final List<AbstractFsItem> result = new ArrayList<AbstractFsItem>();
-        IOFileFilter filter = new AbstractFileFilter() {
-            public boolean accept(File file) {
-                if (((file.isFile() && file.getName().contains("als")) || file.isDirectory()) && !file.isHidden() && file.getParent().equals(curPath) && !file.getAbsolutePath().equals(curPath)) {
-                    return true;
-                }
-                return false;
-            }
-        };
-        Collection<File> files = FileUtils.listFilesAndDirs(new File(curPath), filter, filter);
-        files.stream().filter(f -> Files.isReadable(f.toPath())).forEach(path -> {
-            if (Files.isRegularFile(path.toPath())) {
-                result.add(new FsFile(path.toPath()));
-            } else {
-                result.add(createDirectoryItem(path));
-            }
-        });
+        Arrays.asList(new File(curPath).listFiles(f -> f.isDirectory()))
+                .stream()
+                .filter(f -> Files.isReadable(f.toPath()))
+                .forEach(path -> {
+                    if (Files.isRegularFile(path.toPath())) {
+                        result.add(new FsFile(path.toPath()));
+                    } else {
+                        result.add(createDirectoryItem(path));
+                    }
+                });
         return new ExplorerPathResult(result, this.curPath);
     }
 

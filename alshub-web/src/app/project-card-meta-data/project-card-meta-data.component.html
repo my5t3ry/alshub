@@ -1,0 +1,12 @@
+<div class="row" *ngIf="projectMetaData">
+  <div class="col-3">
+    <i class="fas fa-eye"></i><span class="project-meta-data-count">{{projectMetaData.viewCount}}</span>
+  </div>
+  <div class="col-3">
+    <i class="far fa-heart"></i><span class="project-meta-data-count">{{projectMetaData.likeCount}}</span>
+  </div>
+  <div class="col-3">
+    <i class="fas fa-code-branch"></i>
+    <span class="project-meta-data-count">{{projectMetaData.forkCount}}</span>
+  </div>
+</div>

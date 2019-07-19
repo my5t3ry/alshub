@@ -18,6 +18,8 @@ public class ProjectMetaData {
     @Id
     @Field(type = FieldType.Text, store = true)
     private String id;
+    @Field(type = FieldType.Text, store = true)
+    private String name;
     @Field(type = FieldType.Integer, store = true)
     private Integer projectId = 0;
     @Field(type = FieldType.Integer, store = true)

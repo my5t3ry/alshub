@@ -1,8 +1,63 @@
-<div class="row navbar-container">
-  <div class="col-12">
-    <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand" routerLink="/">my projects</a>
-      <app-spinner></app-spinner>
-    </nav>
+<!--<div class="row navbar-container">-->
+<!--  <div class="col-12">-->
+<!--    <nav class="navbar navbar-light bg-light">-->
+<!--      <a class="navbar-brand" routerLink="/">my projects</a>-->
+<!--      <app-spinner></app-spinner>-->
+<!--    </nav>-->
+<!--  </div>-->
+<!--</div>-->
+
+<nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/explorer">
+          <i class="fa fa-plus-square">
+          </i>
+          push project
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">
+          <i class="fa fa-home"></i>
+          Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ">
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="fa fa-bell">
+            <span class="badge badge-info">11</span>
+          </i>
+          Test
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="fa fa-globe">
+            <span class="badge badge-success">11</span>
+          </i>
+          Test
+        </a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-bars"></i>
+        </a>
+      </li>
+
+    </ul>
   </div>
-</div>
+</nav>

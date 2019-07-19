@@ -1,5 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~bootstrap/dist/css/bootstrap.min.css';
 @import '~@fortawesome/fontawesome-free/css/all.css';
 @import "~node_modules/angular-notifier/styles";
+@import '~bootstrap/dist/css/bootstrap.min.css';
 
+body {
+  background-image: url(assets/img/bg.png);
+  background-repeat: repeat-y;
+  background-position: bottom;
+  background-color: whitesmoke;
+  background-size: cover;
+}
+
+.content-container {
+  margin: 10px 0px 0px 0px;
+  background: whitesmoke;
+  opacity: 0.8;
+  padding: 1rem 1rem;
+}
+
+.main-container {
+  background-color: transparent;
+}

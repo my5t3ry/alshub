@@ -52,6 +52,7 @@ public class ProjectMetaDataService {
                 .id(UUID.randomUUID().toString())
                 .ownerUserId(userController.getUser(principal).getId())
                 .projectId(project.getId())
+                .name(project.getName())
                 .viewCount(0)
                 .likeCount(0)
                 .forkCount(0)
