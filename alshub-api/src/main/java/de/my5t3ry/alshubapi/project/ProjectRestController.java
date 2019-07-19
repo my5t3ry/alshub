@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,5 +24,10 @@ public class ProjectRestController {
     public ResponseEntity<List<Project>> get(Principal principal) {
         projectRepository.findByUser(userController.getUser(principal));
         return new ResponseEntity<>(projectRepository.findByUser(userController.getUser(principal)), HttpStatus.OK);
+    }
+
+    @GetMapping("/{projectId}")
+    public ResponseEntity<Project> get(@PathVariable("projectId") Integer projectId) {
+        return new ResponseEntity<>(projectRepository.findById(projectId).get(), HttpStatus.OK);
     }
 }

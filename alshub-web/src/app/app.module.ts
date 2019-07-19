@@ -15,6 +15,7 @@ import {FontAwesomeModule} from "ngx-icons";
 import {SpinnerComponent} from "./spinner/spinner.component";
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { MyProjectsComponent } from './my-projects/my-projects.component';
+import { ProjectDetailComponent } from './project-detail/project-detail.component';
 
 declare var fs: any;
 
@@ -25,7 +26,8 @@ declare var fs: any;
     SpinnerComponent,
     NavComponent,
     SidebarComponent,
-    MyProjectsComponent
+    MyProjectsComponent,
+    ProjectDetailComponent
   ],
   imports: [
     BrowserModule,

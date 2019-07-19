@@ -3,6 +3,7 @@ import {Routes, RouterModule} from '@angular/router';
 import {ExplorerComponent} from "./explorer/explorer.component";
 import {AppAuthGuard} from "../app.authguard";
 import {MyProjectsComponent} from "./my-projects/my-projects.component";
+import {ProjectDetailComponent} from "./project-detail/project-detail.component";
 
 const routes: Routes = [{
   path: '',
@@ -14,7 +15,12 @@ const routes: Routes = [{
   component: ExplorerComponent,
   canActivate: [AppAuthGuard],
   data: {roles: ['alshub']}
-}];
+},
+  {
+    path: 'project-detail/:projectId', component: ProjectDetailComponent,
+    canActivate: [AppAuthGuard],
+    data: {roles: ['alshub']}
+  }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
