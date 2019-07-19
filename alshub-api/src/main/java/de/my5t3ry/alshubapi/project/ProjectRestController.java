@@ -37,7 +37,7 @@ public class ProjectRestController {
 
     @GetMapping("/get-changes/{projectId}")
     public ResponseEntity<ProjectChanges> getChanges(@PathVariable("projectId") Integer projectId) {
-        return ResponseEntityFactory.build("Changes refreshed added",
+        return ResponseEntityFactory.build("Changes refreshed",
                 ResponseMessageType.INFO,
                 gitService.checkChanges(projectRepository.findById(projectId).get()),
                 HttpStatus.OK);

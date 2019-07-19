@@ -17,7 +17,7 @@ export class ExplorerComponent implements OnInit {
   private items: any;
   path: any;
 
-  constructor(private http: HttpClient, private router: Router,private notifierService:NotifierService) {
+  constructor(private http: HttpClient, private router: Router, private notifierService: NotifierService) {
   }
 
   ngOnInit() {
@@ -56,12 +56,9 @@ export class ExplorerComponent implements OnInit {
   }
 
   addProject(item: any) {
-    this.notifierService.notify('info', "project created");
-
     this.http.post(this.endpoint + '/add-project/', {path: item.absolutePath})
       .subscribe(
         data => {
-
           this.router.navigateByUrl("/project-detail/" + data.id)
         });
   }

@@ -31,7 +31,7 @@
         </div>
       </tab>
       <tab heading="Changes">
-        <div class="row" *ngIf="changes">
+        <div class="row">
           <div class="col-12">
             <ul class="nav justify-content-end">
               <li class="nav-item">
@@ -55,6 +55,15 @@
               </div>
               <div class="col-6">
                 {{change.path}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" *ngIf="!changes || changes.length == 0">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-12">
+                no changes since the last push
               </div>
             </div>
           </div>

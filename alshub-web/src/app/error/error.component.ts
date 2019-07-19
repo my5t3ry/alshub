@@ -30,7 +30,6 @@ export class ErrorComponent implements OnInit {
     });
   }
 
-
   getError(): string {
     return this.error;
   }
