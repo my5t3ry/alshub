@@ -14,6 +14,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.security.Principal;
 import java.time.Duration;
+import java.util.UUID;
 
 @Component
 public class ProjectMetaDataService {
@@ -27,8 +28,13 @@ public class ProjectMetaDataService {
 
     public ProjectMetaData createProjectMetaData(final Project project, Principal principal) {
         final ProjectMetaData projectMetaData = ProjectMetaData.builder()
+                .id(UUID.randomUUID().toString())
                 .ownerUserId(userController.getUser(principal).getId())
-                .projectId(project.getId()).build();
+                .projectId(project.getId())
+                .viewCount(0)
+                .likeCount(0)
+                .forkCount(0)
+                .build();
         try {
             final HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create(API_URL))

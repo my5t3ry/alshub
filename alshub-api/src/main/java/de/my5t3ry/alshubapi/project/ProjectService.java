@@ -34,8 +34,8 @@ public class ProjectService {
         gitService.createNewRepositoryForProject(project);
         project.setAlsFile(findAlsFile(project).getAbsolutePath());
         createStats(project);
-        final ProjectMetaData projectMetaData = projectMetaDataService.createProjectMetaData(project, principal);
         projectRepository.save(project);
+        final ProjectMetaData projectMetaData = projectMetaDataService.createProjectMetaData(project, principal);
         final User user = userController.getUser(principal);
         user.addProject(project);
         userRepository.save(user);
