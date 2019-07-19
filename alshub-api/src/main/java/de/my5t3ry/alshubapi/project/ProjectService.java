@@ -2,6 +2,7 @@ package de.my5t3ry.alshubapi.project;
 
 import de.my5t3ry.als_parser.AbletonFileParser;
 import de.my5t3ry.als_parser.domain.AbletonProject.AbletonProject;
+import de.my5t3ry.alshub.project.ProjectMetaData;
 import de.my5t3ry.alshubapi.explorer.SetPathRequest;
 import de.my5t3ry.alshubapi.git.GitService;
 import de.my5t3ry.alshubapi.user.User;
@@ -25,12 +26,15 @@ public class ProjectService {
     private ProjectRepository projectRepository;
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private ProjectMetaDataService projectMetaDataService;
 
     public Project addProject(final SetPathRequest setPathRequest, Principal principal) {
         Project project = new Project(setPathRequest);
         gitService.createNewRepositoryForProject(project);
         project.setAlsFile(findAlsFile(project).getAbsolutePath());
         createStats(project);
+        final ProjectMetaData projectMetaData = projectMetaDataService.createProjectMetaData(project, principal);
         projectRepository.save(project);
         final User user = userController.getUser(principal);
         user.addProject(project);

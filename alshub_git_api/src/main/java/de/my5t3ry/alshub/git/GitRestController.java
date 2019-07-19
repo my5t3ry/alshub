@@ -1,4 +1,4 @@
-package de.my5t3ry.alshub_git_api.git;
+package de.my5t3ry.alshub.git;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.filefilter.HiddenFileFilter;

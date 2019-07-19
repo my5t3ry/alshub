@@ -30,10 +30,6 @@ import java.util.Set;
 public class GitService {
 
     private final String API_URL = "https://alshub-git.mikodump.org/api/git/";
-    private final HttpRequest request = HttpRequest.newBuilder()
-            .uri(URI.create(API_URL))
-            .build();
-    private final HttpClient client = HttpClient.newHttpClient();
     private final String GIT_REPO_URL = "git@mikodump.org:/home/git/repos/";
 
     public GitService() {
@@ -47,7 +43,9 @@ public class GitService {
     public void createNewRepositoryForProject(final Project project) {
         try {
             if (!RepositoryCache.FileKey.isGitRepository(new File(project.getPath()), FS.DETECTED)) {
-                final String uuid = client.send(request, HttpResponse.BodyHandlers.ofString()).body();
+                final String uuid = HttpClient.newHttpClient().send(HttpRequest.newBuilder()
+                        .uri(URI.create(API_URL))
+                        .build(), HttpResponse.BodyHandlers.ofString()).body();
                 project.setGitUuid(uuid);
                 this.createAndPushLocalRepo(project);
             }
@@ -78,7 +76,7 @@ public class GitService {
         pushCommand.call();
     }
 
-    public void pushChanges(final Project project)  {
+    public void pushChanges(final Project project) {
         try {
             pushChanges(Git.open(new File(project.getPath())));
         } catch (IOException | GitAPIException e) {

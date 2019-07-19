@@ -84,6 +84,12 @@
             <artifactId>spring-security-jwt</artifactId>
             <version>1.0.10.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>de.my5t3ry.alshub</groupId>
+            <artifactId>alshub-shared-model</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
 
