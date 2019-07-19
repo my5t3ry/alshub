@@ -15,15 +15,26 @@
 
   </div>
 </div>
-<div class="row" *ngIf="changes">
+<div class="row" *ngIf="project">
   <div class="col-12">
-    <div class="row" *ngFor="let change of changes">
-      <div class="col-6">
-        {{change.type}}
-      </div>
-      <div class="col-6">
-        {{change.path}}
-      </div>
-    </div>
+    <tabset>
+      <tab heading="Info" id="project-info">Basic content</tab>
+      <tab heading="Changes">
+        <div class="row" *ngIf="changes">
+          <div class="col-12">
+            <div class="row" *ngFor="let change of changes">
+              <div class="col-6">
+                {{change.type}}
+              </div>
+              <div class="col-6">
+                {{change.path}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </tab>
+      <tab heading="more">more</tab>
+    </tabset>
   </div>
 </div>
+

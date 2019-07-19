@@ -1,4 +1,5 @@
 import {AfterContentChecked, Component} from '@angular/core';
+import {setTheme} from "ngx-bootstrap";
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,7 @@ export class AppComponent implements AfterContentChecked {
   title = 'alshub-web';
 
   constructor() {
+    setTheme('bs4'); // or 'bs4'
 
   }
 

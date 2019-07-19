@@ -2,30 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60bb6e59-dc4d-4c7e-a355-d132b967a7b3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../als-parser/src/main/java/de/my5t3ry/als_parser/AbletonFileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../als-parser/src/main/java/de/my5t3ry/als_parser/AbletonFileParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../als-parser/src/main/java/de/my5t3ry/als_parser/domain/AbletonProject/AbletonProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/../als-parser/src/main/java/de/my5t3ry/als_parser/domain/AbletonProject/AbletonProject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../als-parser/src/main/java/de/my5t3ry/als_parser/domain/AbletonProject/AbletonProjectFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../als-parser/src/main/java/de/my5t3ry/als_parser/domain/AbletonProject/AbletonProjectFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../als-parser/src/main/java/de/my5t3ry/als_parser/domain/AbletonProject/device/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/../als-parser/src/main/java/de/my5t3ry/als_parser/domain/AbletonProject/device/Device.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../als-parser/src/main/java/de/my5t3ry/als_parser/domain/AbletonProject/device/DeviceManufacturer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../als-parser/src/main/java/de/my5t3ry/als_parser/domain/AbletonProject/device/DeviceManufacturer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/AlshubApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/AlshubApiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alshub-web/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/my-projects/my-projects.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/my-projects/my-projects.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/nav/nav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/nav/nav.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/sidebar/sidebar.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/sidebar/sidebar.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/sidebar/sidebar.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/sidebar/sidebar.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-detail/project-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-detail/project-detail.component.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,8 +32,12 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/alshub-web/src/app/my-projects/my-projects.component.scss">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/alshub-web/src/app/project-detail/project-detail.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="945">
+              <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -75,6 +62,7 @@
       <find>fa</find>
       <find>&lt;fa name</find>
       <find>&lt;/fa&gt;</find>
+      <find>contact</find>
     </findStrings>
     <replaceStrings>
       <replace>result.concat</replace>
@@ -82,6 +70,7 @@
       <replace>result.addChange</replace>
       <replace>&lt;i class</replace>
       <replace>&lt;/i&gt;</replace>
+      <replace>history</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -102,7 +91,6 @@
         <option value="$PROJECT_DIR$/alshub_git_api/src/main/java/de/my5t3ry/alshub_git_api/git/GitRestController.java" />
         <option value="$PROJECT_DIR$/alshub-web/src/app/explorer/explorer.component.ts" />
         <option value="$PROJECT_DIR$/alshub-web/src/spinnner.service.ts" />
-        <option value="$PROJECT_DIR$/alshub-web/src/app/app.component.ts" />
         <option value="$PROJECT_DIR$/alshub-web/src/app/spinner/spinner.component.ts" />
         <option value="$PROJECT_DIR$/alshub-web/src/app/spinner/spinner.component.html" />
         <option value="$PROJECT_DIR$/alshub-web/src/app/spinner/spinner.component.scss" />
@@ -128,11 +116,9 @@
         <option value="$PROJECT_DIR$/alshub-web/src/app/explorer/explorer.component.html" />
         <option value="$PROJECT_DIR$/alshub-web/package.json" />
         <option value="$PROJECT_DIR$/alshub-web/src/styles.scss" />
-        <option value="$PROJECT_DIR$/alshub-web/src/app/project-detail/project-detail.component.html" />
         <option value="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitService.java" />
         <option value="$PROJECT_DIR$/alshub-api/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/alshub-web/src/app/app.component.html" />
-        <option value="$PROJECT_DIR$/alshub-web/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/alshub-web/src/app/nav/nav.component.html" />
         <option value="$PROJECT_DIR$/alshub-api/pom.xml" />
         <option value="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/Project.java" />
@@ -141,6 +127,9 @@
         <option value="$PROJECT_DIR$/../als-parser/src/main/java/de/my5t3ry/als_parser/domain/AbletonProject/device/DeviceManufacturer.java" />
         <option value="$PROJECT_DIR$/../als-parser/src/main/java/de/my5t3ry/als_parser/domain/AbletonProject/device/Device.java" />
         <option value="$PROJECT_DIR$/alshub-web/src/app/my-projects/my-projects.component.scss" />
+        <option value="$PROJECT_DIR$/alshub-web/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/alshub-web/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/alshub-web/src/app/project-detail/project-detail.component.html" />
       </list>
     </option>
   </component>
@@ -621,7 +610,7 @@
       <workItem from="1562951786579" duration="594000" />
       <workItem from="1563477091533" duration="14130000" />
       <workItem from="1563493742539" duration="16637000" />
-      <workItem from="1563511146976" duration="271000" />
+      <workItem from="1563511146976" duration="1797000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore">
       <created>1563483607877</created>
@@ -707,11 +696,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563509509729</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="gitignore">
+      <created>1563511466936</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1563511466937</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40292000" />
+    <option name="totallyTimeSpent" value="41818000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="33" width="3206" height="1770" extended-state="6" />
@@ -1034,13 +1030,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-web/src/app/project-detail/project-detail.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
@@ -1062,23 +1051,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-web/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-web/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="26" column="15" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1122,13 +1094,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../als-parser/src/main/java/de/my5t3ry/als_parser/domain/AbletonProject/AbletonProject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../als-parser/src/main/java/de/my5t3ry/als_parser/domain/AbletonProject/device/DeviceManufacturer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="621">
@@ -1161,7 +1126,45 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/alshub-web/src/app/my-projects/my-projects.component.scss">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../als-parser/src/main/java/de/my5t3ry/als_parser/domain/AbletonProject/AbletonProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-108">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alshub-web/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alshub-web/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="837">
+          <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alshub-web/src/app/project-detail/project-detail.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

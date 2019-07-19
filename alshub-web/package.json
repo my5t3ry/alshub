@@ -29,6 +29,7 @@
     "install": "^0.13.0",
     "keycloak-angular": "^7.0.1",
     "keycloak-js": "^6.0.1",
+    "ngx-bootstrap": "^5.1.0",
     "npm": "^6.10.1",
     "rxjs": "~6.3.3",
     "uninstall": "0.0.0",

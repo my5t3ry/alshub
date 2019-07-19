@@ -12,9 +12,10 @@ import {KeycloakService, KeycloakAngularModule} from 'keycloak-angular';
 import {NotifierModule, NotifierService} from "angular-notifier";
 import {NavComponent} from './nav/nav.component';
 import {SpinnerComponent} from "./spinner/spinner.component";
-import {SidebarComponent} from './sidebar/sidebar.component';
 import {MyProjectsComponent} from './my-projects/my-projects.component';
 import {ProjectDetailComponent} from './project-detail/project-detail.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {TabsModule} from "ngx-bootstrap";
 
 declare var fs: any;
 
@@ -29,6 +30,7 @@ declare var fs: any;
   ],
   imports: [
     BrowserModule,
+    TabsModule.forRoot(),
     KeycloakAngularModule,
     AppRoutingModule,
     HttpClientModule,
@@ -47,7 +49,8 @@ declare var fs: any;
       behaviour: {
         autoHide: 5000
       }
-    })],
+    }),
+    BrowserAnimationsModule],
 
   providers: [HttpClient,
     {provide: HTTP_INTERCEPTORS, useClass: RequestInterceptorService, multi: true},
