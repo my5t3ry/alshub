@@ -8,13 +8,23 @@
     <a (click)="selectParentDir()">..</a>
   </div>
 </div>
-<div *ngFor="let item of items" class="row">
-  <div class="col-12" *ngIf="item.type == 'DIRECTORY'">
-    <fa name="fas fa-folder"></fa>
-    <a (click)="selectDir(item)"> {{item.name}} </a>
+<div *ngFor="let item of items">
+
+  <div class="row" *ngIf="item.type == 'DIRECTORY'">
+    <div class="col-10">
+
+      <fa name="fas fa-folder"></fa>
+      <a (click)="selectDir(item)"> {{item.name}} </a>
+
+    </div>
+    <div class="col-2 folder-action-icons-container">
+      <fa (click)="addProject(item)"  *ngIf="item.abletonProject" name="fas fa-plus"></fa>
+    </div>
   </div>
-  <div class="col-12" *ngIf="item.type == 'FILE'">
-    <fa name="far fa-file"></fa>
-    {{item.name}}
+  <div class="row" *ngIf="item.type == 'FILE'">
+    <div class="col-12">
+      <fa name="far fa-file"></fa>
+      {{item.name}}
+    </div>
   </div>
 </div>

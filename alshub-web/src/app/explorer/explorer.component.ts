@@ -54,4 +54,12 @@ export class ExplorerComponent implements OnInit {
           this.refresh(data);
         });
   }
+
+  addProject(item: any) {
+    this.http.post(this.endpoint + '/add-project/', {path: item.absolutePath})
+      .subscribe(
+        data => {
+          this.refresh(data);
+        });
+  }
 }
