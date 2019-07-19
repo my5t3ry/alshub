@@ -8,6 +8,10 @@
     <version>0.0.1-SNAPSHOT</version>
     <artifactId>alshub-shared-model</artifactId>
     <packaging>jar</packaging>
+
+    <properties>
+        <java.version>12</java.version>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
