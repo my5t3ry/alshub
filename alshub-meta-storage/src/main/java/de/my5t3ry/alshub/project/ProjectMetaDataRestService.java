@@ -13,7 +13,7 @@ public class ProjectMetaDataRestService {
 
     @GetMapping("/by-project-id/{projectId}")
     public ResponseEntity<ProjectMetaData> get(@PathVariable("projectId") Integer projectId) {
-        return new ResponseEntity<>(projectMetaDataRepository.findByProjectOd(projectId), HttpStatus.OK);
+        return new ResponseEntity<>(projectMetaDataRepository.findByProjectId(projectId), HttpStatus.OK);
     }
 
     @PostMapping(path = "/")
