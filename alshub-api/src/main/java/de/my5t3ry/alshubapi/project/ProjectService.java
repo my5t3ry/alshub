@@ -36,6 +36,7 @@ public class ProjectService {
         createStats(project);
         projectRepository.save(project);
         final ProjectMetaData projectMetaData = projectMetaDataService.createProjectMetaData(project, principal);
+
         final User user = userController.getUser(principal);
         user.addProject(project);
         userRepository.save(user);
