@@ -73,11 +73,7 @@ public class ProjectMetaDataService {
                 .header("Content-Type", "application/json")
                 .POST(HttpRequest.BodyPublishers.ofString(objectMapper.writeValueAsString(projectMetaData)))
                 .build();
-        final String body = HttpClient.newHttpClient().send(HttpRequest.newBuilder()
-                .uri(URI.create(API_URL))
-                .build(), HttpResponse.BodyHandlers.ofString()).body();
+        final String body = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString()).body();
         return objectMapper.readValue(body, ProjectMetaData.class);
     }
-
-
 }

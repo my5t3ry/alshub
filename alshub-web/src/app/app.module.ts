@@ -17,6 +17,7 @@ import {ProjectDetailComponent} from './project-detail/project-detail.component'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {TabsModule} from "ngx-bootstrap";
 import {ErrorComponent} from "./error/error.component";
+import { ProjectCardMetaDataComponent } from './project-card-meta-data/project-card-meta-data.component';
 
 declare var fs: any;
 
@@ -28,7 +29,8 @@ declare var fs: any;
     NavComponent,
     ErrorComponent,
     MyProjectsComponent,
-    ProjectDetailComponent
+    ProjectDetailComponent,
+    ProjectCardMetaDataComponent
   ],
   imports: [
     BrowserModule,
