@@ -6,7 +6,6 @@ import {AppComponent} from './app.component';
 import {ExplorerComponent} from './explorer/explorer.component';
 import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule, HttpHandler} from "@angular/common/http";
 import {initializer} from "../app-init";
-import {SpinnerService} from "../spinnner.service";
 import {RequestInterceptorService} from "../request-interceptor.service";
 import {KeycloakService, KeycloakAngularModule} from 'keycloak-angular';
 import {NotifierModule, NotifierService} from "angular-notifier";
@@ -15,10 +14,11 @@ import {SpinnerComponent} from "./spinner/spinner.component";
 import {MyProjectsComponent} from './my-projects/my-projects.component';
 import {ProjectDetailComponent} from './project-detail/project-detail.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {TabsModule} from "ngx-bootstrap";
+import {BsDropdownModule, TabsModule} from "ngx-bootstrap";
 import {ErrorComponent} from "./error/error.component";
-import { ProjectCardMetaDataComponent } from './project-card-meta-data/project-card-meta-data.component';
-import { FooterComponent } from './footer/footer.component';
+import {ProjectCardMetaDataComponent} from './project-card-meta-data/project-card-meta-data.component';
+import {FooterComponent} from './footer/footer.component';
+import {SpinnerService} from "../spinnner.service";
 
 declare var fs: any;
 
@@ -37,6 +37,7 @@ declare var fs: any;
   imports: [
     BrowserModule,
     TabsModule.forRoot(),
+    BsDropdownModule.forRoot(),
     KeycloakAngularModule,
     AppRoutingModule,
     HttpClientModule,
@@ -60,7 +61,6 @@ declare var fs: any;
 
   providers: [HttpClient,
     {provide: HTTP_INTERCEPTORS, useClass: RequestInterceptorService, multi: true},
-    // { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptorService, multi: true },
     SpinnerService,
     NotifierService,
     {

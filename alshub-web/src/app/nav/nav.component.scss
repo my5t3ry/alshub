@@ -1,5 +1,5 @@
 .navbar-container {
-margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 
@@ -115,4 +115,15 @@ margin-bottom: 10px;
   .navbar-icon-top.navbar-expand-xl .navbar-nav .nav-link > .fa > .badge {
     top: -7px;
   }
+}
+
+div.dropdown-menu {
+  top: 88%;
+  left: -480%;
+  right: -12%;
+}
+
+.menu-icon {
+margin-right: 5px
+;
 }

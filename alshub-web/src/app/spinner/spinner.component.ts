@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {SpinnerService} from "../../spinnner.service";
 
@@ -11,7 +11,8 @@ export class SpinnerComponent implements OnInit {
 
   public visibility: boolean;
 
-  constructor(private _http: HttpClient, private spinnerService: SpinnerService) { }
+  constructor(private _http: HttpClient, private spinnerService: SpinnerService) {
+  }
 
   ngOnInit() {
     this.spinnerService.visibility.subscribe(state => {

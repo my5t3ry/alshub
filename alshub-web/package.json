@@ -27,10 +27,12 @@
     "evil-icons": "^1.10.1",
     "fs": "0.0.1-security",
     "install": "^0.13.0",
+    "jquery": "^3.4.1",
     "keycloak-angular": "^7.0.1",
     "keycloak-js": "^6.0.1",
     "ngx-bootstrap": "^5.1.0",
     "npm": "^6.10.1",
+    "popper.js": "^1.15.0",
     "rxjs": "~6.3.3",
     "uninstall": "0.0.0",
     "zone.js": "~0.8.26"
@@ -61,8 +63,8 @@
   "main": "http://alshub.local",
   "node-remote": "http://alshub.local",
   "window": {
-    "width": 960,
-    "height": 600,
+    "width": 1280,
+    "height": 720,
     "min_width": 700,
     "min_height": 500,
     "icon": "your-app-logo.png"
