@@ -1,5 +1,29 @@
+<div class="row">
+  <div class="col-12">
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+        <button (click)="checkForChanges()" type="button" class="btn btn-dark">
+          <i class="fas fa-sync"></i>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
 <div class="row" *ngIf="project">
   <div class="col-12">
     {{project.name}}
+
+  </div>
+</div>
+<div class="row" *ngIf="changes">
+  <div class="col-12">
+    <div class="row" *ngFor="let change of changes">
+      <div class="col-6">
+        {{change.type}}
+      </div>
+      <div class="col-6">
+        {{change.path}}
+      </div>
+    </div>
   </div>
 </div>

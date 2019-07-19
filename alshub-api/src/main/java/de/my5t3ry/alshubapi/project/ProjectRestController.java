@@ -1,5 +1,6 @@
 package de.my5t3ry.alshubapi.project;
 
+import de.my5t3ry.alshubapi.git.GitService;
 import de.my5t3ry.alshubapi.user.UserController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,6 +20,8 @@ public class ProjectRestController {
     private ProjectRepository projectRepository;
     @Autowired
     private UserController userController;
+    @Autowired
+    private GitService gitService;
 
     @GetMapping("/my-projects")
     public ResponseEntity<List<Project>> get(Principal principal) {
@@ -29,5 +32,10 @@ public class ProjectRestController {
     @GetMapping("/{projectId}")
     public ResponseEntity<Project> get(@PathVariable("projectId") Integer projectId) {
         return new ResponseEntity<>(projectRepository.findById(projectId).get(), HttpStatus.OK);
+    }
+
+    @GetMapping("/get-changes/{projectId}")
+    public ResponseEntity<ProjectChanges> getChanges(@PathVariable("projectId") Integer projectId) {
+        return new ResponseEntity<>(gitService.checkChanges(projectRepository.findById(projectId).get()), HttpStatus.OK);
     }
 }

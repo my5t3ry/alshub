@@ -15,6 +15,7 @@ export class ProjectDetailComponent implements OnInit {
     headers: new HttpHeaders({'Content-Type': 'application/json', 'Accept': 'application/json'})
   };
   project: any;
+  changes: any;
 
   constructor(private http: HttpClient, private route: ActivatedRoute) {
   }
@@ -25,10 +26,25 @@ export class ProjectDetailComponent implements OnInit {
       this.receiveProject(this.projectId).subscribe(data => {
         this.project = data;
       });
+      this.fetchChanges();
+    });
+  }
+
+  private fetchChanges() {
+    this.receiveChanges(this.projectId).subscribe(data => {
+      this.changes = data.changeList;
     });
   }
 
   receiveProject(id): Observable<any> {
     return this.http.get<any>(this.endpoint + "/" + id, this.httpOptions).pipe();
+  }
+
+  receiveChanges(id): Observable<any> {
+    return this.http.get<any>(this.endpoint + "/get-changes/" + id, this.httpOptions).pipe();
+  }
+
+  checkForChanges() {
+    this.fetchChanges();
   }
 }

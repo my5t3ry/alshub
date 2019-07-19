@@ -2,11 +2,13 @@ package de.my5t3ry.alshubapi.git;
 
 import com.jcraft.jsch.Session;
 import de.my5t3ry.alshubapi.project.Project;
+import de.my5t3ry.alshubapi.project.ProjectChange;
+import de.my5t3ry.alshubapi.project.ProjectChangeType;
+import de.my5t3ry.alshubapi.project.ProjectChanges;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.PushCommand;
+import org.eclipse.jgit.api.Status;
 import org.eclipse.jgit.api.errors.GitAPIException;
-import org.eclipse.jgit.api.errors.InvalidRemoteException;
-import org.eclipse.jgit.api.errors.TransportException;
 import org.eclipse.jgit.lib.StoredConfig;
 import org.eclipse.jgit.transport.JschConfigSessionFactory;
 import org.eclipse.jgit.transport.OpenSshConfig;
@@ -19,6 +21,7 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.Set;
 
 
 @Component
@@ -66,14 +69,59 @@ public class GitService {
                     .call();
             PushCommand pushCommand = newLocalRepository.push();
             pushCommand.call();
+        } catch (IOException | GitAPIException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public ProjectChanges checkChanges(Project project) {
+        ProjectChanges result = new ProjectChanges();
+        try {
+            Git git = null;
+            git = Git.open(new File(project.getPath()));
+            Status status = git.status().call();
+            Set<String> conflicting = status.getConflicting();
+            for (String conflict : conflicting) {
+                result.addChange(new ProjectChange(ProjectChangeType.CONFLICT, conflict));
+            }
+            Set<String> added = status.getAdded();
+            for (String add : added) {
+                result.addChange(new ProjectChange(ProjectChangeType.ADDED, add));
+            }
+            Set<String> changed = status.getChanged();
+            for (String change : changed) {
+                result.addChange(new ProjectChange(ProjectChangeType.CHANGE, change));
+            }
+            Set<String> missing = status.getMissing();
+            for (String miss : missing) {
+                result.addChange(new ProjectChange(ProjectChangeType.MISSING, miss));
+            }
+            Set<String> modified = status.getModified();
+            for (String modify : modified) {
+                result.addChange(new ProjectChange(ProjectChangeType.MODIFICATION, modify));
+            }
+            Set<String> removed = status.getRemoved();
+            for (String remove : removed) {
+                result.addChange(new ProjectChange(ProjectChangeType.REMOVED, remove));
+            }
+            Set<String> uncommittedChanges = status.getUncommittedChanges();
+            for (String uncommitted : uncommittedChanges) {
+                result.addChange(new ProjectChange(ProjectChangeType.UNCOMMITED, uncommitted));
+            }
+            Set<String> untracked = status.getUntracked();
+            for (String untrack : untracked) {
+                result.addChange(new ProjectChange(ProjectChangeType.UNTRACKED, untrack));
+            }
+            Set<String> untrackedFolders = status.getUntrackedFolders();
+            for (String untrack : untrackedFolders) {
+                result.addChange(new ProjectChange(ProjectChangeType.UNTRACKED, untrack));
+            }
         } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InvalidRemoteException e) {
-            e.printStackTrace();
-        } catch (TransportException e) {
             e.printStackTrace();
         } catch (GitAPIException e) {
             e.printStackTrace();
         }
+        return result;
+
     }
 }

@@ -13,17 +13,17 @@
   <div class="row" *ngIf="item.type == 'DIRECTORY'">
     <div class="col-10">
 
-      <fa name="fas fa-folder"></fa>
+      <i class="fas fa-folder"></i>
       <a (click)="selectDir(item)"> {{item.name}} </a>
 
     </div>
     <div class="col-2 folder-action-icons-container">
-      <fa (click)="addProject(item)"  *ngIf="item.abletonProject" name="fas fa-plus"></fa>
+      <i (click)="addProject(item)" *ngIf="item.abletonProject" class="fas fa-plus-square"></i>
     </div>
   </div>
   <div class="row" *ngIf="item.type == 'FILE'">
     <div class="col-12">
-      <fa name="far fa-file"></fa>
+      <i class="far fa-file"></i>
       {{item.name}}
     </div>
   </div>
