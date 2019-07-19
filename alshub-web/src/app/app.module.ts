@@ -18,6 +18,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {TabsModule} from "ngx-bootstrap";
 import {ErrorComponent} from "./error/error.component";
 import { ProjectCardMetaDataComponent } from './project-card-meta-data/project-card-meta-data.component';
+import { FooterComponent } from './footer/footer.component';
 
 declare var fs: any;
 
@@ -30,7 +31,8 @@ declare var fs: any;
     ErrorComponent,
     MyProjectsComponent,
     ProjectDetailComponent,
-    ProjectCardMetaDataComponent
+    ProjectCardMetaDataComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
