@@ -60,6 +60,11 @@
             <scope>runtime</scope>
         </dependency>
         <dependency>
+            <groupId>de.my5t3ry</groupId>
+            <artifactId>als-parser</artifactId>
+            <version>0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
@@ -80,7 +85,6 @@
             <version>1.0.10.RELEASE</version>
         </dependency>
     </dependencies>
-
 
 
     <dependencyManagement>

@@ -1,5 +1,6 @@
 package de.my5t3ry.alshubapi.project;
 
+import de.my5t3ry.als_parser.domain.AbletonProject.AbletonProject;
 import de.my5t3ry.alshubapi.explorer.SetPathRequest;
 import de.my5t3ry.alshubapi.user.User;
 import lombok.Data;
@@ -20,6 +21,9 @@ public class Project {
     private String remoteGitUrl;
     @ManyToOne
     private User user;
+    private String alsFile;
+    @OneToOne(cascade = CascadeType.ALL)
+    private AbletonProject abletonProject;
 
     public Project() {
     }
@@ -35,5 +39,21 @@ public class Project {
 
     public User getUser() {
         return user;
+    }
+
+    public void setAlsFile(final String alsFile) {
+        this.alsFile = alsFile;
+    }
+
+    public String getAlsFile() {
+        return alsFile;
+    }
+
+    public void setAbletonProject(final AbletonProject abletonProject) {
+        this.abletonProject = abletonProject;
+    }
+
+    public AbletonProject getAbletonProject() {
+        return abletonProject;
     }
 }

@@ -9,10 +9,12 @@ import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.PushCommand;
 import org.eclipse.jgit.api.Status;
 import org.eclipse.jgit.api.errors.GitAPIException;
+import org.eclipse.jgit.lib.RepositoryCache;
 import org.eclipse.jgit.lib.StoredConfig;
 import org.eclipse.jgit.transport.JschConfigSessionFactory;
 import org.eclipse.jgit.transport.OpenSshConfig;
 import org.eclipse.jgit.transport.SshSessionFactory;
+import org.eclipse.jgit.util.FS;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
@@ -44,9 +46,11 @@ public class GitService {
 
     public void createNewRepositoryForProject(final Project project) {
         try {
-            final String uuid = client.send(request, HttpResponse.BodyHandlers.ofString()).body();
-            project.setGitUuid(uuid);
-            this.createAndPushLocalRepo(project);
+            if (!RepositoryCache.FileKey.isGitRepository(new File(project.getPath()), FS.DETECTED)) {
+                final String uuid = client.send(request, HttpResponse.BodyHandlers.ofString()).body();
+                project.setGitUuid(uuid);
+                this.createAndPushLocalRepo(project);
+            }
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
@@ -122,6 +126,5 @@ public class GitService {
             e.printStackTrace();
         }
         return result;
-
     }
 }

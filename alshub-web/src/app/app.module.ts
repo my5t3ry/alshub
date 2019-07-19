@@ -10,11 +10,11 @@ import {SpinnerService} from "../spinnner.service";
 import {RequestInterceptorService} from "../request-interceptor.service";
 import {KeycloakService, KeycloakAngularModule} from 'keycloak-angular';
 import {NotifierModule, NotifierService} from "angular-notifier";
-import { NavComponent } from './nav/nav.component';
+import {NavComponent} from './nav/nav.component';
 import {SpinnerComponent} from "./spinner/spinner.component";
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { MyProjectsComponent } from './my-projects/my-projects.component';
-import { ProjectDetailComponent } from './project-detail/project-detail.component';
+import {SidebarComponent} from './sidebar/sidebar.component';
+import {MyProjectsComponent} from './my-projects/my-projects.component';
+import {ProjectDetailComponent} from './project-detail/project-detail.component';
 
 declare var fs: any;
 
@@ -24,7 +24,6 @@ declare var fs: any;
     ExplorerComponent,
     SpinnerComponent,
     NavComponent,
-    SidebarComponent,
     MyProjectsComponent,
     ProjectDetailComponent
   ],

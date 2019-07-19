@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/alshub-api/pom.xml" />
         <option value="$PROJECT_DIR$/alshub_git_api/pom.xml" />
+        <option value="$PROJECT_DIR$/../als-parser/pom.xml" />
       </list>
     </option>
   </component>

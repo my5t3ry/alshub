@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="als-parser" />
         <module name="alshub_git_api" />
         <module name="alshub-api" />
         <module name="alshub" />
