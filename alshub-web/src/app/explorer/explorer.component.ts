@@ -59,7 +59,7 @@ export class ExplorerComponent implements OnInit {
     this.http.post(this.endpoint + '/add-project/', {path: item.absolutePath})
       .subscribe(
         data => {
-          this.refresh(data);
+          console.log(data)
         });
   }
 }
