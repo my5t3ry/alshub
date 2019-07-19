@@ -11,9 +11,9 @@ export class ErrorComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) {
   }
-  private errorCode = 0;
+  errorCode = 0;
 
-  private messages = {
+  messages = {
     0: 'unbekannter Fehler',
     500: 'Backend Fehler',
     405: 'Zugriff verweigert.'

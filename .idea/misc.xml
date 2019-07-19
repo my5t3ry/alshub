@@ -9,10 +9,11 @@
         <option value="$PROJECT_DIR$/alshub_git_api/pom.xml" />
         <option value="$PROJECT_DIR$/../als-parser/pom.xml" />
         <option value="$PROJECT_DIR$/alshub-meta-storage/pom.xml" />
+        <option value="$PROJECT_DIR$/alshub-serv/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="12 (2)" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8.0_212 (2)" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

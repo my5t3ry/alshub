@@ -12,7 +12,7 @@ import {RequestInterceptorService} from "../../request-interceptor.service";
 })
 export class ProjectDetailComponent implements OnInit {
   projectId: any;
-  private endpoint = 'http://localhost:8090/api/project';
+  endpoint = 'http://localhost:8090/api/project';
 
   project: any;
   changes: any;
@@ -30,7 +30,7 @@ export class ProjectDetailComponent implements OnInit {
     });
   }
 
-  private fetchChanges() {
+  fetchChanges() {
     this.receiveChanges(this.projectId).subscribe(data => {
       this.changes = data.changeList;
     });

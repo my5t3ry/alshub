@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "concurrently \"ng serve --port=8964\" \"nw .\"",
+    "buildbin": "node-pre-gyp install --fallback-to-build",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -35,6 +36,7 @@
     "popper.js": "^1.15.0",
     "rxjs": "~6.3.3",
     "uninstall": "0.0.0",
+    "node-pre-gyp": "0.6.x",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
@@ -43,6 +45,7 @@
     "@angular/cli": "~7.0.3",
     "@angular/compiler-cli": "~7.0.0",
     "@angular/language-service": "~7.0.0",
+    "aws-sdk": "2.x",
     "@fortawesome/fontawesome-free": "^5.9.0",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
@@ -60,8 +63,8 @@
     "tslint": "~5.11.0",
     "typescript": "~3.1.1"
   },
-  "main": "http://alshub.local",
-  "node-remote": "http://alshub.local",
+  "main": "http://localhost:8009/index.html",
+  "node-remote": "http://localhost:8090/api/index.html",
   "window": {
     "width": 1280,
     "height": 720,
@@ -73,5 +76,13 @@
     "fs": false,
     "path": false,
     "os": false
+  },
+  "binary": {
+    "module_name": "test",
+    "module_path": "./lib/binding/",
+    "host": "https://your_module.s3-us-west-1.amazonaws.com"
+  },
+  "developer": {
+    "showDevToolsOnStartup": true
   }
 }

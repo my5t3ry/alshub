@@ -45,7 +45,7 @@ export class RequestInterceptorService implements HttpInterceptor {
     )
   }
 
-  private handleMessage(req: HttpResponse<any>) {
+  handleMessage(req: HttpResponse<any>) {
     if (req.headers.get("message")) {
       this.notifierService.notify(req.headers.get("message-type"), req.headers.get("message"));
     }

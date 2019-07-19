@@ -7,19 +7,21 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="als-parser" />
-        <module name="alshub_git_api" />
         <module name="alshub-api" />
-        <module name="alshub-shared-model" />
+        <module name="alshub-git-api" />
         <module name="alshub-meta-storage" />
+        <module name="alshub-serv" />
+        <module name="alshub-shared-model" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="alshub-api" options="-parameters" />
+      <module name="alshub-git-api" options="-parameters" />
       <module name="alshub-meta-storage" options="-parameters" />
+      <module name="alshub-serv" options="-parameters" />
       <module name="alshub-shared-model" options="" />
-      <module name="alshub_git_api" options="-parameters" />
     </option>
   </component>
 </project>

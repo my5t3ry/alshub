@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@fortawesome/fontawesome-free/css/all.css';
-@import "~node_modules/angular-notifier/styles";
+@import "~angular-notifier/styles";
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
 body {
@@ -16,7 +16,6 @@ body {
   background: whitesmoke;
   opacity: 0.8;
   padding: 1rem 1rem;
-  height: 560px;
 }
 
 .main-container {

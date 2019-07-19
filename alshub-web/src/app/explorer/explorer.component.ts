@@ -12,9 +12,9 @@ import {RequestInterceptorService} from "../../request-interceptor.service";
 })
 export class ExplorerComponent implements OnInit {
 
-  private endpoint = 'http://localhost:8090/api/explorer';
+  endpoint = 'http://localhost:8090/api/explorer';
 
-  private items: any;
+  items: any;
   path: any;
 
   constructor(private http: HttpClient, private router: Router, private notifierService: NotifierService) {
