@@ -3,8 +3,11 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/../als-parser" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/alshub-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/alshub-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/alshub-git-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/alshub-meta-storage" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/alshub-meta-storage" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/alshub-serv" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/alshub-serv" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/alshub-shared-model" charset="UTF-8" />
   </component>
