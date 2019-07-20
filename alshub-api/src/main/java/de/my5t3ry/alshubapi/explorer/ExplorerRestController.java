@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.io.File;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.security.Principal;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -85,7 +84,7 @@ public class ExplorerRestController {
 
     @PostMapping(path = "/set-parent")
     public ResponseEntity<ExplorerPathResult> setParent() {
-        this.curPath = Path.of(this.curPath).getParent().toAbsolutePath().toString();
+        this.curPath = new File(new File(this.curPath).getParent()).getAbsolutePath();
         final ExplorerPathResult result = getCurrentItems();
         return new ResponseEntity<>(result, HttpStatus.OK);
     }

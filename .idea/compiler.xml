@@ -7,14 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="als-parser" />
-        <module name="alshub-api" />
-        <module name="alshub-meta-storage" />
         <module name="alshub-serv" />
+        <module name="alshub-api" />
+        <module name="alshub-shared-model" />
+        <module name="alshub-meta-storage" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="alshub-git-api" target="12" />
-      <module name="alshub-shared-model" target="12" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

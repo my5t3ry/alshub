@@ -5,17 +5,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import de.my5t3ry.alshub.project.ProjectMetaData;
 import de.my5t3ry.alshubapi.error.ProcessingException;
 import de.my5t3ry.alshubapi.user.UserController;
+import kong.unirest.Unirest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
 import java.security.Principal;
-import java.time.Duration;
 import java.util.HashMap;
 import java.util.UUID;
 
@@ -67,20 +63,13 @@ public class ProjectMetaDataService {
     }
 
     private ProjectMetaData getQueryProjectMetaData(Integer projectId) throws IOException, InterruptedException {
-        final String resultJson = HttpClient.newHttpClient().send(HttpRequest.newBuilder()
-                .uri(URI.create(API_URL + "/by-project-id/" + projectId))
-                .build(), HttpResponse.BodyHandlers.ofString()).body();
+        final String resultJson =        Unirest.get(API_URL + "/by-project-id/" + projectId) .asString().getBody();
+
         return objectMapper.readValue(resultJson, ProjectMetaData.class);
     }
 
     private ProjectMetaData putQueryProjectMetaData(ProjectMetaData projectMetaData) throws IOException, InterruptedException {
-        final HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(API_URL))
-                .timeout(Duration.ofMinutes(1))
-                .header("Content-Type", "application/json")
-                .POST(HttpRequest.BodyPublishers.ofString(objectMapper.writeValueAsString(projectMetaData)))
-                .build();
-        final String body = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString()).body();
+        final String body =  Unirest.get(API_URL) .asString().getBody();
         return objectMapper.readValue(body, ProjectMetaData.class);
     }
 }

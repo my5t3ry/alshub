@@ -5,6 +5,7 @@ import de.my5t3ry.alshubapi.project.Project;
 import de.my5t3ry.alshubapi.project.ProjectChange;
 import de.my5t3ry.alshubapi.project.ProjectChangeType;
 import de.my5t3ry.alshubapi.project.ProjectChanges;
+import kong.unirest.Unirest;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.PushCommand;
 import org.eclipse.jgit.api.Status;
@@ -19,10 +20,6 @@ import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
 import java.util.Set;
 
 
@@ -41,16 +38,10 @@ public class GitService {
     }
 
     public void createNewRepositoryForProject(final Project project) {
-        try {
-            if (!RepositoryCache.FileKey.isGitRepository(new File(project.getPath()), FS.DETECTED)) {
-                final String uuid = HttpClient.newHttpClient().send(HttpRequest.newBuilder()
-                        .uri(URI.create(API_URL))
-                        .build(), HttpResponse.BodyHandlers.ofString()).body();
-                project.setGitUuid(uuid);
-                this.createAndPushLocalRepo(project);
-            }
-        } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
+        if (!RepositoryCache.FileKey.isGitRepository(new File(project.getPath()), FS.DETECTED)) {
+            final String uuid = Unirest.get(API_URL) .asString().getBody();
+            project.setGitUuid(uuid);
+            this.createAndPushLocalRepo(project);
         }
     }
 
