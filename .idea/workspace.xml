@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60bb6e59-dc4d-4c7e-a355-d132b967a7b3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-meta-storage/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-meta-storage/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-meta-storage/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-serv/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-serv/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -71,10 +67,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/alshub-git-api/pom.xml">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+            <state relative-caret-position="243">
+              <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -124,7 +120,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/alshub-meta-storage/src/main/java/de/my5t3ry/alshub/config/ElasticsearchTemplate.java" />
         <option value="$PROJECT_DIR$/alshub-meta-storage/src/main/java/de/my5t3ry/alshub/config/ElsConfig.java" />
         <option value="$PROJECT_DIR$/alshub-meta-storage/src/main/java/de/my5t3ry/alshub/ElasticsearchConfig.java" />
         <option value="$PROJECT_DIR$/alshub-meta-storage/src/main/java/de/my5t3ry/alshub/ElasticsearchConfiguration.java" />
@@ -175,6 +170,7 @@
         <option value="$PROJECT_DIR$/alshub-serv/pom.xml" />
         <option value="$PROJECT_DIR$/alshub-meta-storage/.mvn/wrapper/MavenWrapperDownloader.java" />
         <option value="$PROJECT_DIR$/alshub-meta-storage/pom.xml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -500,7 +496,7 @@
       <workItem from="1563511146976" duration="21022000" />
       <workItem from="1563536117791" duration="18412000" />
       <workItem from="1563579107518" duration="11929000" />
-      <workItem from="1563623991540" duration="2314000" />
+      <workItem from="1563623991540" duration="2976000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore">
       <created>1563483607877</created>
@@ -733,11 +729,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563624098129</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="downgrade to jdk 8 for graal compatibilty">
+      <created>1563646146596</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1563646146596</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97651000" />
+    <option name="totallyTimeSpent" value="98313000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="33" width="3206" height="1770" extended-state="6" />
@@ -807,13 +810,6 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/2.6/commons-io-2.6-sources.jar!/org/apache/commons/io/filefilter/DirectoryFileFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="59" column="14" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/alshub-web/src/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -1142,6 +1138,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
         </state>
       </provider>
     </entry>
