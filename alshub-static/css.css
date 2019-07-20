@@ -1,0 +1,30 @@
+a:link    {color:#000;}  /* unvisited link  */
+a:visited {color:#000;}  /* visited link    */
+a:hover   {color:#000;}  /* mouse over link */
+a:active  {color:#000;}  /* selected link   */
+.logo {
+    background: url("icon.svg");
+    height: 500px;
+    position: absolute;
+    vertical-align: center;
+    horiz-align: center;
+    width: 500px;
+    left: 50%;
+    top: 40%;
+}
+
+body {
+    background: url("bg.png");
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.content {
+    background-color: gray;
+    opacity: .9;
+    width: 600px;
+    height: auto;
+    position: absolute;
+    left: 200px;
+    top: 100px;
+    padding: 20px;
+}
