@@ -22,6 +22,7 @@ import {SpinnerService} from "../spinnner.service";
 import {ProjectDetailEditComponent} from './project-detail-edit/project-detail-edit.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {TagInputModule} from "ngx-chips";
+import {PictureGalleryComponent} from "./picture-gallery/picture-gallery.component";
 
 declare var fs: any;
 
@@ -36,6 +37,7 @@ declare var fs: any;
     ProjectDetailComponent,
     ProjectCardMetaDataComponent,
     FooterComponent,
+    PictureGalleryComponent,
     ProjectDetailEditComponent
   ],
   imports: [

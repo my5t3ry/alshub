@@ -1,4 +1,4 @@
-<form *ngIf="projectForm" [formGroup]="projectForm">
+<form class="project-meta-edit-form" *ngIf="projectForm" [formGroup]="projectForm">
 
   <!--  <div class="form-group">-->
   <!--    <label for="exampleInputPassword1">Password</label>-->
@@ -9,7 +9,7 @@
   <!--    <label class="form-check-label" for="exampleCheck1">Check me out</label>-->
   <!--  </div>-->
 
-  <div class="row" *ngIf="project">
+  <div class="row">
     <div class="col-12">
       <div class="form-group">
         <label for="exampleInputEmail1">Project name</label>
@@ -17,88 +17,71 @@
       </div>
     </div>
   </div>
-  <div class="row" *ngIf="project">
+  <div class="row">
     <div class="col-12">
-      <tabset>
-        <tab heading="Info" id="project-info">
-          <div class="row">
-            <div class="col-2">
-              Created on:
-            </div>
-            <div class="col-10">
-              {{project.abletonProject.creationFileTime}}
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              External plugins:
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <tag-input formControlName="devices" [identifyBy]="'id'" [displayBy]="'name'"></tag-input>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              Genres:
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <tag-input formControlName="genres" [identifyBy]="'id'" [displayBy]="'name'"></tag-input>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-                <button type="submit" (click)="save()" class="btn btn-primary">Save</button>
+      <!--          <div class="row">-->
+      <!--            <div class="col-2">-->
+      <!--              Created on:-->
+      <!--            </div>-->
+      <!--            <div class="col-10">-->
+      <!--              {{project.abletonProject.creationFileTime}}-->
+      <!--            </div>-->
+      <!--          </div>-->
 
-            </div>
+      <div class="row mt-2">
+        <div class="col-12">
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" formControlName="description"></textarea>
           </div>
-        </tab>
-        <tab heading="Changes">
-          <div class="row">
-            <div class="col-12">
-              <ul class="nav justify-content-end">
-                <li class="nav-item">
-                  <button  type="button" class="btn btn-dark">
-                    <i class="fas fa-sync"></i>
-                  </button>
-                </li>
-                <li class="nav-item">
-                  <button type="button" class="btn btn-dark">
-                    <i class="fas fa-cloud-upload-alt"></i>
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="row" *ngIf="changes">
-            <div class="col-12">
-              <div class="row" *ngFor="let change of changes">
-                <div class="col-6">
-                  {{change.type}}
-                </div>
-                <div class="col-6">
-                  {{change.path}}
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-12">
+          <div class="form-group">
+            <label for="description">Picture</label>
+            <div *ngIf="pictureData">
+              <div class="picture-preview-container">
+                <img class="banner-picture-preview" src="{{pictureData}}">
+                <div class="picture-preview-button-container">
+                  <div type='button' ngbTooltip="Löschen" name='delete' (click)="initReset()" class='box'>
+                    <div class='box-left'>
+                      <i class='but-icon fa fa-lg fa-times'></i>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="row" *ngIf="!changes || changes.length == 0">
-            <div class="col-12">
+            <div *ngIf="!pictureData">
               <div class="row">
                 <div class="col-12">
-                  no changes since the last push
+                  <app-picture-gallery (onPictureSelect)="pictureSelectHandler($event)"></app-picture-gallery>
                 </div>
               </div>
             </div>
           </div>
-        </tab>
-        <tab heading="History">history</tab>
-      </tabset>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="col-12">
+          <label for="external-plugins-input">External plugins</label>
+          <tag-input id="external-plugins-input" formControlName="devices" [identifyBy]="'id'" [displayBy]="'name'"></tag-input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <label for="genres-input">Genres</label>
+          <tag-input id="genres-input" formControlName="genres" [identifyBy]="'id'" [displayBy]="'name'"></tag-input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <button type="submit" (click)="save()" class="btn btn-primary">Save</button>
+        </div>
+      </div>
     </div>
   </div>
-
 </form>
 

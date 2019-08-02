@@ -17,6 +17,7 @@ public class Project {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String name;
+    private String description;
     private String path;
     private String gitUuid;
     private String remoteGitUrl;

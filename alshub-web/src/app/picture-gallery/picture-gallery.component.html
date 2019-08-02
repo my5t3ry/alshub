@@ -1,0 +1,62 @@
+<button (click)="showPictureSelectModal(pictureGalleryContent)" class="btn btn-primary pull-left" id="select-picture" placement="top" type="button" ngbTooltip="Bild auswählen" tooltipClass="custom-tooltip">
+  Gallery öffnen
+  <i class="fa fa-edit"></i>
+</button>
+<ng-template #pictureGalleryContent let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Bild Archiv</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div *ngIf="pictures.length > 0">
+      <div class="picture-gallery-wrapper">
+        <div *ngFor="let picture of pictures">
+          <div class="picture-preview-container">
+            <img class="banner-picture-preview" [attr.data-id]="picture.id" (click)="clickPicture($event)" #picturePreview src="data:image/jpg;base64,{{picture.base64}}">
+            <div *ngIf="!editMode" class="picture-preview-button-container" (click)="picturePreview.click()">
+              <div type='button' name='delete'
+                   class='box'>
+                <div class='box-left'>
+                  <i class='but-icon fa fa-lg fa-plus-circle'></i>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="editMode" class="picture-preview-button-container" (click)="picturePreview.click()">
+              <div type='button' name='delete'
+                   class='box'>
+                <div class='box-left'>
+                  <i class='but-icon fa fa-lg fa-trash'></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="pictures.length == 0">
+      Für dieses Motiv wurden noch keine Bilder hochgeladen.
+    </div>
+  </div>
+  <div class="modal-footer">
+    <div class="upload-wrap pull-left">
+      <button type="button" title="Bild hinzufügen" class="btn btn-primary fa fa-plus"></button>
+      <input type="file" class="upload-btn" (change)="onFileChange($event)"/>
+    </div>
+  </div>
+</ng-template>
+<ng-template #deletePictureConfirmationContent let-modal>
+  <!--<div class="modal-header">-->
+  <!--<h4 class="modal-title" id="modal-title">Banner löschen</h4>-->
+  <!--</div>-->
+  <div class="modal-body">
+    <p><strong>Wollen Sie dieses Bild wirklich löschen?</strong></p>
+    <p>Dies Aktion kann nicht rückgängig gemacht werden.
+    </p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-success" (click)="modal.dismiss('cancel click')">Nein</button>
+    <button type="button" class="btn btn-primary" (click)="modal.close('Ok click')">Ja</button>
+  </div>
+</ng-template>

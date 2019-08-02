@@ -22,6 +22,8 @@ public class ProjectMetaData {
     private String name;
     @Field(type = FieldType.Text, store = true)
     private String genres;
+    @Field(type = FieldType.Text, store = true)
+    private String description;
     @Field(type = FieldType.Integer, store = true)
     private Integer projectId = 0;
     @Field(type = FieldType.Integer, store = true)

@@ -12,12 +12,18 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
   styleUrls: ['./project-detail-edit.component.scss']
 })
 export class ProjectDetailEditComponent implements OnInit {
+  get pictureData(): string {
+    return this._pictureData;
+  }
+
   projectId: any;
   endpoint = 'http://localhost/api/project';
 
   project: any;
   changes: any;
   public projectForm: FormGroup;
+  private _pictureData: string = null;
+
 
   constructor(private http: HttpClient, private route: ActivatedRoute, private notifierService: NotifierService) {
   }
@@ -31,6 +37,7 @@ export class ProjectDetailEditComponent implements OnInit {
           name: new FormControl('', Validators.required),
           devices: new FormControl(''),
           genres: new FormControl(''),
+          description: new FormControl(''),
         });
         this.projectForm.patchValue(this.project);
         this.projectForm.patchValue({devices: this.project.abletonProject.externalDevices});
@@ -54,5 +61,13 @@ export class ProjectDetailEditComponent implements OnInit {
           // @ts-ignore
           this.router.navigateByUrl("/project-detail/" + data.id)
         });
+  }
+
+  pictureSelectHandler(data: string) {
+    this._pictureData = data;
+  }
+
+  initReset() {
+    this._pictureData = null;
   }
 }

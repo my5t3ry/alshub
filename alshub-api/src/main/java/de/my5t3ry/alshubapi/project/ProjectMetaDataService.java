@@ -51,6 +51,7 @@ public class ProjectMetaDataService {
                 .projectId(project.getId())
                 .name(project.getName())
                 .genres(project.getGenresAsString())
+                .description(project.getDescription())
                 .viewCount(0)
                 .likeCount(0)
                 .forkCount(0)
