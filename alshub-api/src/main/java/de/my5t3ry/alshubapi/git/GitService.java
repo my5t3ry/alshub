@@ -9,17 +9,13 @@ import de.my5t3ry.alshubapi.project.ProjectChanges;
 import kong.unirest.Unirest;
 import net.nemerosa.ontrack.git.GitRepository;
 import net.nemerosa.ontrack.git.GitRepositoryClient;
-import net.nemerosa.ontrack.git.model.GitLog;
 import net.nemerosa.ontrack.git.support.GitRepositoryClientFactoryImpl;
 import org.eclipse.jgit.api.*;
 import org.eclipse.jgit.api.errors.GitAPIException;
-import org.eclipse.jgit.lib.ObjectId;
+import org.eclipse.jgit.lib.Constants;
 import org.eclipse.jgit.lib.Ref;
 import org.eclipse.jgit.lib.RepositoryCache;
 import org.eclipse.jgit.lib.StoredConfig;
-import org.eclipse.jgit.revplot.PlotCommitList;
-import org.eclipse.jgit.revplot.PlotLane;
-import org.eclipse.jgit.revplot.PlotWalk;
 import org.eclipse.jgit.revwalk.RevCommit;
 import org.eclipse.jgit.revwalk.RevWalk;
 import org.eclipse.jgit.transport.JschConfigSessionFactory;
@@ -31,8 +27,11 @@ import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.IOException;
-import java.time.format.DateTimeFormatter;
-import java.util.*;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 
@@ -54,7 +53,6 @@ public class GitService {
         if (!RepositoryCache.FileKey.isGitRepository(new File(project.getPath()), FS.DETECTED)) {
             final String uuid = Unirest.get(API_URL).asString().getBody();
             project.setGitUuid(uuid);
-
             this.createAndPushLocalRepo(project);
         }
     }
@@ -91,42 +89,40 @@ public class GitService {
             f‌ile.createNewFile();
             Git newLocalRepository = Git.init().setDirectory(f‌ile.getParentFile()).call();
             setRemoteOrigin(project, newLocalRepository);
-            pushChanges(newLocalRepository, "created local project repository", project);
+            pushChanges("created local project repository", project);
         } catch (IOException | GitAPIException e) {
-            e.printStackTrace();
+            throw new ProcessingException("could not create local repo for project ['" + e.getMessage() + "']", e);
         }
     }
 
-    public void pushChanges(final Git newLocalRepository, final String commitMessage, final Project project) throws GitAPIException {
-        newLocalRepository.add().addFilepattern(".").call();
+    public void pushChanges(final String commitMessage, final Project project) throws GitAPIException {
+        final Git git = getGit(project);
+        git.add().addFilepattern(".").call();
         try {
-            final String commitName = newLocalRepository.getRepository().getBranch();
+            final String commitName = git.getRepository().getBranch();
             if (isValidSHA1(commitName)) {
                 final String newBranchName = "branched_" + commitName;
-                if (!branchExists(newLocalRepository, newBranchName)) {
-                    Ref ref = newLocalRepository.checkout().
+                if (!branchExists(git, newBranchName)) {
+                    Ref ref = git.checkout().
                             setCreateBranch(true).
                             setName(newBranchName).
                             setUpstreamMode(CreateBranchCommand.SetupUpstreamMode.TRACK).
                             setForce(true)
                             .call();
                 } else {
-                    Ref ref = newLocalRepository.checkout().
+                    Ref ref = git.checkout().
                             setName(newBranchName)
                             .setForce(true)
                             .call();
                 }
             }
-            newLocalRepository.commit()
+            git.commit()
                     .setMessage(commitMessage)
                     .setCommitter("auto", "commit")
                     .setAll(true)
                     .call();
-            PushCommand pushCommand = newLocalRepository.push();
-
+            PushCommand pushCommand = git.push();
             final Iterable<PushResult> call = pushCommand.call();
-
-
             plotGitGraph(project);
         } catch (IOException e) {
             throw new ProcessingException("could not push changes for project ['" + e.getMessage() + "']", e);
@@ -135,85 +131,57 @@ public class GitService {
 
     public List<RevCommit> getCommits(Git git, Ref branch) {
         final ArrayList<RevCommit> commits = new ArrayList<>();
-
         try (RevWalk revWalk = new RevWalk(git.getRepository())) {
             revWalk.markStart(revWalk.parseCommit(branch.getObjectId()));
-
             revWalk.forEach(c -> commits.add(c));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        Collections.reverse(commits);
         return commits;
     }
 
-    public List<GitGraphCommit> plotGitGraph(final Project project) {
+    public List<GitGraphBranch> plotGitGraph(final Project project) {
+        final List<GitGraphBranch> result = new ArrayList<GitGraphBranch>();
         final Git newLocalRepository = getGit(project);
         final GitRepositoryClient source = new GitRepositoryClientFactoryImpl(new File(project.getPath())).getClient(new GitRepository("source", project.getGitUuid(), GIT_REPO_URL.concat(project.getGitUuid()), "", ""));
-        RevCommit youngestCommit = null;
-        RevCommit oldestCommit = null;
+        source.getBranches();
         List<Ref> branches = null;
-        try (RevWalk walk = new RevWalk(newLocalRepository.getRepository())) {
+        try {
             branches = newLocalRepository.branchList().setListMode(ListBranchCommand.ListMode.ALL).call();
             for (Ref branch : branches) {
-                RevCommit commit = walk.parseCommit(branch.getObjectId());
-                for (RevCommit parentCommit : getCommits(newLocalRepository, branch)) {
-                    parentCommit = walk.parseCommit(parentCommit.toObjectId());
-                    if (youngestCommit == null || parentCommit.getAuthorIdent().getWhen().compareTo(
-                            youngestCommit.getAuthorIdent().getWhen()) > 0)
-                        youngestCommit = parentCommit;
-                    if (oldestCommit == null || parentCommit.getAuthorIdent().getWhen().compareTo(
-                            oldestCommit.getAuthorIdent().getWhen()) < 0)
-                        oldestCommit = parentCommit;
+                if (!branch.getName().contains("HEAD")) {
+                    final List<RevCommit> commits = getCommits(newLocalRepository, branch);
+                    List<GitGraphCommit> scrapedCommits = convertToGitGraphCommit(commits, newLocalRepository);
+                    result.add(GitGraphBranch.builder().hash(branch.getObjectId().getName()).commits(scrapedCommits).subject(branch.getName()).build());
                 }
             }
-            return convertToGitGraphCommit(source.graph(youngestCommit.getName(), oldestCommit.getName()),newLocalRepository);
+            Collections.sort(result);
+            return result;
         } catch (Exception e) {
             throw new ProcessingException("could not plot graph for project ['" + e.getMessage() + "']", e);
         }
     }
 
-    private List<GitGraphCommit> convertToGitGraphCommit(final GitLog graph,Git git) {
-         final List<GitGraphCommit> result = new ArrayList<GitGraphCommit>() ;
-        graph.getCommits().forEach(gitCommit -> {
-            result.add(GitGraphCommit.builder()
-                    .author(gitCommit.getAuthor().getName())
-                    .dotText("V")
-                    .hash(gitCommit.getId())
-                    .subject(gitCommit.getCommitTime().format( DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))+ " - "+gitCommit.getFullMessage())
-                    .build());
-        });
-        Ref head = git.getRepository().getAllRefs().get("HEAD");
-        result.stream().filter(gitGraphCommit -> gitGraphCommit.getHash().equals(head.getObjectId().getName())).collect(Collectors.toList()).forEach(gitGraphCommit -> gitGraphCommit.setCheckedOut(true));
-        return result;
-    }
-
-
-    public void test(Git git) {
-        Ref head = null;
+    private List<GitGraphCommit> convertToGitGraphCommit(List<RevCommit> commits, Git git) {
+        final List<GitGraphCommit> result = new ArrayList<GitGraphCommit>();
         try {
-            PlotWalk revWalk = new PlotWalk(git.getRepository());
-            ObjectId rootId = git.getRepository().resolve("refs/heads/master");
-            RevCommit root = revWalk.parseCommit(rootId);
-            revWalk.markStart(root);
-            PlotCommitList<PlotLane> plotCommitList = new PlotCommitList<>();
-            plotCommitList.source(revWalk);
-            plotCommitList.fillTo(Integer.MAX_VALUE);
-
-            System.out.println("Printing children of commit " + root);
-            for (RevCommit com : revWalk) {
-                System.out.println("Child: " + com);
+            for (RevCommit gitCommit : commits) {
+                final RevCommit parseCommit;
+                parseCommit = new RevWalk(git.getRepository()).parseCommit(gitCommit);
+                result.add(GitGraphCommit.builder()
+                        .author(parseCommit.getAuthorIdent().getName())
+                        .dotText("V")
+                        .hash(parseCommit.toObjectId().getName())
+                        .commitTime(parseCommit.getAuthorIdent().getWhen())
+                        .subject(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(parseCommit.getAuthorIdent().getWhen()) + " - " + parseCommit.getFullMessage())
+                        .build());
             }
-
-            System.out.println("Printing with next()");
-            System.out.println("next: " + revWalk.next());
-
+            Ref head = git.getRepository().getAllRefs().get("HEAD");
+            result.stream().filter(gitGraphCommit -> gitGraphCommit.getHash().equals(head.getObjectId().getName())).collect(Collectors.toList()).forEach(gitGraphCommit -> gitGraphCommit.setCheckedOut(true));
+            return result;
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new ProcessingException("could not plot graph for project ['" + e.getMessage() + "']", e);
         }
-        // a RevWalk allows to walk over commits based on some filtering that is defined
-
-
     }
 
     private boolean branchExists(Git git, String branchName) {
@@ -234,8 +202,7 @@ public class GitService {
 
     public void pushChanges(final Project project) {
         try {
-            pushChanges(getGit(project), "Manual revision created", project);
-
+            pushChanges("Manual revision created", project);
         } catch (GitAPIException e) {
             throw new ProcessingException("could not push changes for project ['" + e.getMessage() + "']", e);
         }
@@ -247,7 +214,6 @@ public class GitService {
         project.setRemoteGitUrl(remoteGitUrl);
         config.setString("remote", "origin", "url", remoteGitUrl);
         config.save();
-
     }
 
     public ProjectChanges checkChanges(Project project) {
@@ -297,12 +263,14 @@ public class GitService {
         return result;
     }
 
-    public List<GitGraphCommit> checkoutCommit(final Project project, final String commitId) {
+    public List<GitGraphBranch> checkoutCommit(final Project project, final String commitId) {
         final Git git = getGit(project);
         try {
-            git.checkout().setName(commitId).call();
+            if (!getGit(project).getRepository().getRef(Constants.HEAD).getObjectId().getName().equals(commitId)) {
+                git.checkout().setName(commitId).call();
+            }
             return plotGitGraph(project);
-        } catch (GitAPIException e) {
+        } catch (GitAPIException | IOException e) {
             throw new ProcessingException("could not checkout project to commit ['" + commitId + "']", e);
         }
     }

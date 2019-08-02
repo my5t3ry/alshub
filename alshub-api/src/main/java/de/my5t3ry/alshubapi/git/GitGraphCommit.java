@@ -1,8 +1,12 @@
 package de.my5t3ry.alshubapi.git;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Data
@@ -16,6 +20,7 @@ public class GitGraphCommit {
     private String hash;
     private final List<GitGraphCommit> parents = new ArrayList<>();
     private String dotText;
+    private Date commitTime;
     private boolean checkedOut = false;
 
     protected boolean canEqual(final Object other) {

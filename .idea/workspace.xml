@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60bb6e59-dc4d-4c7e-a355-d132b967a7b3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitGraphBranch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitGraphCommit.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitGraphCommit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectRestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alshub-web/src/app/git-plot.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/git-plot.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-detail/project-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-detail/project-detail.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -125,7 +132,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="Kotlin SDK" />
     <property name="jdk.selected.PYTHON_MODULE" value="Python 3.6 (kivy_venv)" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/alshub-web/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/alshub-web/node_modules/@gitgraph" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -163,6 +170,7 @@
       <recent name="$PROJECT_DIR$/alshub-picture-api/src/main/java/de/my5t3ry/alshubpictureapi" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="de.my5t3ry.alshubapi.git" />
       <recent name="de.my5t3ry.alshubapi.picture" />
       <recent name="de.my5t3ry.project" />
       <recent name="de.my5t3ry.alshubapi.error" />
@@ -296,14 +304,7 @@
       <workItem from="1564705641031" duration="4446000" />
       <workItem from="1564711050279" duration="31256000" />
       <workItem from="1564748598785" duration="8223000" />
-      <workItem from="1564757250421" duration="16738000" />
-    </task>
-    <task id="LOCAL-00004" summary="gitignore">
-      <created>1563500482209</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1563500482209</updated>
+      <workItem from="1564757250421" duration="22527000" />
     </task>
     <task id="LOCAL-00005" summary="gitignore">
       <created>1563501066628</created>
@@ -641,7 +642,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564774303072</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="a lot of shit">
+      <created>1564774591336</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1564774591336</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -684,6 +692,9 @@
         <watch expression="newLocalRepository.getRepository().getWorkTree()" language="JAVA" />
         <watch expression="Arrays.asList(commit.getParents())" />
         <watch expression="source.graph(youngestCommit.getName(), oldestCommit.getName())" />
+        <watch expression="commits.get(0).getName()" />
+        <watch expression="commits.get(commits.size() - 1).getName()" />
+        <watch expression="source.getBranches()" />
       </configuration>
     </watches-manager>
   </component>

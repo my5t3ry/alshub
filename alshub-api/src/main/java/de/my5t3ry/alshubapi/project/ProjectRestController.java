@@ -1,6 +1,6 @@
 package de.my5t3ry.alshubapi.project;
 
-import de.my5t3ry.alshubapi.git.GitGraphCommit;
+import de.my5t3ry.alshubapi.git.GitGraphBranch;
 import de.my5t3ry.alshubapi.git.GitService;
 import de.my5t3ry.alshubapi.response_entity.ResponseEntityFactory;
 import de.my5t3ry.alshubapi.response_entity.ResponseMessageType;
@@ -43,13 +43,13 @@ public class ProjectRestController {
     }
 
     @GetMapping("/get-commit-history/{projectId}")
-    public ResponseEntity<List<GitGraphCommit>> getCommitHistory(@PathVariable("projectId") Integer projectId) {
+    public ResponseEntity<List<GitGraphBranch>> getCommitHistory(@PathVariable("projectId") Integer projectId) {
         return ResponseEntityFactory.build(gitService.plotGitGraph(projectRepository.findById(projectId).get()),
                 HttpStatus.OK);
     }
 
     @GetMapping("/restore-commit/{projectId}/{commitId}")
-    public ResponseEntity<List<GitGraphCommit>> getCommitHistory(@PathVariable("projectId") Integer projectId, @PathVariable("commitId") String commitId) {
+    public ResponseEntity<List<GitGraphBranch>> getCommitHistory(@PathVariable("projectId") Integer projectId, @PathVariable("commitId") String commitId) {
         return ResponseEntityFactory.build("Revision restored",
                 ResponseMessageType.INFO,
                 gitService.checkoutCommit(projectRepository.findById(projectId).get(), commitId),
@@ -66,7 +66,7 @@ public class ProjectRestController {
     }
 
     @GetMapping("/push-changes/{projectId}")
-    public ResponseEntity<List<GitGraphCommit>> pushChanges(@PathVariable("projectId") Integer projectId) {
+    public ResponseEntity<List<GitGraphBranch>> pushChanges(@PathVariable("projectId") Integer projectId) {
         gitService.pushChanges(projectRepository.findById(projectId).get());
         return ResponseEntityFactory.build(gitService.plotGitGraph(projectRepository.findById(projectId).get()),
                 HttpStatus.OK);
