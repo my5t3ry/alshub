@@ -14,17 +14,12 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 export class ProjectDetailEditComponent implements OnInit {
   private _pictureId: string;
 
-  get pictureData(): string {
-    return this._pictureData;
-  }
-
   projectId: any;
   endpoint = '/api/project';
 
   project: any;
   changes: any;
   public projectForm: FormGroup;
-  private _pictureData: string = null;
 
 
   constructor(private http: HttpClient, private route: ActivatedRoute,private router: Router) {
@@ -58,7 +53,6 @@ export class ProjectDetailEditComponent implements OnInit {
     this.project.abletonProject.externalDevices = this.projectForm.controls['devices'].value;
     this.project.genres = this.projectForm.controls['genres'].value;
     this.project.description = this.projectForm.controls['description'].value;
-    this.project.pictureId = this._pictureId;
     this.http.post(this.endpoint + '/edit-project/', this.project)
       .subscribe(
         data => {
@@ -68,11 +62,10 @@ export class ProjectDetailEditComponent implements OnInit {
   }
 
   pictureSelectHandler(data: Element) {
-    this._pictureData = data.attributes.getNamedItem('src').value;
-    this._pictureId = data.attributes.getNamedItem('data-id').value;
+    this.project.pictureId = data.attributes.getNamedItem('data-id').value;
   }
 
   initReset() {
-    this._pictureData = null;
+    this.project.pictureId = null;
   }
 }

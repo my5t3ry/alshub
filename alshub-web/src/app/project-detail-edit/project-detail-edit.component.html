@@ -19,23 +19,13 @@
   </div>
   <div class="row">
     <div class="col-12">
-      <!--          <div class="row">-->
-      <!--            <div class="col-2">-->
-      <!--              Created on:-->
-      <!--            </div>-->
-      <!--            <div class="col-10">-->
-      <!--              {{project.abletonProject.creationFileTime}}-->
-      <!--            </div>-->
-      <!--          </div>-->
-
-
       <div class="row mt-2">
         <div class="col-12">
           <div class="form-group">
             <label for="description">Picture</label>
-            <div *ngIf="pictureData">
+            <div *ngIf="project.pictureId">
               <div class="picture-preview-container">
-                <img class="banner-picture-preview" src="{{pictureData}}">
+                <img class="banner-picture-preview" src="http://alshub.local/picture-api/picture/id/{{project.pictureId}}">
                 <div class="picture-preview-button-container">
                   <div type='button' ngbTooltip="Löschen" name='delete' (click)="initReset()" class='box'>
                     <div class='box-left'>
@@ -45,7 +35,7 @@
                 </div>
               </div>
             </div>
-            <div *ngIf="!pictureData">
+            <div *ngIf="!project.pictureId">
               <div class="row">
                 <div class="col-12">
                   <app-picture-gallery (onPictureSelect)="pictureSelectHandler($event)"></app-picture-gallery>

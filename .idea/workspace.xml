@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60bb6e59-dc4d-4c7e-a355-d132b967a7b3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-detail-edit/project-detail-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-detail-edit/project-detail-edit.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-detail-edit/project-detail-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-detail-edit/project-detail-edit.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -269,7 +270,7 @@
       <workItem from="1564469361287" duration="226000" />
       <workItem from="1564471060907" duration="1419000" />
       <workItem from="1564705641031" duration="4446000" />
-      <workItem from="1564711050279" duration="18799000" />
+      <workItem from="1564711050279" duration="19559000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore">
       <created>1563483607877</created>
@@ -600,7 +601,21 @@
       <option name="project" value="LOCAL" />
       <updated>1564728985377</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="downgrade to jdk 8 for graal compatibilty">
+      <created>1564729866451</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1564729866451</updated>
+    </task>
+    <task id="LOCAL-00049" summary="downgrade to jdk 8 for graal compatibilty">
+      <created>1564730015694</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1564730015694</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
