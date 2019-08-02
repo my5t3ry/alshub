@@ -2,73 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60bb6e59-dc4d-4c7e-a355-d132b967a7b3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/GitRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/GitRepositoryClient.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/GitRepositoryClientFactory.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/exceptions/GitRepositoryAPIException.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/exceptions/GitRepositoryCannotCloneException.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/exceptions/GitRepositoryDirException.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/exceptions/GitRepositoryException.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/exceptions/GitRepositoryIOException.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/exceptions/GitRepositoryInitException.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/exceptions/GitRepositorySyncException.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/exceptions/GitTestException.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/model/GitBranchInfo.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/model/GitBranchesInfo.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/model/GitChangeType.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/model/GitCommit.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/model/GitDiff.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/model/GitDiffEntry.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/model/GitLog.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/model/GitPerson.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/model/GitRange.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/model/GitSynchronisationStatus.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/model/GitTag.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/model/plot/AbstractGItem.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/model/plot/GColor.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/model/plot/GDim.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/model/plot/GItem.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/model/plot/GLine.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/model/plot/GOval.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/model/plot/GPlot.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/model/plot/GPoint.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/model/plot/GitPlotRenderer.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/support/GitClientSupport.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/support/GitRepo.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/support/GitRepositoryClientFactoryImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/kotlin/net/nemerosa/ontrack/git/support/GitRepositoryClientImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-web/src/app/git-plot.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-web/src/app/git-plot.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-web/src/service.plot.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kotlin-git/kotlin-git.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/ProjectCommit.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitGraphCommit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-git-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-git-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-meta-storage/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-meta-storage/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-picture-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-picture-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/explorer/explorer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/explorer/explorer.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/my-projects/my-projects.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/my-projects/my-projects.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-card-meta-data/project-card-meta-data.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-card-meta-data/project-card-meta-data.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-detail-edit/project-detail-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-detail-edit/project-detail-edit.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-detail/project-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-detail/project-detail.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-detail/project-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-detail/project-detail.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/spinner/spinner.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/spinner/spinner.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/keycloak-helper.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/keycloak-helper.service.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/keycloak-helper.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/keycloak-helper.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/request-interceptor.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/request-interceptor.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/spinnner.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/spinnner.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/git-plot.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/git-plot.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -361,14 +296,7 @@
       <workItem from="1564705641031" duration="4446000" />
       <workItem from="1564711050279" duration="31256000" />
       <workItem from="1564748598785" duration="8223000" />
-      <workItem from="1564757250421" duration="16241000" />
-    </task>
-    <task id="LOCAL-00003" summary="gitignore">
-      <created>1563493053735</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1563493053735</updated>
+      <workItem from="1564757250421" duration="16738000" />
     </task>
     <task id="LOCAL-00004" summary="gitignore">
       <created>1563500482209</created>
@@ -706,7 +634,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564741981999</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="a lot of shit">
+      <created>1564774303071</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1564774303072</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -731,7 +666,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="gitignore" />
     <MESSAGE value="downgrade to jdk 8 for graal compatibilty" />
-    <option name="LAST_COMMIT_MESSAGE" value="downgrade to jdk 8 for graal compatibilty" />
+    <MESSAGE value="a lot of shit" />
+    <option name="LAST_COMMIT_MESSAGE" value="a lot of shit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
