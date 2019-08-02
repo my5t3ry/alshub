@@ -25,6 +25,12 @@ public class PictureRestController {
         return new ResponseEntity<>(pictureRepository.findAll(), HttpStatus.OK);
     }
 
+    @GetMapping("/id/{id}")
+    public ResponseEntity<String> getById(@PathVariable("id") Integer id) {
+        return new ResponseEntity<>(pictureRepository.findById(id).get().getBase64(), HttpStatus.OK);
+    }
+
+
     @GetMapping("/delete/{pictureId}")
     public ResponseEntity delete(@PathVariable("pictureId") Integer id) {
         pictureRepository.deleteById(id);

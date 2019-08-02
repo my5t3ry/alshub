@@ -21,7 +21,7 @@ export class PictureGalleryComponent implements OnInit {
   @Output() onPictureSelect: EventEmitter<Element> = new EventEmitter();
   @Input() editMode = false;
   private _pictures: Picture[];
-  private endpoint = '/api/picture';
+  private endpoint = '/picture-api/picture';
   private file: string | ArrayBuffer;
   private httpOptions = {
     headers: new HttpHeaders({'Content-Type': 'application/json', 'Accept': 'application/json'})

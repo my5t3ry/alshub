@@ -10,4 +10,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface PictureRepository extends JpaRepository<Picture, Integer> {
     boolean existsByHash(String foo);
 
+    Picture findByHash(String id);
 }

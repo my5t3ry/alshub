@@ -22,7 +22,6 @@ import java.util.Objects;
 @Entity
 public class Picture {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
