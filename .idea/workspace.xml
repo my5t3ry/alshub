@@ -2,22 +2,332 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60bb6e59-dc4d-4c7e-a355-d132b967a7b3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-meta-storage/etc/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-meta-storage/etc/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/3rdpartylicenses.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/img/bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/img/icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/feather-sprite.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/feather.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/activity.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/airplay.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/alert-circle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/alert-octagon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/alert-triangle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/align-center.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/align-justify.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/align-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/align-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/anchor.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/aperture.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/archive.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/arrow-down-circle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/arrow-down-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/arrow-down-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/arrow-down.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/arrow-left-circle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/arrow-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/arrow-right-circle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/arrow-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/arrow-up-circle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/arrow-up-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/arrow-up-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/arrow-up.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/at-sign.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/award.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/bar-chart-2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/bar-chart.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/battery-charging.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/battery.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/bell-off.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/bell.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/bluetooth.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/bold.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/book-open.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/book.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/bookmark.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/box.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/briefcase.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/calendar.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/camera-off.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/camera.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/cast.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/check-circle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/check-square.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/check.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/chevron-down.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/chevron-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/chevron-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/chevron-up.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/chevrons-down.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/chevrons-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/chevrons-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/chevrons-up.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/chrome.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/circle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/clipboard.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/clock.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/cloud-drizzle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/cloud-lightning.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/cloud-off.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/cloud-rain.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/cloud-snow.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/cloud.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/code.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/codepen.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/codesandbox.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/coffee.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/columns.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/command.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/compass.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/copy.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/corner-down-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/corner-down-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/corner-left-down.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/corner-left-up.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/corner-right-down.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/corner-right-up.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/corner-up-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/corner-up-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/cpu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/credit-card.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/crop.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/crosshair.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/database.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/delete.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/disc.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/dollar-sign.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/download-cloud.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/download.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/droplet.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/edit-2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/edit-3.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/edit.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/external-link.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/eye-off.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/eye.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/facebook.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/fast-forward.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/feather.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/figma.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/file-minus.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/file-plus.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/file-text.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/file.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/film.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/filter.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/flag.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/folder-minus.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/folder-plus.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/folder.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/framer.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/frown.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/gift.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/git-branch.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/git-commit.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/git-merge.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/git-pull-request.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/github.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/gitlab.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/globe.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/grid.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/hard-drive.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/hash.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/headphones.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/heart.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/help-circle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/hexagon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/home.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/image.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/inbox.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/info.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/instagram.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/key.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/layers.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/layout.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/life-buoy.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/link-2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/link.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/linkedin.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/list.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/loader.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/lock.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/log-in.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/log-out.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/mail.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/map-pin.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/map.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/maximize-2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/maximize.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/meh.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/menu.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/message-circle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/message-square.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/mic-off.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/mic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/minimize-2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/minimize.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/minus-circle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/minus-square.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/minus.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/monitor.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/moon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/more-horizontal.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/more-vertical.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/mouse-pointer.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/move.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/music.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/navigation-2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/navigation.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/octagon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/package.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/paperclip.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/pause-circle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/pause.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/pen-tool.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/percent.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/phone-call.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/phone-forwarded.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/phone-incoming.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/phone-missed.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/phone-off.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/phone-outgoing.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/phone.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/pie-chart.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/play-circle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/play.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/plus-circle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/plus-square.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/plus.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/pocket.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/power.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/printer.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/radio.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/refresh-ccw.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/refresh-cw.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/repeat.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/rewind.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/rotate-ccw.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/rotate-cw.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/rss.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/save.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/scissors.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/search.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/send.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/server.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/settings.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/share-2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/share.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/shield-off.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/shield.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/shopping-bag.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/shopping-cart.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/shuffle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/sidebar.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/skip-back.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/skip-forward.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/slack.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/slash.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/sliders.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/smartphone.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/smile.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/speaker.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/square.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/star.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/stop-circle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/sun.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/sunrise.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/sunset.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/tablet.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/tag.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/target.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/terminal.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/thermometer.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/thumbs-down.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/thumbs-up.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/toggle-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/toggle-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/trash-2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/trash.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/trello.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/trending-down.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/trending-up.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/triangle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/truck.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/tv.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/twitter.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/type.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/umbrella.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/underline.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/unlock.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/upload-cloud.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/upload.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/user-check.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/user-minus.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/user-plus.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/user-x.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/user.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/users.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/video-off.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/video.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/voicemail.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/volume-1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/volume-2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/volume-x.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/volume.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/watch.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/wifi-off.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/wifi.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/wind.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/x-circle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/x-octagon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/x-square.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/x.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/youtube.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/zap-off.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/zap.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/zoom-in.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/assets/js/feather/icons/zoom-out.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/bg.6b611911f3012833e207.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/fa-brands-400.03783c5172ee1ad128c5.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/fa-brands-400.073c2f3ce60eaf69cc27.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/fa-brands-400.7559b3774a0625e8ca6c.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/fa-brands-400.ed2b8bf117160466ba62.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/fa-brands-400.fe9d62e0d16a333a20e6.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/fa-regular-400.59215032a4397507b80e.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/fa-regular-400.8fdea4e89ac405d9f8db.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/fa-regular-400.e07d9e40b26048d9abe2.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/fa-regular-400.e5770f9863963fb57694.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/fa-regular-400.fc9c63c8224fb341fc93.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/fa-solid-900.4bced7c4c0d61d4f9886.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/fa-solid-900.acf50f59802f20d8b452.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/fa-solid-900.b557f56e367e59344ca9.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/fa-solid-900.b5cf8ae26748570d8fb9.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/fa-solid-900.ef3df98419d143d9617f.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/icon.f43d038a88fab4cdec50.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/keycloak.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/main.65e1627cdbae929b77c6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/polyfills.94484237919207e6c46e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/runtime.ec2944dd8b20ec099bf3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/scripts.ea9a7b51b5073e2a08c5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/app/styles.bb976ee5195dfab8bc5f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/index.html" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <ignored path="$PROJECT_DIR$/alshub-api/target/" />
-    <ignored path="$PROJECT_DIR$/alshub_git_api/target/" />
-    <ignored path="$PROJECT_DIR$/../als-parser/target/" />
-    <ignored path="$PROJECT_DIR$/alshub-meta-storage/target/" />
-    <ignored path="$PROJECT_DIR$/alshub-shared-model/target/" />
-    <ignored path="$PROJECT_DIR$/alshub-serv/target/" />
-    <ignored path="$PROJECT_DIR$/alshub-git-api/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="ComposerSettings">
     <execution>
@@ -64,19 +374,6 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -117,63 +414,6 @@
     <option name="ROOT_SYNC" value="SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/alshub-meta-storage/src/main/java/de/my5t3ry/alshub/config/ElsConfig.java" />
-        <option value="$PROJECT_DIR$/alshub-meta-storage/src/main/java/de/my5t3ry/alshub/ElasticsearchConfig.java" />
-        <option value="$PROJECT_DIR$/alshub-meta-storage/src/main/java/de/my5t3ry/alshub/ElasticsearchConfiguration.java" />
-        <option value="$PROJECT_DIR$/alshub-meta-storage/src/main/java/de/my5t3ry/AlshubMetaStorageApplication.java" />
-        <option value="$PROJECT_DIR$/alshub-meta-storage/etc/docker.yml" />
-        <option value="$PROJECT_DIR$/alshub-meta-storage/etc/docker-compose.yml" />
-        <option value="$PROJECT_DIR$/alshub-meta-storage/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/alshub-meta-storage/src/main/java/de/my5t3ry/alshub/project/ProjectMetaDataRestService.java" />
-        <option value="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectService.java" />
-        <option value="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectMetaDataRestController.java" />
-        <option value="$PROJECT_DIR$/alshub-meta-storage/src/main/java/de/my5t3ry/alshub/project/ProjectMetaDataRepository.java" />
-        <option value="$PROJECT_DIR$/alshub-web/src/app/project-card-meta-data/project-card-meta-data.component.ts" />
-        <option value="$PROJECT_DIR$/alshub-web/src/app/project-card-meta-data/project-card-meta-data.component.scss" />
-        <option value="$PROJECT_DIR$/alshub-web/src/app/project-card-meta-data/project-card-meta-data.component.html" />
-        <option value="$PROJECT_DIR$/alshub-shared-model/src/main/java/de/my5t3ry/alshub/project/ProjectMetaData.java" />
-        <option value="$PROJECT_DIR$/alshub-web/src/app/my-projects/my-projects.component.html" />
-        <option value="$PROJECT_DIR$/alshub-web/src/app/explorer/explorer.component.scss" />
-        <option value="$PROJECT_DIR$/alshub-web/src/app/explorer/explorer.component.html" />
-        <option value="$PROJECT_DIR$/alshub-web/src/app/app.component.html" />
-        <option value="$PROJECT_DIR$/alshub-web/src/app/spinner/spinner.component.scss" />
-        <option value="$PROJECT_DIR$/alshub-web/src/app/spinner/spinner.component.html" />
-        <option value="$PROJECT_DIR$/alshub-web/src/app/footer/footer.component.html" />
-        <option value="$PROJECT_DIR$/alshub-web/src/app/footer/footer.component.scss" />
-        <option value="$PROJECT_DIR$/alshub-web/src/polyfills.ts" />
-        <option value="$PROJECT_DIR$/alshub-web/src/index.html" />
-        <option value="$PROJECT_DIR$/alshub-web/src/app/spinnner.service.ts" />
-        <option value="$PROJECT_DIR$/alshub-web/src/spinnner.service.ts" />
-        <option value="$PROJECT_DIR$/alshub-web/src/request-interceptor.service.ts" />
-        <option value="$PROJECT_DIR$/alshub-web/src/app/spinner/spinner.component.ts" />
-        <option value="$PROJECT_DIR$/alshub-web/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/alshub-web/angular.json" />
-        <option value="$PROJECT_DIR$/alshub-web/src/app/nav/nav.component.scss" />
-        <option value="$PROJECT_DIR$/alshub-web/src/app/nav/nav.component.html" />
-        <option value="$PROJECT_DIR$/alshub-web/src/app/nav/nav.component.ts" />
-        <option value="$PROJECT_DIR$/alshub-web/src/app/my-projects/my-projects.component.scss" />
-        <option value="$PROJECT_DIR$/alshub-web/src/styles.scss" />
-        <option value="$PROJECT_DIR$/alshub-web/package.json" />
-        <option value="$PROJECT_DIR$/alshub-static/css.css" />
-        <option value="$PROJECT_DIR$/alshub-static/index.html" />
-        <option value="$PROJECT_DIR$/README" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/alshub-api/pom.xml" />
-        <option value="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectMetaDataService.java" />
-        <option value="$PROJECT_DIR$/alshub-shared-model/pom.xml" />
-        <option value="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitService.java" />
-        <option value="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/explorer/ExplorerRestController.java" />
-        <option value="$PROJECT_DIR$/alshub-git-api/pom.xml" />
-        <option value="$PROJECT_DIR$/alshub-serv/pom.xml" />
-        <option value="$PROJECT_DIR$/alshub-meta-storage/.mvn/wrapper/MavenWrapperDownloader.java" />
-        <option value="$PROJECT_DIR$/alshub-meta-storage/pom.xml" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-      </list>
-    </option>
-  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -181,31 +421,8 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="alshub-meta-storage" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="alshub-meta-storage" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="alshub-meta-storage" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-          <item name="org.springframework.data:spring-data-elasticsearch:3.1.9.RELEASE" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="alshub-shared-model" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="4" />
@@ -213,121 +430,9 @@
     <option name="width" value="3196" />
     <option name="height" value="1766" />
   </component>
+  <component name="ProjectId" id="1OgpK0o8VKM4DE6vEAoMudufAmw" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="alshub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alshub" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alshub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alshub" type="462c0819:PsiDirectoryNode" />
-              <item name="alshub-boot" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alshub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alshub" type="462c0819:PsiDirectoryNode" />
-              <item name="alshub-git-api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alshub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alshub" type="462c0819:PsiDirectoryNode" />
-              <item name="alshub-meta-storage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alshub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alshub" type="462c0819:PsiDirectoryNode" />
-              <item name="alshub-meta-storage" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alshub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alshub" type="462c0819:PsiDirectoryNode" />
-              <item name="alshub-meta-storage" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alshub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alshub" type="462c0819:PsiDirectoryNode" />
-              <item name="alshub-meta-storage" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alshub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alshub" type="462c0819:PsiDirectoryNode" />
-              <item name="alshub-meta-storage" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="de" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alshub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alshub" type="462c0819:PsiDirectoryNode" />
-              <item name="alshub-meta-storage" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="de" type="462c0819:PsiDirectoryNode" />
-              <item name="my5t3ry" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alshub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alshub" type="462c0819:PsiDirectoryNode" />
-              <item name="alshub-meta-storage" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="de" type="462c0819:PsiDirectoryNode" />
-              <item name="my5t3ry" type="462c0819:PsiDirectoryNode" />
-              <item name="alshub" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alshub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alshub" type="462c0819:PsiDirectoryNode" />
-              <item name="alshub-meta-storage" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="de" type="462c0819:PsiDirectoryNode" />
-              <item name="my5t3ry" type="462c0819:PsiDirectoryNode" />
-              <item name="alshub" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alshub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alshub" type="462c0819:PsiDirectoryNode" />
-              <item name="alshub-serv" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alshub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alshub" type="462c0819:PsiDirectoryNode" />
-              <item name="alshub-shared-model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alshub" type="b2602c69:ProjectViewProjectNode" />
-              <item name="alshub" type="462c0819:PsiDirectoryNode" />
-              <item name="alshub-static" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="h2" />
@@ -347,7 +452,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="12" />
     <property name="jdk.selected.PYTHON_MODULE" value="Python 3.6 (kivy_venv)" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/alshub-static" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -496,7 +601,11 @@
       <workItem from="1563511146976" duration="21022000" />
       <workItem from="1563536117791" duration="18412000" />
       <workItem from="1563579107518" duration="11929000" />
-      <workItem from="1563623991540" duration="2976000" />
+      <workItem from="1563623991540" duration="3660000" />
+      <workItem from="1564409028294" duration="47000" />
+      <workItem from="1564409093545" duration="1236000" />
+      <workItem from="1564469361287" duration="226000" />
+      <workItem from="1564471060907" duration="1419000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore">
       <created>1563483607877</created>
@@ -736,52 +845,31 @@
       <option name="project" value="LOCAL" />
       <updated>1563646146596</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="downgrade to jdk 8 for graal compatibilty">
+      <created>1563646747068</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1563646747068</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98313000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-3" y="33" width="3206" height="1770" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="UI Designer" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info id="Web" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3299279" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3299279" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49875" visible="true" weight="0.39963943" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="TypeScript" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3299279" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50125" side_tool="true" weight="0.39963943" />
-      <window_info anchor="bottom" id="Spring" order="13" />
-      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.499375" weight="0.3299279" />
-      <window_info anchor="bottom" id="Java Enterprise" order="15" />
-      <window_info anchor="bottom" id="Database Console" order="16" weight="0.3299279" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Palette&#9;" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="SciView" order="7" />
-      <window_info anchor="right" id="Bean Validation" order="8" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -808,346 +896,6 @@
   <component name="XPathView.XPathProjectComponent">
     <history />
     <find-history />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/alshub-web/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-web/src/app/explorer/explorer.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-web/src/app/footer/footer.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-web/node_modules/angular-notifier/src/components/notifier-container.component.d.ts" />
-    <entry file="file://$PROJECT_DIR$/alshub-web/src/app/my-projects/my-projects.component.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-web/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-web/src/app/spinner/spinner.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-web/src/app/spinner/spinner.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="56" lean-forward="true" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-web/src/app/footer/footer.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-web/src/app/footer/footer.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="122" column="8" selection-start-line="122" selection-start-column="8" selection-end-line="122" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-web/node_modules/angular-notifier/src/services/notifier.service.d.ts" />
-    <entry file="file://$PROJECT_DIR$/alshub-web/node_modules/@angular/common/http/src/interceptor.d.ts" />
-    <entry file="file://$PROJECT_DIR$/alshub-web/node_modules/@angular/common/http/src/client.d.ts" />
-    <entry file="file://$PROJECT_DIR$/alshub-web/src/main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-web/src/polyfills.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="68" column="29" lean-forward="true" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-web/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-web/src/spinnner.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-web/src/request-interceptor.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="13" column="58" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-web/src/app/spinner/spinner.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-web/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="796">
-          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-web/angular.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="944">
-          <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-web/src/app/nav/nav.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="863">
-          <caret line="127" selection-start-line="127" selection-end-line="127" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-web/src/app/nav/nav.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="842">
-          <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-web/src/app/nav/nav.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-web/src/app/my-projects/my-projects.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-web/src/app/app.component.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-web/src/styles.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-web/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1366">
-          <caret line="83" column="4" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-static/bg.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-static/icon.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-static/css.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub.iml" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1219">
-          <caret line="31" column="21" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-static/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1183">
-          <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectMetaDataRestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectRestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="37" column="61" lean-forward="true" selection-start-line="37" selection-start-column="61" selection-end-line="37" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1303#1304#0" expanded="true" />
-            <element signature="e#1406#1407#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="37" column="81" selection-start-line="37" selection-start-column="81" selection-end-line="37" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectMetaDataService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="691">
-          <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-api/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="20" column="88" selection-start-line="20" selection-start-column="88" selection-end-line="20" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-shared-model/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/explorer/ExplorerRestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1426">
-          <caret line="89" column="5" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-serv/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1204">
-          <caret line="70" column="16" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-meta-storage/src/main/java/de/my5t3ry/alshub/project/ProjectMetaDataRestService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-meta-storage/src/main/java/de/my5t3ry/alshub/project/ProjectMetaDataRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-meta-storage/.mvn/wrapper/MavenWrapperDownloader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-meta-storage/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1242">
-          <caret line="46" column="32" selection-start-line="44" selection-start-column="12" selection-end-line="46" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alshub-git-api/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>
