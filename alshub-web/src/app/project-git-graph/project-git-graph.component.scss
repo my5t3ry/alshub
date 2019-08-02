@@ -1,75 +1,21 @@
-ul {
-  margin-left: 10px;
-  list-style-image: url('../../assets/img/circle.svg');
-}
+
 
 .outer-list {
   position: relative;
 }
 
-.outer-list:after {
-  position: absolute;
-  height: calc(100% - 20px);
-  width: 3px;
+.commit-history-entry:after {
+  position: relative;
+  height: 50px;
+  width: 4px;
   content: "";
   display: block;
   background-color: black;
-  left: 19px;
-  top: 37px;
+  left: 28px;
+  top: -2px;
 }
 
-ul li {
-  padding: 5px 0;
-}
 
-.inner-list {
-  margin-left: 0;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  position: relative;
-}
-
-.inner-list:before {
-  position: absolute;
-  height: 40px;
-  width: 1px;
-  content: '';
-  display: block;
-  background-color: black;
-  transform: rotate(-45deg);
-  left: 4px;
-  bottom: 100%;
-  margin-bottom: -15px;
-}
-
-.inner-list:after {
-  position: absolute;
-  height: 40px;
-  width: 1px;
-  content: '';
-  display: block;
-  background-color: black;
-  transform: rotate(45deg);
-  left: 5px;
-  top: 100%;
-  margin-top: -15px;
-}
-
-.inner-list li {
-  position: relative;
-}
-
-.inner-list li:after {
-  position: absolute;
-  height: 15px;
-  width: 1px;
-  content: '';
-  display: block;
-  background-color: black;
-  left: -15px;
-  top: 20px;
-}
-
-.inner-list li:last-child:after {
-  display: none;
+.commit-history-entry {
+  margin-bottom: 10px;
 }

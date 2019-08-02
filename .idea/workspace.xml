@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60bb6e59-dc4d-4c7e-a355-d132b967a7b3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-detail/project-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-detail/project-detail.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.scss" afterDir="false" />
     </list>
@@ -271,7 +269,7 @@
       <workItem from="1564469361287" duration="226000" />
       <workItem from="1564471060907" duration="1419000" />
       <workItem from="1564705641031" duration="4446000" />
-      <workItem from="1564711050279" duration="17920000" />
+      <workItem from="1564711050279" duration="18799000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore">
       <created>1563483607877</created>
@@ -595,7 +593,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564728263740</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="downgrade to jdk 8 for graal compatibilty">
+      <created>1564728985377</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1564728985377</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

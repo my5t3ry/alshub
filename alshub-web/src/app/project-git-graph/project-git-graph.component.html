@@ -1,6 +1,10 @@
-<div *ngIf="commitHistory">>
-  <ul *ngFor="let commit of commitHistory" class="outer-list">
-    <li>{{commit.time}} <br> {{commit.msg}} - {{commit.id}}
-    </li>
-  </ul>
+<div *ngIf="commitHistory">
+  <div class="row commit-history-entry" *ngFor="let commit of commitHistory">
+    <div class="col-1">
+      <img src="../../assets/img/circle.svg">
+    </div>
+    <div class="col-11">
+      {{commit.time}} <br> {{commit.msg}} - {{commit.id}}
+    </div>
+  </div>
 </div>
