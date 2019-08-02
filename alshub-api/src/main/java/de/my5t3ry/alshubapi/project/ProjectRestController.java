@@ -45,9 +45,7 @@ public class ProjectRestController {
 
     @GetMapping("/get-commit-history/{projectId}")
     public ResponseEntity<List<ProjectCommit>> getCommitHistory(@PathVariable("projectId") Integer projectId) {
-        return ResponseEntityFactory.build("Changes refreshed",
-                ResponseMessageType.INFO,
-                gitService.getCommits(projectRepository.findById(projectId).get()),
+        return ResponseEntityFactory.build(gitService.getCommits(projectRepository.findById(projectId).get()),
                 HttpStatus.OK);
     }
 

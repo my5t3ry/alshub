@@ -15,4 +15,10 @@ public class ResponseEntityFactory {
         responseHeaders.set("access-control-expose-headers", "message, message-type");
         return ResponseEntity.status(status).headers(responseHeaders).body(data);
     }
+    public static <T> ResponseEntity<T> build(final T data,
+                                              final HttpStatus status) {
+        HttpHeaders responseHeaders = new HttpHeaders();
+        responseHeaders.set("access-control-expose-headers", "message, message-type");
+        return ResponseEntity.status(status).headers(responseHeaders).body(data);
+    }
 }
