@@ -149,11 +149,9 @@ public class GitService {
         try {
             branches = newLocalRepository.branchList().setListMode(ListBranchCommand.ListMode.ALL).call();
             for (Ref branch : branches) {
-                if (!branch.getName().contains("HEAD")) {
-                    final List<RevCommit> commits = getCommits(newLocalRepository, branch);
-                    List<GitGraphCommit> scrapedCommits = convertToGitGraphCommit(commits, newLocalRepository);
-                    result.add(GitGraphBranch.builder().hash(branch.getObjectId().getName()).commits(scrapedCommits).subject(branch.getName()).build());
-                }
+                final List<RevCommit> commits = getCommits(newLocalRepository, branch);
+                List<GitGraphCommit> scrapedCommits = convertToGitGraphCommit(commits, newLocalRepository);
+                result.add(GitGraphBranch.builder().hash(branch.getObjectId().getName()).commits(scrapedCommits).subject(branch.getName()).build());
             }
             Collections.sort(result);
             return result;

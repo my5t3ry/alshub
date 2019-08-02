@@ -17,21 +17,16 @@ export class GitPlotService implements OnInit {
   }
 
   template = new Template({
-
     colors: ["#02978e", "#008fb5", "#47f11a"],
     branch: {
       lineWidth: 10,
-      spacing: 40,
-
+      spacing: 50,
       color: "#282528"
     },
     commit: {
-      spacing: 20,
-
-
+      spacing: 70,
       dot: {
-        size: 15,
-
+        size: 20,
         color: "#1cc732"
       },
       message: {
@@ -51,7 +46,7 @@ export class GitPlotService implements OnInit {
     div.classList.add("col-12");
     div.classList.add("graph-container");
     this.renderer.appendChild(container, div);
-    const gitgraph  = createGitgraph(div, {template: this.template, orientation: Orientation.VerticalReverse, initCommitOffsetY: -50});
+    const gitgraph  = createGitgraph(div, {template: this.template, orientation: Orientation.VerticalReverse});
     branches.forEach(curBranch => {
       const branch = gitgraph.branch({name: curBranch.subject});
       curBranch.commits.forEach(curCommit => {
