@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.constraints.NotNull;
+import java.util.Base64;
 import java.util.List;
 
 /**
@@ -26,8 +27,9 @@ public class PictureRestController {
     }
 
     @GetMapping("/id/{id}")
-    public ResponseEntity<String> getById(@PathVariable("id") Integer id) {
-        return new ResponseEntity<>(pictureRepository.findById(id).get().getBase64(), HttpStatus.OK);
+    public ResponseEntity<byte[]> getById(@PathVariable("id") Integer id) {
+        byte[] decodedBytes = Base64.getDecoder().decode(pictureRepository.findById(id).get().getBase64());
+        return new ResponseEntity<>(decodedBytes, HttpStatus.OK);
     }
 
 

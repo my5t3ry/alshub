@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60bb6e59-dc4d-4c7e-a355-d132b967a7b3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/alshub-picture-api/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-picture-api/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-picture-api/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-picture-api/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-picture-api/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-picture-api/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-picture-api/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-picture-api/src/main/java/de/my5t3ry/alshubpictureapi/AlshubPictureApiApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-picture-api/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../als-parser/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../als-parser/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../als-parser/src/main/java/de/my5t3ry/als_parser/domain/AbletonProject/AbletonProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/../als-parser/src/main/java/de/my5t3ry/als_parser/domain/AbletonProject/AbletonProject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../als-parser/src/main/java/de/my5t3ry/als_parser/domain/AbletonProject/device/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/../als-parser/src/main/java/de/my5t3ry/als_parser/domain/AbletonProject/device/Device.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-picture-api/src/main/java/de/my5t3ry/alshubpictureapi/picture/Picture.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-picture-api/src/main/java/de/my5t3ry/alshubpictureapi/picture/Picture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-picture-api/src/main/java/de/my5t3ry/alshubpictureapi/picture/PictureRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-picture-api/src/main/java/de/my5t3ry/alshubpictureapi/picture/PictureRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alshub-picture-api/src/main/java/de/my5t3ry/alshubpictureapi/picture/PictureRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-picture-api/src/main/java/de/my5t3ry/alshubpictureapi/picture/PictureRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/picture-gallery/picture-gallery.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/picture-gallery/picture-gallery.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-detail/project-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-detail/project-detail.component.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -282,7 +273,7 @@
       <workItem from="1564469361287" duration="226000" />
       <workItem from="1564471060907" duration="1419000" />
       <workItem from="1564705641031" duration="4446000" />
-      <workItem from="1564711050279" duration="10618000" />
+      <workItem from="1564711050279" duration="12320000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore">
       <created>1563483607877</created>
@@ -578,7 +569,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564720932065</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="downgrade to jdk 8 for graal compatibilty">
+      <created>1564721904974</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1564721904974</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
