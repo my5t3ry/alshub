@@ -1,6 +1,7 @@
 package de.my5t3ry.alshubapi.project;
 
 import de.my5t3ry.alshubapi.git.GitService;
+import de.my5t3ry.alshubapi.git.ProjectCommit;
 import de.my5t3ry.alshubapi.response_entity.ResponseEntityFactory;
 import de.my5t3ry.alshubapi.response_entity.ResponseMessageType;
 import de.my5t3ry.alshubapi.user.UserController;
@@ -20,7 +21,7 @@ public class ProjectRestController {
     @Autowired
     private UserController userController;
     @Autowired
-    private ProjectService projectService ;
+    private ProjectService projectService;
     @Autowired
     private GitService gitService;
 
@@ -42,9 +43,17 @@ public class ProjectRestController {
                 HttpStatus.OK);
     }
 
+    @GetMapping("/get-commit-history/{projectId}")
+    public ResponseEntity<List<ProjectCommit>> getCommitHistory(@PathVariable("projectId") Integer projectId) {
+        return ResponseEntityFactory.build("Changes refreshed",
+                ResponseMessageType.INFO,
+                gitService.getCommits(projectRepository.findById(projectId).get()),
+                HttpStatus.OK);
+    }
+
     @PostMapping(path = "/edit-project")
     public ResponseEntity<Project> editProject(@RequestBody Project project, Principal principal) {
-        projectService.updateProject(project,principal);
+        projectService.updateProject(project, principal);
         return ResponseEntityFactory.build("Project saved",
                 ResponseMessageType.INFO,
                 projectRepository.save(project),

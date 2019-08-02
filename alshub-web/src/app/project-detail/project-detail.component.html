@@ -1,91 +1,91 @@
-<div class="row" *ngIf="project">
-  <div class="col-11">
-    <h2> {{project.name}}</h2>
+<div *ngIf="project">
+  <div class="navbar">
+    <ul class="nav mr-auto">
+      <li class="nav-item">
+      <li class="nav-item">
+        <h2> {{project.name}}</h2>
+      </li>
+    </ul>
+    <ul class="nav ml-auto">
+      <li class="nav-item">
+        <button (click)="checkForChanges()" type="button" class="btn btn-primary">
+          <i class="fas fa-sync"></i>
+        </button>
+      </li>
+      <li class="nav-item">
+        <button (click)="pushChanges(project)" type="button" class="btn btn-primary">
+          <i class="fas fa-cloud-upload-alt"></i>
+        </button>
+      </li>
+      <li class="nav-item">
+        <button type="button" routerLink="/project-detail-edit/{{project.id}}" title="Edit project" class="btn btn-primary "><i class="fas fa-pen"></i></button>
+      </li>
+    </ul>
   </div>
-  <div class="col-1">
-    <button type="button" routerLink="/project-detail-edit/{{project.id}}" title="Edit project" class="btn btn-primary "><i class="fas fa-pen"></i></button>
-  </div>
-</div>
-<div class="row" *ngIf="project">
-  <div class="col-12">
-    <tabset>
-      <tab heading="Info" id="project-info">
-        <div class="row">
-          <div class="col-12">
-            <img class="project-picture" src="http://alshub.local/picture-api/picture/id/{{project.pictureId}}">
-          </div>
+
+  <div class="row" *ngIf="project">
+    <div class="col-6">
+
+      <div class="row">
+        <div class="col-12">
+          <img class="project-picture" src="http://alshub.local/picture-api/picture/id/{{project.pictureId}}">
         </div>
-        <div class="row">
-          <div class="col-2">
-            Description:
-          </div>
-          <div class="col-10">
-            {{project.description}}
-          </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          Description:
         </div>
-        <div class="row">
-          <div class="col-12">
-            External plugins:
-          </div>
+        <div class="col-10">
+          {{project.description}}
         </div>
-        <div class="row" *ngFor="let device of project.abletonProject.externalDevices">
-          <div class="col-2">
-            {{device.name}}
-          </div>
-          <div class="col-10">
-            {{device.count}}
-          </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          External plugins:
         </div>
-        <div class="row">
-          <div class="col-2">
-            Created on:
-          </div>
-          <div class="col-10">
-            {{project.abletonProject.creationFileTime}}
-          </div>
+      </div>
+      <div class="row" *ngFor="let device of project.abletonProject.externalDevices">
+        <div class="col-2">
+          {{device.name}}
         </div>
-      </tab>
-      <tab heading="Changes">
-        <div class="row">
-          <div class="col-12">
-            <ul class="nav justify-content-end">
-              <li class="nav-item">
-                <button (click)="checkForChanges()" type="button" class="btn btn-dark">
-                  <i class="fas fa-sync"></i>
-                </button>
-              </li>
-              <li class="nav-item">
-                <button (click)="pushChanges(project)" type="button" class="btn btn-dark">
-                  <i class="fas fa-cloud-upload-alt"></i>
-                </button>
-              </li>
-            </ul>
-          </div>
+        <div class="col-10">
+          {{device.count}}
         </div>
-        <div class="row" *ngIf="changes">
-          <div class="col-12">
-            <div class="row" *ngFor="let change of changes">
-              <div class="col-6">
-                {{change.type}}
-              </div>
-              <div class="col-6">
-                {{change.path}}
-              </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          Created on:
+        </div>
+        <div class="col-10">
+          {{project.abletonProject.creationFileTime}}
+        </div>
+      </div>
+
+    </div>
+    <div class="col-6">
+      <app-project-git-graph [projectId]="project.id"></app-project-git-graph>
+      <div class="row" *ngIf="changes">
+        <div class="col-12">
+          <div class="row" *ngFor="let change of changes">
+            <div class="col-6">
+              {{change.type}}
+            </div>
+            <div class="col-6">
+              {{change.path}}
             </div>
           </div>
         </div>
-        <div class="row" *ngIf="!changes || changes.length == 0">
-          <div class="col-12">
-            <div class="row">
-              <div class="col-12">
-                no changes since the last push
-              </div>
+      </div>
+      <div class="row" *ngIf="!changes || changes.length == 0">
+        <div class="col-12">
+          <div class="row">
+            <div class="col-12">
+              no changes since the last push
             </div>
           </div>
         </div>
-      </tab>
-      <tab heading="History">history</tab>
-    </tabset>
+      </div>
+    </div>
   </div>
 </div>
 

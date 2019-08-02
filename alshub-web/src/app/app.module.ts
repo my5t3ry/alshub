@@ -24,6 +24,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {TagInputModule} from "ngx-chips";
 import {PictureGalleryComponent} from "./picture-gallery/picture-gallery.component";
 import {NgbModalModule} from "@ng-bootstrap/ng-bootstrap";
+import { ProjectGitGraphComponent } from './project-git-graph/project-git-graph.component';
 
 declare var fs: any;
 
@@ -39,7 +40,8 @@ declare var fs: any;
     ProjectCardMetaDataComponent,
     FooterComponent,
     PictureGalleryComponent,
-    ProjectDetailEditComponent
+    ProjectDetailEditComponent,
+    ProjectGitGraphComponent
   ],
   imports: [
     BrowserModule,

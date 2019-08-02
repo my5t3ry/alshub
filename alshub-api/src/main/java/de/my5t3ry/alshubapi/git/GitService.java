@@ -1,6 +1,7 @@
 package de.my5t3ry.alshubapi.git;
 
 import com.jcraft.jsch.Session;
+import de.my5t3ry.alshubapi.error.ProcessingException;
 import de.my5t3ry.alshubapi.project.Project;
 import de.my5t3ry.alshubapi.project.ProjectChange;
 import de.my5t3ry.alshubapi.project.ProjectChangeType;
@@ -10,8 +11,11 @@ import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.PushCommand;
 import org.eclipse.jgit.api.Status;
 import org.eclipse.jgit.api.errors.GitAPIException;
+import org.eclipse.jgit.internal.storage.file.FileRepository;
+import org.eclipse.jgit.lib.Repository;
 import org.eclipse.jgit.lib.RepositoryCache;
 import org.eclipse.jgit.lib.StoredConfig;
+import org.eclipse.jgit.revwalk.RevCommit;
 import org.eclipse.jgit.transport.JschConfigSessionFactory;
 import org.eclipse.jgit.transport.OpenSshConfig;
 import org.eclipse.jgit.transport.SshSessionFactory;
@@ -20,6 +24,10 @@ import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import java.util.Set;
 
 
@@ -39,10 +47,27 @@ public class GitService {
 
     public void createNewRepositoryForProject(final Project project) {
         if (!RepositoryCache.FileKey.isGitRepository(new File(project.getPath()), FS.DETECTED)) {
-            final String uuid = Unirest.get(API_URL) .asString().getBody();
+            final String uuid = Unirest.get(API_URL).asString().getBody();
             project.setGitUuid(uuid);
             this.createAndPushLocalRepo(project);
         }
+    }
+
+    public List<ProjectCommit> getCommits(final Project project) {
+        final List<ProjectCommit> result = new ArrayList<ProjectCommit>();
+        Repository repository = null;
+        try {
+            repository = new FileRepository(new File(project.getPath()+"/.git"));
+            final Iterable<RevCommit> logs = new Git(repository).log()
+                    .add(repository.resolve("refs/heads/master"))
+                    .call();
+            for (RevCommit rev : logs) {
+                result.add(new ProjectCommit(rev.getFullMessage(),new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date(rev.getCommitTime())), rev.getName()));
+            }
+        } catch (IOException | GitAPIException e) {
+            throw new ProcessingException("could not resolve commit history for project ['" + project.getPath() + "']", e);
+        }
+        return result;
     }
 
     private void createAndPushLocalRepo(final Project project) {
@@ -60,7 +85,7 @@ public class GitService {
     public void pushChanges(final Git newLocalRepository) throws GitAPIException {
         newLocalRepository.add().addFilepattern(".").call();
         newLocalRepository.commit()
-                .setMessage("Initial commit")
+                .setMessage(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()))
                 .setCommitter("auto", "commit")
                 .call();
         PushCommand pushCommand = newLocalRepository.push();

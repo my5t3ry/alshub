@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60bb6e59-dc4d-4c7e-a355-d132b967a7b3" name="Default Changelist" comment="downgrade to jdk 8 for graal compatibilty">
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-detail-edit/project-detail-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-detail-edit/project-detail-edit.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-detail-edit/project-detail-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-detail-edit/project-detail-edit.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/ProjectCommit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alshub-web/src/assets/img/circle.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-detail/project-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-detail/project-detail.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-detail/project-detail.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-detail/project-detail.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-detail/project-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-detail/project-detail.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,6 +96,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="h2" />
     <property name="GO_FMT" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
@@ -126,11 +135,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="de.my5t3ry.alshubapi.git" />
       <recent name="de.my5t3ry.alshubapi.project" />
       <recent name="de.my5t3ry.alshubapi.response_entity" />
       <recent name="de.my5t3ry.alshubapi.user" />
       <recent name="de.my5t3ry.alshubapi.explorer" />
-      <recent name="de.my5t3ry.alshubapi.explorer.fs_item" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="de.my5t3ry" />
@@ -164,7 +173,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AlshubPictureApiApplication">
+  <component name="RunManager" selected="Spring Boot.AlshubApiApplication">
     <configuration name="E2E Tests (alshub-web)" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/alshub-web/e2e/protractor.conf.js" />
       <node-interpreter value="project" />
@@ -270,7 +279,7 @@
       <workItem from="1564469361287" duration="226000" />
       <workItem from="1564471060907" duration="1419000" />
       <workItem from="1564705641031" duration="4446000" />
-      <workItem from="1564711050279" duration="13010000" />
+      <workItem from="1564711050279" duration="17159000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore">
       <created>1563483607877</created>
@@ -580,7 +589,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564723445049</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="downgrade to jdk 8 for graal compatibilty">
+      <created>1564724073409</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1564724073409</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -602,6 +618,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="gitignore" />
     <MESSAGE value="downgrade to jdk 8 for graal compatibilty" />
     <option name="LAST_COMMIT_MESSAGE" value="downgrade to jdk 8 for graal compatibilty" />
@@ -613,6 +630,17 @@
           <url>file://$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/error/RestExceptionHandler.java</url>
           <line>29</line>
           <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitService.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/alshub-web/src/app/project-detail/project-detail.component.ts</url>
+          <line>14</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -627,6 +655,10 @@
         <watch expression="projectRepository.findById(projectId).get()" />
         <watch expression="ResponseEntity.status(status).headers(responseHeaders).body(data)" />
         <watch expression="HttpClient.newHttpClient().send(HttpRequest.newBuilder()&#10;                .uri(URI.create(API_URL + &quot;/by-project-id/&quot; + projectId))&#10;                .build(), HttpResponse.BodyHandlers.ofString())" />
+        <watch expression="projectMetaDataService.postQueryUpdateProjectMetaData(projectMetaData)" />
+        <watch expression="new Git(repository).log().add(repository.resolve(&quot;origin/master&quot;))" language="JAVA" />
+        <watch expression="repository.resolve(&quot;refs/heads/master&quot;)" language="JAVA" />
+        <watch expression="rev.getName()" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
