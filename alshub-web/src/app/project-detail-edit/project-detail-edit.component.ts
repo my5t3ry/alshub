@@ -22,7 +22,7 @@ export class ProjectDetailEditComponent implements OnInit {
   public projectForm: FormGroup;
 
 
-  constructor(private http: HttpClient, private route: ActivatedRoute,private router: Router) {
+  constructor(private http: HttpClient, private route: ActivatedRoute, private router: Router) {
   }
 
   ngOnInit() {

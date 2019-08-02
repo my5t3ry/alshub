@@ -6,13 +6,14 @@
 
 .commit-history-entry:after {
   position: relative;
-  height: 40px;
+  height: 45px;
   width: 4px;
   content: "";
   display: block;
   background-color: black;
   left: 28px;
-  top: -2px;
+  top: -45px;
+  margin-bottom: -40px;
 }
 
 

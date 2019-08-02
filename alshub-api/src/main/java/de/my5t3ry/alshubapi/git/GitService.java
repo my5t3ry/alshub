@@ -12,7 +12,7 @@ import org.eclipse.jgit.api.PushCommand;
 import org.eclipse.jgit.api.Status;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.internal.storage.file.FileRepository;
-import org.eclipse.jgit.lib.Repository;
+import org.eclipse.jgit.lib.Ref;
 import org.eclipse.jgit.lib.RepositoryCache;
 import org.eclipse.jgit.lib.StoredConfig;
 import org.eclipse.jgit.revwalk.RevCommit;
@@ -26,9 +26,9 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 
 @Component
@@ -55,19 +55,28 @@ public class GitService {
 
     public List<ProjectCommit> getCommits(final Project project) {
         final List<ProjectCommit> result = new ArrayList<ProjectCommit>();
-        Repository repository = null;
         try {
-            repository = new FileRepository(new File(project.getPath() + "/.git"));
-            final Iterable<RevCommit> logs = new Git(repository).log()
-                    .add(repository.resolve("refs/heads/master"))
+            final Git git = getGit(project);
+            final Iterable<RevCommit> logs = git.log()
+                    .add(git.getRepository().resolve("refs/heads/master"))
                     .call();
             for (RevCommit rev : logs) {
-                result.add(new ProjectCommit(rev.getFullMessage(), new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date(rev.getCommitTime())), rev.getName()));
+                result.add(new ProjectCommit(rev.getFullMessage(), new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(rev.getAuthorIdent().getWhen()), rev.getName(), false));
             }
+            Ref head = git.getRepository().getAllRefs().get("HEAD");
+            result.stream().filter(projectCommit -> {projectCommit.getId().equals(head.getObjectId().getName());}).collect(Collectors.toList()).forEach(projectCommit -> projectCommit.setCheckedOut(true));
         } catch (IOException | GitAPIException e) {
             throw new ProcessingException("could not resolve commit history for project ['" + project.getPath() + "']", e);
         }
         return result;
+    }
+
+    private Git getGit(final Project project) {
+        try {
+            return new Git(new FileRepository(new File(project.getPath() + "/.git")));
+        } catch (IOException e) {
+            throw new ProcessingException("could not read repository for project ['" + project.getPath() + "']", e);
+        }
     }
 
     private void createAndPushLocalRepo(final Project project) {
@@ -94,8 +103,8 @@ public class GitService {
 
     public void pushChanges(final Project project) {
         try {
-            pushChanges(Git.open(new File(project.getPath())), "Manual revision created");
-        } catch (IOException | GitAPIException e) {
+            pushChanges(getGit(project), "Manual revision created");
+        } catch (GitAPIException e) {
             e.printStackTrace();
         }
     }
@@ -156,5 +165,15 @@ public class GitService {
             e.printStackTrace();
         }
         return result;
+    }
+
+    public List<ProjectCommit> checkoutCommit(final Project project, final String commitId) {
+        final Git git = getGit(project);
+        try {
+            git.checkout().setName(commitId).call();
+            return getCommits(project);
+        } catch (GitAPIException e) {
+            throw new ProcessingException("could not checkout project to commit ['" + commitId + "']", e);
+        }
     }
 }

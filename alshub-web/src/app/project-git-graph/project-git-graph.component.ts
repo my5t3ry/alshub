@@ -12,7 +12,7 @@ import {RequestInterceptorService} from "../../request-interceptor.service";
 export class ProjectGitGraphComponent implements OnInit {
 
   @Input() projectId: number;
-  endpoint = '/api/project/get-commit-history';
+  endpoint = '/api/project/';
   private commitHistory: any;
 
 
@@ -21,10 +21,16 @@ export class ProjectGitGraphComponent implements OnInit {
 
 
   ngOnInit() {
-    this.http.get<any>(this.endpoint + "/" + this.projectId, RequestInterceptorService.httpOptions).pipe().subscribe(value => {
+    this.http.get<any>(this.endpoint + "/" + '/get-commit-history/' + this.projectId, RequestInterceptorService.httpOptions).pipe().subscribe(value => {
       this.commitHistory = value;
       console.log(value)
     })
   }
 
+  restoreCommit(commit: any) {
+    this.http.get<any>(this.endpoint + '/restore-commit/' + this.projectId + "/" + commit.id, RequestInterceptorService.httpOptions).pipe().subscribe(value => {
+      this.commitHistory = value;
+      console.log(value)
+    })
+  }
 }

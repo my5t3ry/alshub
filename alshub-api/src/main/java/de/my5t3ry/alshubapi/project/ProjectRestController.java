@@ -49,6 +49,14 @@ public class ProjectRestController {
                 HttpStatus.OK);
     }
 
+    @GetMapping("/restore-commit/{projectId}/{commitId}")
+    public ResponseEntity<List<ProjectCommit>> getCommitHistory(@PathVariable("projectId") Integer projectId, @PathVariable("commitId") String commitId) {
+        return ResponseEntityFactory.build("Revision restored",
+                ResponseMessageType.INFO,
+                gitService.checkoutCommit(projectRepository.findById(projectId).get(), commitId),
+                HttpStatus.OK);
+    }
+
     @PostMapping(path = "/edit-project")
     public ResponseEntity<Project> editProject(@RequestBody Project project, Principal principal) {
         projectService.updateProject(project, principal);

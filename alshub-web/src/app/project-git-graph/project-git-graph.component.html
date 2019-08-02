@@ -1,10 +1,22 @@
 <div *ngIf="commitHistory">
   <div class="row commit-history-entry" *ngFor="let commit of commitHistory">
     <div class="col-1">
-      <img src="../../assets/img/circle.svg">
+      <img *ngIf="commit.checkedOut" src="../../assets/img/circle_green.svg">
+      <img *ngIf="!commit.checkedOut" src="../../assets/img/circle_blue.svg">
     </div>
     <div class="col-11">
-      {{commit.time}} <br> {{commit.msg}} - {{commit.id}}
+      <div class="row">
+        <div class="col-12">
+          {{commit.time}} <br> {{commit.msg}} - {{commit.id}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <button (click)="restoreCommit(commit)" title="Restore revision" type="button" class="btn btn-primary">
+            <i class="fas fa-trash-restore"></i>
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

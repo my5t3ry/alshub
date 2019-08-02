@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60bb6e59-dc4d-4c7e-a355-d132b967a7b3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-detail-edit/project-detail-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-detail-edit/project-detail-edit.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alshub-web/src/assets/img/circle_green.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/ProjectCommit.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/ProjectCommit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectRestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-detail-edit/project-detail-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-detail-edit/project-detail-edit.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/src/assets/img/circle.svg" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/assets/img/circle_blue.svg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,6 +97,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="h2" />
     <property name="GO_FMT" value="true" />
+    <property name="LombokPluginEnabledInProject" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -105,7 +113,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="12" />
     <property name="jdk.selected.PYTHON_MODULE" value="Python 3.6 (kivy_venv)" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/alshub-web/src/app/project-detail/project-detail.component.scss" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/alshub-web/src/assets/img" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -120,7 +128,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="show.run.dashboard.notification" value="false" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/alshub-web/node_modules/typescript/lib" />
   </component>
@@ -136,11 +144,11 @@
       <recent name="de.my5t3ry" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/alshub-web/src/assets/img" />
       <recent name="$PROJECT_DIR$/alshub-picture-api/src/main/java/de/my5t3ry/alshubpictureapi" />
       <recent name="$PROJECT_DIR$/alshub-web/src/app" />
       <recent name="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi" />
       <recent name="$PROJECT_DIR$/alshub-api/src/main/resources" />
-      <recent name="$PROJECT_DIR$/alshub-static" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="de.my5t3ry.alshubapi.picture" />
@@ -270,14 +278,7 @@
       <workItem from="1564469361287" duration="226000" />
       <workItem from="1564471060907" duration="1419000" />
       <workItem from="1564705641031" duration="4446000" />
-      <workItem from="1564711050279" duration="19559000" />
-    </task>
-    <task id="LOCAL-00001" summary="gitignore">
-      <created>1563483607877</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1563483607877</updated>
+      <workItem from="1564711050279" duration="24773000" />
     </task>
     <task id="LOCAL-00002" summary="gitignore">
       <created>1563489200010</created>
@@ -615,7 +616,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564730015694</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="downgrade to jdk 8 for graal compatibilty">
+      <created>1564730626767</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1564730626768</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -661,18 +669,18 @@
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
         <watch expression="Files.isDirectory(curPath) &amp;&amp; !curPath.getFileName().toString().contains(&quot;.&quot;)" />
-        <watch expression="Files.isRegularFile(curPath) &amp;&amp; curPath.getFileName().toString().contains(&quot;als&quot;)" />
-        <watch expression="file.isFile()" />
-        <watch expression="!file.getName().contains(&quot;.&quot;)" />
-        <watch expression="file.getParent()" />
-        <watch expression="file.isFile() &amp;&amp; file.getName().contains(&quot;als&quot;)" />
-        <watch expression="projectRepository.findById(projectId).get()" />
-        <watch expression="ResponseEntity.status(status).headers(responseHeaders).body(data)" />
-        <watch expression="HttpClient.newHttpClient().send(HttpRequest.newBuilder()&#10;                .uri(URI.create(API_URL + &quot;/by-project-id/&quot; + projectId))&#10;                .build(), HttpResponse.BodyHandlers.ofString())" />
-        <watch expression="projectMetaDataService.postQueryUpdateProjectMetaData(projectMetaData)" />
-        <watch expression="new Git(repository).log().add(repository.resolve(&quot;origin/master&quot;))" language="JAVA" />
         <watch expression="repository.resolve(&quot;refs/heads/master&quot;)" language="JAVA" />
         <watch expression="rev.getName()" language="JAVA" />
+        <watch expression="new Date(rev.getCommitTime())" />
+        <watch expression="git.getRepository().getAllRefs().get(&quot;HEAD&quot;)" />
+        <watch expression="head.getObjectId()." language="JAVA" />
+        <watch expression="head.getObjectId().getName()" />
+        <watch expression="projectCommit.setCheckedOut(projectCommit.getId().equals(head.getObjectId().getName()) ? true : false)" />
+        <watch expression="projectCommit -&gt; projectCommit.setCheckedOut(projectCommit.getId().equals(head.getObjectId().getName()) ? true : false)" language="JAVA" />
+        <watch expression="result.stream().filter(projectCommit -&gt; projectCommit.getId().equals(head.getObjectId().getName())).collect(Collectors.toList()).forEach(projectCommit -&gt; projectCommit.setCheckedOut(true))" />
+        <watch expression="projectCommit -&gt; projectCommit.getId().equals(head.getObjectId().getName())" />
+        <watch expression="projectCommit -&gt; {&#10;                projectCommit.getId().equals(head.getObjectId().getName());&#10;            }" />
+        <watch expression="projectCommit.getId().equals(head.getObjectId().getName())" />
       </configuration>
     </watches-manager>
   </component>
