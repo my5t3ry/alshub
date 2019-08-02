@@ -7,6 +7,7 @@ import lombok.Data;
 import javax.persistence.*;
 import java.io.File;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Data
 @Entity
@@ -22,8 +23,8 @@ public class Project {
     private String alsFile;
     @OneToOne(cascade = CascadeType.ALL)
     private AbletonProject abletonProject;
-    @ManyToMany
-    private List<Genre> genreList;
+    @ManyToMany(cascade = CascadeType.ALL)
+    private List<Genre> genres;
 
     public Project() {
     }
@@ -37,6 +38,7 @@ public class Project {
         this.alsFile = alsFile;
     }
 
+
     public String getAlsFile() {
         return alsFile;
     }
@@ -47,5 +49,11 @@ public class Project {
 
     public AbletonProject getAbletonProject() {
         return abletonProject;
+    }
+
+    public String getGenresAsString() {
+        return genres.stream()
+                .map(Genre::getName)
+                .collect(Collectors.joining(" "));
     }
 }

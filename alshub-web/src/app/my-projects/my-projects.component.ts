@@ -9,7 +9,7 @@ import {RequestInterceptorService} from "../../request-interceptor.service";
   styleUrls: ['./my-projects.component.scss']
 })
 export class MyProjectsComponent implements OnInit {
-  endpoint = 'http://localhost:8090/api/project';
+  endpoint = 'http://localhost/api/project';
 
   projects: any;
 

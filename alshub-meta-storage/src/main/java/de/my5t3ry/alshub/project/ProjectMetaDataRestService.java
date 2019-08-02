@@ -20,4 +20,13 @@ public class ProjectMetaDataRestService {
     public ResponseEntity<ProjectMetaData> save(@RequestBody ProjectMetaData projectMetaData) {
         return new ResponseEntity<>(projectMetaDataRepository.save(projectMetaData), HttpStatus.OK);
     }
+
+    @PostMapping(path = "/update")
+    public ResponseEntity<ProjectMetaData> update(@RequestBody ProjectMetaData projectMetaData) {
+        final ProjectMetaData byProjectId = projectMetaDataRepository.findByProjectId(projectMetaData.getProjectId());
+        if (byProjectId != null) {
+            projectMetaDataRepository.delete(byProjectId);
+        }
+        return new ResponseEntity<>(projectMetaDataRepository.save(projectMetaData), HttpStatus.OK);
+    }
 }

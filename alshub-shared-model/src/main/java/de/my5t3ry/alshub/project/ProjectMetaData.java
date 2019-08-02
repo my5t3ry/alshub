@@ -20,6 +20,8 @@ public class ProjectMetaData {
     private String id;
     @Field(type = FieldType.Text, store = true)
     private String name;
+    @Field(type = FieldType.Text, store = true)
+    private String genres;
     @Field(type = FieldType.Integer, store = true)
     private Integer projectId = 0;
     @Field(type = FieldType.Integer, store = true)
@@ -30,6 +32,5 @@ public class ProjectMetaData {
     private Integer likeCount = 0;
     @Field(type = FieldType.Integer, store = true)
     private Integer forkCount = 0;
-
 
 }

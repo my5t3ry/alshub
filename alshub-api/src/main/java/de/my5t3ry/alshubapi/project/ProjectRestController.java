@@ -7,10 +7,7 @@ import de.my5t3ry.alshubapi.user.UserController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 import java.util.List;
@@ -22,6 +19,8 @@ public class ProjectRestController {
     private ProjectRepository projectRepository;
     @Autowired
     private UserController userController;
+    @Autowired
+    private ProjectService projectService ;
     @Autowired
     private GitService gitService;
 
@@ -40,6 +39,15 @@ public class ProjectRestController {
         return ResponseEntityFactory.build("Changes refreshed",
                 ResponseMessageType.INFO,
                 gitService.checkChanges(projectRepository.findById(projectId).get()),
+                HttpStatus.OK);
+    }
+
+    @PostMapping(path = "/edit-project")
+    public ResponseEntity<Project> editProject(@RequestBody Project project, Principal principal) {
+        projectService.updateProject(project,principal);
+        return ResponseEntityFactory.build("Project saved",
+                ResponseMessageType.INFO,
+                projectRepository.save(project),
                 HttpStatus.OK);
     }
 

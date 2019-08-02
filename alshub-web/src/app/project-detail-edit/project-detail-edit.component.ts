@@ -13,7 +13,7 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 })
 export class ProjectDetailEditComponent implements OnInit {
   projectId: any;
-  endpoint = 'http://localhost:8090/api/project';
+  endpoint = 'http://localhost/api/project';
 
   project: any;
   changes: any;
@@ -45,6 +45,14 @@ export class ProjectDetailEditComponent implements OnInit {
   }
 
   save() {
-    console.log(this.projectForm);
+    this.project.name = this.projectForm.controls['name'].value;
+    this.project.abletonProject.externalDevices = this.projectForm.controls['devices'].value;
+    this.project.genres = this.projectForm.controls['genres'].value;
+    this.http.post(this.endpoint + '/edit-project/', this.project)
+      .subscribe(
+        data => {
+          // @ts-ignore
+          this.router.navigateByUrl("/project-detail/" + data.id)
+        });
   }
 }

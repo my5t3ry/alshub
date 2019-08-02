@@ -2,20 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60bb6e59-dc4d-4c7e-a355-d132b967a7b3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/Genre.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-web/src/app/project-detail-edit/project-detail-edit.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-web/src/app/project-detail-edit/project-detail-edit.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-web/src/app/project-detail-edit/project-detail-edit.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-web/src/app/project-detail-edit/project-detail-edit.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/resources/application-live.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/Genre.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/Genre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectMetaDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectMetaDataService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/project/ProjectService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/resources/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-meta-storage/etc/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-meta-storage/etc/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-meta-storage/src/main/java/de/my5t3ry/alshub/project/ProjectMetaDataRestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-meta-storage/src/main/java/de/my5t3ry/alshub/project/ProjectMetaDataRestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-meta-storage/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-meta-storage/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-serv/src/main/resources/public/main.65e1627cdbae929b77c6.js" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-serv/src/main/resources/public/main.65e1627cdbae929b77c6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-shared-model/src/main/java/de/my5t3ry/alshub/project/ProjectMetaData.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-shared-model/src/main/java/de/my5t3ry/alshub/project/ProjectMetaData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alshub-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/explorer/explorer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/explorer/explorer.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alshub-web/src/app/explorer/explorer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/explorer/explorer.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/nav/nav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/nav/nav.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/my-projects/my-projects.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/my-projects/my-projects.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-card-meta-data/project-card-meta-data.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-card-meta-data/project-card-meta-data.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-detail-edit/project-detail-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-detail-edit/project-detail-edit.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-detail/project-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-detail/project-detail.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +53,17 @@
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="db" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="DB: database" type="2aa06773:H2ImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="DB: database" type="2aa06773:H2ImplModel$Database" />
+        <item name="PUBLIC: schema" type="7f85d983:H2ImplModel$Schema" />
       </path>
     </expand>
     <select />
@@ -104,7 +122,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="12" />
     <property name="jdk.selected.PYTHON_MODULE" value="Python 3.6 (kivy_venv)" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/alshub-git-api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/alshub-api/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -124,30 +142,30 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/alshub-web/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/alshub-web/src" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="de.my5t3ry" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/alshub-static" />
-      <recent name="$PROJECT_DIR$/alshub-web/src/app" />
-      <recent name="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/error" />
-      <recent name="$PROJECT_DIR$/alshub-web/src/assets/css" />
-      <recent name="$PROJECT_DIR$/alshub-web/src/assets/js/feather" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="de.my5t3ry.project" />
-      <recent name="de.my5t3ry.alshubapi.error" />
-      <recent name="de.my5t3ry.alshubapi.config" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="de.my5t3ry.alshubapi.project" />
       <recent name="de.my5t3ry.alshubapi.response_entity" />
       <recent name="de.my5t3ry.alshubapi.user" />
       <recent name="de.my5t3ry.alshubapi.explorer" />
       <recent name="de.my5t3ry.alshubapi.explorer.fs_item" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="de.my5t3ry" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/alshub-api/src/main/resources" />
+      <recent name="$PROJECT_DIR$/alshub-static" />
+      <recent name="$PROJECT_DIR$/alshub-web/src/app" />
+      <recent name="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/error" />
+      <recent name="$PROJECT_DIR$/alshub-web/src/assets/css" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="de.my5t3ry.project" />
+      <recent name="de.my5t3ry.alshubapi.error" />
+      <recent name="de.my5t3ry.alshubapi.config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/alshub-web/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -162,7 +180,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AlshubApiApplication">
+  <component name="RunManager" selected="Spring Boot.AlshubMetaStorageApplication">
     <configuration name="E2E Tests (alshub-web)" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/alshub-web/e2e/protractor.conf.js" />
       <node-interpreter value="project" />
@@ -187,6 +205,7 @@
     <configuration name="AlshubApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="alshub-api" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="de.my5t3ry.AlshubApiApplication" />
+      <option name="ACTIVE_PROFILES" value="dev" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <method v="2">
@@ -259,7 +278,8 @@
       <workItem from="1564409093545" duration="1236000" />
       <workItem from="1564469361287" duration="226000" />
       <workItem from="1564471060907" duration="1419000" />
-      <workItem from="1564705641031" duration="3834000" />
+      <workItem from="1564705641031" duration="4446000" />
+      <workItem from="1564711050279" duration="3379000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore">
       <created>1563483607877</created>
@@ -520,7 +540,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564706989848</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="downgrade to jdk 8 for graal compatibilty">
+      <created>1564709480307</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1564709480307</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

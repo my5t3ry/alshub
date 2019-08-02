@@ -65,7 +65,7 @@
     "typescript": "~3.1.1"
   },
   "main": "http://localhost:8009/index.html",
-  "node-remote": "http://localhost:8090/api/index.html",
+  "node-remote": "http://localhost/api/index.html",
   "window": {
     "width": 1280,
     "height": 720,

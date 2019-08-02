@@ -12,7 +12,7 @@ import {RequestInterceptorService} from "../../request-interceptor.service";
 })
 export class ProjectDetailComponent implements OnInit {
   projectId: any;
-  endpoint = 'http://localhost:8090/api/project';
+  endpoint = 'http://localhost/api/project';
 
   project: any;
   changes: any;

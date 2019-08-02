@@ -3,6 +3,7 @@ package de.my5t3ry.alshubapi.project;
 import de.my5t3ry.als_parser.AbletonFileParser;
 import de.my5t3ry.als_parser.domain.AbletonProject.AbletonProject;
 import de.my5t3ry.alshub.project.ProjectMetaData;
+import de.my5t3ry.alshubapi.error.ProcessingException;
 import de.my5t3ry.alshubapi.explorer.SetPathRequest;
 import de.my5t3ry.alshubapi.git.GitService;
 import de.my5t3ry.alshubapi.user.User;
@@ -13,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
+import java.io.IOException;
 import java.security.Principal;
 import java.util.ArrayList;
 
@@ -36,7 +38,25 @@ public class ProjectService {
         createStats(project);
         projectRepository.save(project);
         final ProjectMetaData projectMetaData = projectMetaDataService.createProjectMetaData(project, principal);
+        try {
+            final ProjectMetaData result = projectMetaDataService.postQueryProjectMetaData(projectMetaData);
+        } catch (IOException | InterruptedException e) {
+            throw new ProcessingException("Could not serialize projectMeta data", e);
+        }
+        final User user = userController.getUser(principal);
+        user.addProject(project);
+        userRepository.save(user);
+        return project;
+    }
 
+    public Project updateProject(final Project project, Principal principal) {
+        projectRepository.save(project);
+        final ProjectMetaData projectMetaData = projectMetaDataService.createProjectMetaData(project, principal);
+        try {
+            final ProjectMetaData result = projectMetaDataService.postQueryUpdateProjectMetaData(projectMetaData);
+        } catch (IOException | InterruptedException e) {
+            throw new ProcessingException("Could not serialize projectMeta data", e);
+        }
         final User user = userController.getUser(principal);
         user.addProject(project);
         userRepository.save(user);
