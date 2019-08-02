@@ -57,12 +57,12 @@ public class GitService {
         final List<ProjectCommit> result = new ArrayList<ProjectCommit>();
         Repository repository = null;
         try {
-            repository = new FileRepository(new File(project.getPath()+"/.git"));
+            repository = new FileRepository(new File(project.getPath() + "/.git"));
             final Iterable<RevCommit> logs = new Git(repository).log()
                     .add(repository.resolve("refs/heads/master"))
                     .call();
             for (RevCommit rev : logs) {
-                result.add(new ProjectCommit(rev.getFullMessage(),new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date(rev.getCommitTime())), rev.getName()));
+                result.add(new ProjectCommit(rev.getFullMessage(), new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date(rev.getCommitTime())), rev.getName()));
             }
         } catch (IOException | GitAPIException e) {
             throw new ProcessingException("could not resolve commit history for project ['" + project.getPath() + "']", e);
@@ -76,16 +76,16 @@ public class GitService {
             f‌ile.createNewFile();
             Git newLocalRepository = Git.init().setDirectory(f‌ile.getParentFile()).call();
             setRemoteOrigin(project, newLocalRepository);
-            pushChanges(newLocalRepository);
+            pushChanges(newLocalRepository, "Initialized project repo");
         } catch (IOException | GitAPIException e) {
             e.printStackTrace();
         }
     }
 
-    public void pushChanges(final Git newLocalRepository) throws GitAPIException {
+    public void pushChanges(final Git newLocalRepository, final String commitMessage) throws GitAPIException {
         newLocalRepository.add().addFilepattern(".").call();
         newLocalRepository.commit()
-                .setMessage(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()))
+                .setMessage(commitMessage)
                 .setCommitter("auto", "commit")
                 .call();
         PushCommand pushCommand = newLocalRepository.push();
@@ -94,7 +94,7 @@ public class GitService {
 
     public void pushChanges(final Project project) {
         try {
-            pushChanges(Git.open(new File(project.getPath())));
+            pushChanges(Git.open(new File(project.getPath())), "Manual revision created");
         } catch (IOException | GitAPIException e) {
             e.printStackTrace();
         }

@@ -9,7 +9,7 @@ ul {
 
 .outer-list:after {
   position: absolute;
-  height: calc(100% - 80px);
+  height: calc(100% - 20px);
   width: 3px;
   content: "";
   display: block;

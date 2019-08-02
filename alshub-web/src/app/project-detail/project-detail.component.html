@@ -64,27 +64,6 @@
     </div>
     <div class="col-6">
       <app-project-git-graph [projectId]="project.id"></app-project-git-graph>
-      <div class="row" *ngIf="changes">
-        <div class="col-12">
-          <div class="row" *ngFor="let change of changes">
-            <div class="col-6">
-              {{change.type}}
-            </div>
-            <div class="col-6">
-              {{change.path}}
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row" *ngIf="!changes || changes.length == 0">
-        <div class="col-12">
-          <div class="row">
-            <div class="col-12">
-              no changes since the last push
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </div>

@@ -1,5 +1,6 @@
-<ul class="outer-list">
-  <li>test
-  </li>
-  <li>test</li>
-</ul>
+<div *ngIf="commitHistory">>
+  <ul *ngFor="let commit of commitHistory" class="outer-list">
+    <li>{{commit.time}} <br> {{commit.msg}} - {{commit.id}}
+    </li>
+  </ul>
+</div>
