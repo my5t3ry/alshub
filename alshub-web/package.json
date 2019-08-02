@@ -32,11 +32,12 @@
     "keycloak-angular": "^7.0.1",
     "keycloak-js": "^6.0.1",
     "ngx-bootstrap": "^5.1.0",
+    "ngx-chips": "^2.0.2",
+    "node-pre-gyp": "0.6.x",
     "npm": "^6.10.1",
     "popper.js": "^1.15.0",
     "rxjs": "~6.3.3",
     "uninstall": "0.0.0",
-    "node-pre-gyp": "0.6.x",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

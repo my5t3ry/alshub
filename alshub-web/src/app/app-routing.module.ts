@@ -5,6 +5,7 @@ import {AppAuthGuard} from "../app.authguard";
 import {MyProjectsComponent} from "./my-projects/my-projects.component";
 import {ProjectDetailComponent} from "./project-detail/project-detail.component";
 import {ErrorComponent} from "./error/error.component";
+import {ProjectDetailEditComponent} from "./project-detail-edit/project-detail-edit.component";
 
 const routes: Routes = [{
   path: '',
@@ -19,6 +20,10 @@ const routes: Routes = [{
 },
   {
     path: 'project-detail/:projectId', component: ProjectDetailComponent,
+    canActivate: [AppAuthGuard],
+    data: {roles: ['alshub']}
+  },{
+    path: 'project-detail-edit/:projectId', component: ProjectDetailEditComponent,
     canActivate: [AppAuthGuard],
     data: {roles: ['alshub']}
   }, {

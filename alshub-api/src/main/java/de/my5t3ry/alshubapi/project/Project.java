@@ -6,6 +6,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.io.File;
+import java.util.List;
 
 @Data
 @Entity
@@ -14,13 +15,15 @@ public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    private  String name;
+    private String name;
     private String path;
     private String gitUuid;
     private String remoteGitUrl;
     private String alsFile;
     @OneToOne(cascade = CascadeType.ALL)
     private AbletonProject abletonProject;
+    @ManyToMany
+    private List<Genre> genreList;
 
     public Project() {
     }

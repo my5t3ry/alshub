@@ -1,0 +1,104 @@
+<form *ngIf="projectForm" [formGroup]="projectForm">
+
+  <!--  <div class="form-group">-->
+  <!--    <label for="exampleInputPassword1">Password</label>-->
+  <!--    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">-->
+  <!--  </div>-->
+  <!--  <div class="form-check">-->
+  <!--    <input type="checkbox" class="form-check-input" id="exampleCheck1">-->
+  <!--    <label class="form-check-label" for="exampleCheck1">Check me out</label>-->
+  <!--  </div>-->
+
+  <div class="row" *ngIf="project">
+    <div class="col-12">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Project name</label>
+        <input formControlName="name" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      </div>
+    </div>
+  </div>
+  <div class="row" *ngIf="project">
+    <div class="col-12">
+      <tabset>
+        <tab heading="Info" id="project-info">
+          <div class="row">
+            <div class="col-2">
+              Created on:
+            </div>
+            <div class="col-10">
+              {{project.abletonProject.creationFileTime}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              External plugins:
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <tag-input formControlName="devices" [identifyBy]="'id'" [displayBy]="'name'"></tag-input>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              Genres:
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <tag-input formControlName="genres" [identifyBy]="'id'" [displayBy]="'name'"></tag-input>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+                <button type="submit" (click)="save()" class="btn btn-primary">Save</button>
+
+            </div>
+          </div>
+        </tab>
+        <tab heading="Changes">
+          <div class="row">
+            <div class="col-12">
+              <ul class="nav justify-content-end">
+                <li class="nav-item">
+                  <button  type="button" class="btn btn-dark">
+                    <i class="fas fa-sync"></i>
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button type="button" class="btn btn-dark">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row" *ngIf="changes">
+            <div class="col-12">
+              <div class="row" *ngFor="let change of changes">
+                <div class="col-6">
+                  {{change.type}}
+                </div>
+                <div class="col-6">
+                  {{change.path}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" *ngIf="!changes || changes.length == 0">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12">
+                  no changes since the last push
+                </div>
+              </div>
+            </div>
+          </div>
+        </tab>
+        <tab heading="History">history</tab>
+      </tabset>
+    </div>
+  </div>
+
+</form>
+

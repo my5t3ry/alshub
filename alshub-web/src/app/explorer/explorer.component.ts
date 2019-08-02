@@ -60,7 +60,7 @@ export class ExplorerComponent implements OnInit {
       .subscribe(
         data => {
           // @ts-ignore
-          this.router.navigateByUrl("/project-detail/" + data.id)
+          this.router.navigateByUrl("/project-detail-edit/" + data.id)
         });
   }
 }

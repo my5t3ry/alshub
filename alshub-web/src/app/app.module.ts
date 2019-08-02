@@ -19,6 +19,9 @@ import {ErrorComponent} from "./error/error.component";
 import {ProjectCardMetaDataComponent} from './project-card-meta-data/project-card-meta-data.component';
 import {FooterComponent} from './footer/footer.component';
 import {SpinnerService} from "../spinnner.service";
+import {ProjectDetailEditComponent} from './project-detail-edit/project-detail-edit.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {TagInputModule} from "ngx-chips";
 
 declare var fs: any;
 
@@ -32,7 +35,8 @@ declare var fs: any;
     MyProjectsComponent,
     ProjectDetailComponent,
     ProjectCardMetaDataComponent,
-    FooterComponent
+    FooterComponent,
+    ProjectDetailEditComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +61,11 @@ declare var fs: any;
         autoHide: 5000
       }
     }),
-    BrowserAnimationsModule],
+    BrowserAnimationsModule,
+    TagInputModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
 
   providers: [HttpClient,
     {provide: HTTP_INTERCEPTORS, useClass: RequestInterceptorService, multi: true},
