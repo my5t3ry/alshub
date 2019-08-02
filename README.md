@@ -27,7 +27,6 @@ a tool to organize revisions and provide a change history for ableton projects. 
 
 </span><span>participate:
 
-*   the project is public on github https://github.com/my5t3ry/alshub.git
 *   latest version of the desktop application can be build by hand or a soon provided bash script
 *   binary versions for a supported system can be requested
 *   registration is open to the public and accounts will stay

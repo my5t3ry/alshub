@@ -15,7 +15,7 @@
     <description>swag</description>
 
     <properties>
-        <java.version>8</java.version>
+        <java.version>12</java.version>
     </properties>
 
     <dependencies>
@@ -118,7 +118,15 @@
                     <executable>true</executable>
                 </configuration>
             </plugin>
-
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.1</version>
+                    <configuration>
+                        <source>12</source>
+                        <target>12</target>
+                    </configuration>
+                </plugin>
         </plugins>
         <extensions>
             <extension>

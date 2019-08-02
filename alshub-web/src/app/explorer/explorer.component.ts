@@ -42,7 +42,7 @@ export class ExplorerComponent implements OnInit {
         });
   }
 
-  refresh(data: Object) {
+  refresh(data: any) {
     this.items = data.items;
     this.path = data.path;
   }
@@ -59,6 +59,7 @@ export class ExplorerComponent implements OnInit {
     this.http.post(this.endpoint + '/add-project/', {path: item.absolutePath})
       .subscribe(
         data => {
+          // @ts-ignore
           this.router.navigateByUrl("/project-detail/" + data.id)
         });
   }
