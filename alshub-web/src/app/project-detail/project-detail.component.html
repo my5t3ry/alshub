@@ -1,6 +1,9 @@
 <div class="row" *ngIf="project">
-  <div class="col-12">
-    {{project.name}}
+  <div class="col-11">
+    <h2> {{project.name}}</h2>
+  </div>
+  <div class="col-1">
+    <button type="button" routerLink="/project-detail-edit/{{project.id}}" title="Edit project" class="btn btn-primary "><i class="fas fa-pen"></i></button>
   </div>
 </div>
 <div class="row" *ngIf="project">
@@ -8,16 +11,16 @@
     <tabset>
       <tab heading="Info" id="project-info">
         <div class="row">
-          <div class="col-2">
-            Created on:
-          </div>
-          <div class="col-10">
-            {{project.abletonProject.creationFileTime}}
+          <div class="col-12">
+            <img class="project-picture" src="http://alshub.local/picture-api/picture/id/{{project.pictureId}}">
           </div>
         </div>
         <div class="row">
-          <div class="col-12">
-            <img src="http://alshub.local/picture-api/picture/id/{{project.pictureId}}">
+          <div class="col-2">
+            Description:
+          </div>
+          <div class="col-10">
+            {{project.description}}
           </div>
         </div>
         <div class="row">
@@ -31,6 +34,14 @@
           </div>
           <div class="col-10">
             {{device.count}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            Created on:
+          </div>
+          <div class="col-10">
+            {{project.abletonProject.creationFileTime}}
           </div>
         </div>
       </tab>

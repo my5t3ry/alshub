@@ -57,6 +57,7 @@ export class ProjectDetailEditComponent implements OnInit {
     this.project.name = this.projectForm.controls['name'].value;
     this.project.abletonProject.externalDevices = this.projectForm.controls['devices'].value;
     this.project.genres = this.projectForm.controls['genres'].value;
+    this.project.description = this.projectForm.controls['description'].value;
     this.project.pictureId = this._pictureId;
     this.http.post(this.endpoint + '/edit-project/', this.project)
       .subscribe(
