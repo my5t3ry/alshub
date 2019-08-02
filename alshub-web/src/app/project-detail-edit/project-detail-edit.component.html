@@ -28,14 +28,7 @@
       <!--            </div>-->
       <!--          </div>-->
 
-      <div class="row mt-2">
-        <div class="col-12">
-          <div class="form-group">
-            <label for="description">Description</label>
-            <textarea class="form-control" id="description" formControlName="description"></textarea>
-          </div>
-        </div>
-      </div>
+
       <div class="row mt-2">
         <div class="col-12">
           <div class="form-group">
@@ -46,7 +39,7 @@
                 <div class="picture-preview-button-container">
                   <div type='button' ngbTooltip="Löschen" name='delete' (click)="initReset()" class='box'>
                     <div class='box-left'>
-                      <i class='but-icon fa fa-lg fa-times'></i>
+                      <i class='but-icon fas fa-trash'></i>
                     </div>
                   </div>
                 </div>
@@ -60,6 +53,13 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-12">
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" formControlName="description">what is this project about</textarea>
           </div>
         </div>
       </div>

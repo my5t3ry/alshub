@@ -23,6 +23,7 @@ import {ProjectDetailEditComponent} from './project-detail-edit/project-detail-e
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {TagInputModule} from "ngx-chips";
 import {PictureGalleryComponent} from "./picture-gallery/picture-gallery.component";
+import {NgbModalModule} from "@ng-bootstrap/ng-bootstrap";
 
 declare var fs: any;
 
@@ -65,6 +66,7 @@ declare var fs: any;
     }),
     BrowserAnimationsModule,
     TagInputModule,
+    NgbModalModule,
     FormsModule,
     ReactiveFormsModule
   ],

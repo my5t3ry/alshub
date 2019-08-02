@@ -18,8 +18,7 @@ class Picture {
 export class PictureGalleryComponent implements OnInit {
   private galleryModal: NgbModalRef;
 
-  @Output() onPictureSelect: EventEmitter<string> = new EventEmitter();
-  @ViewChild('deletePictureConfirmationContent') deleteDialogModal: ElementRef;
+  @Output() onPictureSelect: EventEmitter<Element> = new EventEmitter();
   @Input() editMode = false;
   private _pictures: Picture[];
   private endpoint = 'http://localhost/api/picture';
@@ -76,16 +75,13 @@ export class PictureGalleryComponent implements OnInit {
 
   clickPicture(event: Event) {
     if (this.editMode) {
-      this.modalService.open(this.deleteDialogModal, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
-        this.deletePicture(event.srcElement.attributes.getNamedItem('data-id').value).subscribe(result => {
+        this.deletePicture((event.target as Element).attributes.getNamedItem('data-id').value).subscribe(result => {
           this.loadPictures().subscribe(result => {
             this._pictures = result;
           });
         });
-      }, (reason) => {
-      });
     } else {
-      this.onPictureSelect.emit(event.srcElement.attributes.getNamedItem('src').value);
+      this.onPictureSelect.emit((event.target as Element));
       this.galleryModal.close();
     }
   }

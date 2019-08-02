@@ -1,7 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@fortawesome/fontawesome-free/css/all.css';
 @import "~angular-notifier/styles";
-@import '~bootstrap/dist/css/bootstrap.min.css';
+
+$primary: black;
+@import '~bootstrap/scss/bootstrap';
+
 
 body {
   background-image: url(assets/img/bg.png);

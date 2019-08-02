@@ -20,7 +20,7 @@ public class PictureRestController {
     @Autowired
     private PictureRepository pictureRepository;
 
-    @GetMapping("/{motiveId}")
+    @GetMapping
     public ResponseEntity<List<Picture>> get() {
         return new ResponseEntity<>(pictureRepository.findAll(), HttpStatus.OK);
     }

@@ -16,6 +16,7 @@ public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+    private Integer pictureId;
     private String name;
     private String description;
     private String path;
@@ -38,7 +39,6 @@ public class Project {
     public void setAlsFile(final String alsFile) {
         this.alsFile = alsFile;
     }
-
 
     public String getAlsFile() {
         return alsFile;

@@ -4,7 +4,7 @@
 </button>
 <ng-template #pictureGalleryContent let-modal>
   <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Bild Archiv</h4>
+    <h4 class="modal-title" id="modal-basic-title">Gallery</h4>
     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -36,12 +36,12 @@
       </div>
     </div>
     <div *ngIf="pictures.length == 0">
-      Für dieses Motiv wurden noch keine Bilder hochgeladen.
+      No pictures uploaded yet.
     </div>
   </div>
   <div class="modal-footer">
     <div class="upload-wrap pull-left">
-      <button type="button" title="Bild hinzufügen" class="btn btn-primary fa fa-plus"></button>
+      <button type="button" title="Bild hinzufügen" class="btn btn-primary fas fa-plus-square"></button>
       <input type="file" class="upload-btn" (change)="onFileChange($event)"/>
     </div>
   </div>

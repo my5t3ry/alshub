@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {NotifierService} from "angular-notifier";
 import {Observable} from "rxjs";
 import {RequestInterceptorService} from "../../request-interceptor.service";
@@ -12,6 +12,8 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
   styleUrls: ['./project-detail-edit.component.scss']
 })
 export class ProjectDetailEditComponent implements OnInit {
+  private _pictureId: string;
+
   get pictureData(): string {
     return this._pictureData;
   }
@@ -25,7 +27,7 @@ export class ProjectDetailEditComponent implements OnInit {
   private _pictureData: string = null;
 
 
-  constructor(private http: HttpClient, private route: ActivatedRoute, private notifierService: NotifierService) {
+  constructor(private http: HttpClient, private route: ActivatedRoute,private router: Router) {
   }
 
   ngOnInit() {
@@ -55,6 +57,7 @@ export class ProjectDetailEditComponent implements OnInit {
     this.project.name = this.projectForm.controls['name'].value;
     this.project.abletonProject.externalDevices = this.projectForm.controls['devices'].value;
     this.project.genres = this.projectForm.controls['genres'].value;
+    this.project.pictureId = this._pictureId;
     this.http.post(this.endpoint + '/edit-project/', this.project)
       .subscribe(
         data => {
@@ -63,8 +66,9 @@ export class ProjectDetailEditComponent implements OnInit {
         });
   }
 
-  pictureSelectHandler(data: string) {
-    this._pictureData = data;
+  pictureSelectHandler(data: Element) {
+    this._pictureData = data.attributes.getNamedItem('src').value;
+    this._pictureId = data.attributes.getNamedItem('data-id').value;
   }
 
   initReset() {
