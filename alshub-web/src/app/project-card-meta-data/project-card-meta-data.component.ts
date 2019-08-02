@@ -8,7 +8,7 @@ import {HttpClient} from "@angular/common/http";
   styleUrls: ['./project-card-meta-data.component.scss']
 })
 export class ProjectCardMetaDataComponent implements OnInit {
-  endpoint = 'http://localhost/api/project-meta-data';
+  endpoint = '/api/project-meta-data';
   @Input() project: any;
   projectMetaData: any;
 

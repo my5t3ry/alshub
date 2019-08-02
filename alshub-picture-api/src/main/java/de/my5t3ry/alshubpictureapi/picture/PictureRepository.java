@@ -1,4 +1,4 @@
-package de.my5t3ry.alshubapi.picture;
+package de.my5t3ry.alshubpictureapi.picture;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/alshub-meta-storage/pom.xml" />
         <option value="$PROJECT_DIR$/alshub-serv/pom.xml" />
         <option value="$PROJECT_DIR$/alshub-git-api/pom.xml" />
+        <option value="$PROJECT_DIR$/alshub-picture-api/pom.xml" />
       </list>
     </option>
   </component>

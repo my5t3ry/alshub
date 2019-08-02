@@ -12,7 +12,7 @@ import {RequestInterceptorService} from "../../request-interceptor.service";
 })
 export class ExplorerComponent implements OnInit {
 
-  endpoint = 'http://localhost/api/explorer';
+  endpoint = '/api/explorer';
 
   items: any;
   path: any;

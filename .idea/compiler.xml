@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="als-parser" />
+        <module name="alshub-picture-api" />
         <module name="alshub-api" />
         <module name="alshub_git_api" />
         <module name="alshub-meta-storage" />
@@ -23,6 +24,7 @@
       <module name="alshub-api" options="-parameters" />
       <module name="alshub-git-api" options="-parameters" />
       <module name="alshub-meta-storage" options="-parameters" />
+      <module name="alshub-picture-api" options="-parameters" />
       <module name="alshub-serv" options="-parameters" />
       <module name="alshub-shared-model" options="" />
       <module name="alshub_git_api" options="-parameters" />

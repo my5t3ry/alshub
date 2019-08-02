@@ -19,7 +19,7 @@ export class ProjectDetailEditComponent implements OnInit {
   }
 
   projectId: any;
-  endpoint = 'http://localhost/api/project';
+  endpoint = '/api/project';
 
   project: any;
   changes: any;

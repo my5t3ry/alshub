@@ -6,6 +6,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -26,7 +27,7 @@ public class Project {
     @OneToOne(cascade = CascadeType.ALL)
     private AbletonProject abletonProject;
     @ManyToMany(cascade = CascadeType.ALL)
-    private List<Genre> genres;
+    private List<Genre> genres = new ArrayList<>();
 
     public Project() {
     }
