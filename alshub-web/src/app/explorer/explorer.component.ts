@@ -3,7 +3,7 @@ import {Observable} from "rxjs";
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Router} from "@angular/router";
 import {NotifierService} from "angular-notifier";
-import {RequestInterceptorService} from "../../request-interceptor.service";
+import {RequestInterceptorService} from "../request-interceptor.service";
 
 @Component({
   selector: 'app-explorer',

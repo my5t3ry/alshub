@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {SpinnerService} from "../../spinnner.service";
+import {SpinnerService} from "../spinnner.service";
 
 @Component({
   selector: 'app-spinner',

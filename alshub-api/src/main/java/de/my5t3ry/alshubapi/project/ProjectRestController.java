@@ -1,7 +1,7 @@
 package de.my5t3ry.alshubapi.project;
 
+import de.my5t3ry.alshubapi.git.GitGraphCommit;
 import de.my5t3ry.alshubapi.git.GitService;
-import de.my5t3ry.alshubapi.git.ProjectCommit;
 import de.my5t3ry.alshubapi.response_entity.ResponseEntityFactory;
 import de.my5t3ry.alshubapi.response_entity.ResponseMessageType;
 import de.my5t3ry.alshubapi.user.UserController;
@@ -37,20 +37,19 @@ public class ProjectRestController {
 
     @GetMapping("/get-changes/{projectId}")
     public ResponseEntity<ProjectChanges> getChanges(@PathVariable("projectId") Integer projectId) {
-        return ResponseEntityFactory.build("Changes refreshed",
-                ResponseMessageType.INFO,
+        return ResponseEntityFactory.build(
                 gitService.checkChanges(projectRepository.findById(projectId).get()),
                 HttpStatus.OK);
     }
 
     @GetMapping("/get-commit-history/{projectId}")
-    public ResponseEntity<List<ProjectCommit>> getCommitHistory(@PathVariable("projectId") Integer projectId) {
-        return ResponseEntityFactory.build(gitService.getCommits(projectRepository.findById(projectId).get()),
+    public ResponseEntity<List<GitGraphCommit>> getCommitHistory(@PathVariable("projectId") Integer projectId) {
+        return ResponseEntityFactory.build(gitService.plotGitGraph(projectRepository.findById(projectId).get()),
                 HttpStatus.OK);
     }
 
     @GetMapping("/restore-commit/{projectId}/{commitId}")
-    public ResponseEntity<List<ProjectCommit>> getCommitHistory(@PathVariable("projectId") Integer projectId, @PathVariable("commitId") String commitId) {
+    public ResponseEntity<List<GitGraphCommit>> getCommitHistory(@PathVariable("projectId") Integer projectId, @PathVariable("commitId") String commitId) {
         return ResponseEntityFactory.build("Revision restored",
                 ResponseMessageType.INFO,
                 gitService.checkoutCommit(projectRepository.findById(projectId).get(), commitId),
@@ -67,8 +66,9 @@ public class ProjectRestController {
     }
 
     @GetMapping("/push-changes/{projectId}")
-    public ResponseEntity pushChanges(@PathVariable("projectId") Integer projectId) {
+    public ResponseEntity<List<GitGraphCommit>> pushChanges(@PathVariable("projectId") Integer projectId) {
         gitService.pushChanges(projectRepository.findById(projectId).get());
-        return new ResponseEntity<>(HttpStatus.OK);
+        return ResponseEntityFactory.build(gitService.plotGitGraph(projectRepository.findById(projectId).get()),
+                HttpStatus.OK);
     }
 }

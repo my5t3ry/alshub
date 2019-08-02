@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {RequestInterceptorService} from "../../request-interceptor.service";
+import {RequestInterceptorService} from "../request-interceptor.service";
 
 @Component({
   selector: 'app-my-projects',

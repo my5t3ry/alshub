@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {RequestInterceptorService} from "../../request-interceptor.service";
+import {RequestInterceptorService} from "../request-interceptor.service";
 import {HttpClient} from "@angular/common/http";
 
 @Component({

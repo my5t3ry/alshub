@@ -4,16 +4,17 @@
       <li class="nav-item">
       <li class="nav-item">
         <h2> {{project.name}}</h2>
+        <h5> {{project.path}}</h5>
       </li>
     </ul>
     <ul class="nav ml-auto">
       <li class="nav-item">
-        <button (click)="checkForChanges()" type="button" class="btn btn-primary">
+        <button (click)="projectGitGraph.checkForChanges()" type="button" class="btn btn-primary">
           <i class="fas fa-sync"></i>
         </button>
       </li>
       <li class="nav-item">
-        <button (click)="pushChanges(project)" type="button" class="btn btn-primary">
+        <button (click)="projectGitGraph.pushChanges(project)" type="button" class="btn btn-primary">
           <i class="fas fa-cloud-upload-alt"></i>
         </button>
       </li>
@@ -24,7 +25,7 @@
   </div>
 
   <div class="row" *ngIf="project">
-    <div class="col-6">
+    <div class="col-2">
 
       <div class="row">
         <div class="col-12">
@@ -62,8 +63,8 @@
       </div>
 
     </div>
-    <div class="col-6">
-      <app-project-git-graph [projectId]="project.id"></app-project-git-graph>
+    <div class="col-10">
+      <app-project-git-graph  [projectId]="project.id"></app-project-git-graph>
     </div>
   </div>
 </div>

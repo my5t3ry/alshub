@@ -15,14 +15,10 @@
         <module name="alshub-shared-model" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="alshub-git-api" target="12" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="alshub-api" options="-parameters" />
-      <module name="alshub-git-api" options="-parameters" />
       <module name="alshub-meta-storage" options="-parameters" />
       <module name="alshub-picture-api" options="-parameters" />
       <module name="alshub-serv" options="-parameters" />

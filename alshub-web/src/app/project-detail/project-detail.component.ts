@@ -1,9 +1,10 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {NotifierService} from "angular-notifier";
-import {RequestInterceptorService} from "../../request-interceptor.service";
+import {RequestInterceptorService} from "../request-interceptor.service";
+import {ProjectGitGraphComponent} from "../project-git-graph/project-git-graph.component";
 
 @Component({
   selector: 'app-project-detail',
@@ -15,8 +16,7 @@ export class ProjectDetailComponent implements OnInit {
   endpoint = '/api/project/';
 
   project: any;
-  changes: any;
-
+  @ViewChild(ProjectGitGraphComponent,{static: false}) public projectGitGraph:ProjectGitGraphComponent;
   constructor(private http: HttpClient, private route: ActivatedRoute, private notifierService: NotifierService) {
   }
 
@@ -30,26 +30,8 @@ export class ProjectDetailComponent implements OnInit {
     });
   }
 
-  fetchChanges() {
-    this.receiveChanges(this.projectId).subscribe(data => {
-      this.changes = data.changeList;
-    });
-  }
-
   receiveProject(id): Observable<any> {
     return this.http.get<any>(this.endpoint + "/" + id, RequestInterceptorService.httpOptions).pipe();
   }
 
-  receiveChanges(id): Observable<any> {
-    return this.http.get<any>(this.endpoint + "/get-changes/" + id, RequestInterceptorService.httpOptions).pipe();
-  }
-
-  checkForChanges() {
-    this.fetchChanges();
-  }
-
-  pushChanges(project: any) {
-    return this.http.get<any>(this.endpoint + "/push-changes/" + project.id, RequestInterceptorService.httpOptions).pipe().subscribe(value => this.checkForChanges());
-
-  }
 }
