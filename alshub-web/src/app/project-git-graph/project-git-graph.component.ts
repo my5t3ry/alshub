@@ -15,9 +15,7 @@ import {TreeComponent} from "./tree";
   styleUrls: ['./project-git-graph.component.scss']
 })
 export class ProjectGitGraphComponent implements OnInit {
-  get data(): any {
-    return this._data;
-  }
+
 
   @Input() projectId: number;
   @ViewChild('divElement', {static: false}) public divElement: ElementRef;
@@ -40,6 +38,7 @@ export class ProjectGitGraphComponent implements OnInit {
     }
   }
   private _data: any;
+  private graphInit: boolean = false;
 
 
   constructor(private http: HttpClient, private route: ActivatedRoute, private notifierService: NotifierService, private gitPlotService: GitPlotService, private renderer: Renderer2) {
@@ -53,13 +52,10 @@ export class ProjectGitGraphComponent implements OnInit {
 
   private drawPlot(value) {
     this._data = value;
-
-
-    // @ts-ignore
-    let detailedReactHTMLElement = React.createElement(TreeComponent, {data: {name:"test",children:this._data}},null);
-    ReactDOM.render(detailedReactHTMLElement, this.divElement.nativeElement);
-
-    // this.gitPlotService.draw(this.react.nativeElement, value, this.eveentMethods);
+    if (!this.graphInit) {
+      let detailedReactHTMLElement = React.createElement(TreeComponent, {data: {name: "test", children: this._data}, onClickHandler: this.restoreCommit.bind(this)}, null);
+      ReactDOM.render(detailedReactHTMLElement, this.divElement.nativeElement);
+    }
   }
 
   restoreCommit(commit: any) {

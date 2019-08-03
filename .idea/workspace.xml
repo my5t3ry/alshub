@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60bb6e59-dc4d-4c7e-a355-d132b967a7b3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/resources/grawkit" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-web/src/app/git-plot.service.ts.bak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/tree.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitGraphBranch.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitGraphBranch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitGraphCommit.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitGraphCommit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/git-plot.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/git-plot.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/src/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/tsconfig.app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alshub-web/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/tree.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/tree.tsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -314,14 +300,7 @@
       <workItem from="1564748598785" duration="8223000" />
       <workItem from="1564757250421" duration="24527000" />
       <workItem from="1564785667913" duration="5722000" />
-      <workItem from="1564796530679" duration="2246000" />
-    </task>
-    <task id="LOCAL-00007" summary="gitignore">
-      <created>1563504099816</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1563504099816</updated>
+      <workItem from="1564796530679" duration="4450000" />
     </task>
     <task id="LOCAL-00008" summary="gitignore">
       <created>1563504164087</created>
@@ -659,7 +638,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564783861711</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="a lot of shit">
+      <created>1564798842870</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1564798842871</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
