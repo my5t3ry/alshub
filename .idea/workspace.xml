@@ -2,9 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60bb6e59-dc4d-4c7e-a355-d132b967a7b3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/alshub-api/src/main/resources/grawkit" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alshub-web/src/app/git-plot.service.ts.bak" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/tree.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitGraphBranch.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitGraphBranch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitGraphCommit.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitGraphCommit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git/GitService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alshub-web/src/app/git-plot.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/git-plot.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/app/project-git-graph/project-git-graph.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/src/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/src/tsconfig.app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alshub-web/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/alshub-web/tsconfig.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +140,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="Kotlin SDK" />
     <property name="jdk.selected.PYTHON_MODULE" value="Python 3.6 (kivy_venv)" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/alshub-web/node_modules/@gitgraph" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/alshub-web/src/app" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -137,31 +151,28 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
     <property name="show.run.dashboard.notification" value="false" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/alshub-web/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="de.my5t3ry.alshubapi.git" />
-      <recent name="de.my5t3ry.alshubapi.project" />
-      <recent name="de.my5t3ry.alshubapi.response_entity" />
-      <recent name="de.my5t3ry.alshubapi.user" />
-      <recent name="de.my5t3ry.alshubapi.explorer" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/alshub-web/src/app" />
+      <recent name="$PROJECT_DIR$/alshub-web/src" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="de.my5t3ry" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/alshub-web/src/app" />
+      <recent name="$PROJECT_DIR$/alshub-api/src/main/resources" />
       <recent name="$PROJECT_DIR$/alshub-web/src" />
       <recent name="$PROJECT_DIR$/alshub-api/src/main/kotlin" />
       <recent name="$PROJECT_DIR$/alshub-api/src/main/java/de/my5t3ry/alshubapi/git" />
-      <recent name="$PROJECT_DIR$/alshub-web/src/assets/img" />
-      <recent name="$PROJECT_DIR$/alshub-picture-api/src/main/java/de/my5t3ry/alshubpictureapi" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="de.my5t3ry.alshubapi.git" />
@@ -170,9 +181,12 @@
       <recent name="de.my5t3ry.alshubapi.error" />
       <recent name="de.my5t3ry.alshubapi.config" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/alshub-web/src/app" />
-      <recent name="$PROJECT_DIR$/alshub-web/src" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="de.my5t3ry.alshubapi.git" />
+      <recent name="de.my5t3ry.alshubapi.project" />
+      <recent name="de.my5t3ry.alshubapi.response_entity" />
+      <recent name="de.my5t3ry.alshubapi.user" />
+      <recent name="de.my5t3ry.alshubapi.explorer" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -298,14 +312,9 @@
       <workItem from="1564705641031" duration="4446000" />
       <workItem from="1564711050279" duration="31256000" />
       <workItem from="1564748598785" duration="8223000" />
-      <workItem from="1564757250421" duration="23789000" />
-    </task>
-    <task id="LOCAL-00006" summary="gitignore">
-      <created>1563501208001</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1563501208001</updated>
+      <workItem from="1564757250421" duration="24527000" />
+      <workItem from="1564785667913" duration="5722000" />
+      <workItem from="1564796530679" duration="2246000" />
     </task>
     <task id="LOCAL-00007" summary="gitignore">
       <created>1563504099816</created>
@@ -643,7 +652,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564780558059</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="a lot of shit">
+      <created>1564783861711</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1564783861711</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

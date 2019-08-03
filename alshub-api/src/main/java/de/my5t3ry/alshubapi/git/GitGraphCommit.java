@@ -16,7 +16,7 @@ import java.util.List;
 public class GitGraphCommit {
 
     private String author;
-    private String subject;
+    private String name;
     private String hash;
     private final List<GitGraphCommit> parents = new ArrayList<>();
     private String dotText;

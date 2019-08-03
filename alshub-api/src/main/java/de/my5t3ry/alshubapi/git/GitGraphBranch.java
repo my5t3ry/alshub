@@ -16,9 +16,9 @@ import java.util.List;
 @Builder
 public class GitGraphBranch implements Comparable<GitGraphBranch> {
 
-    private String subject;
+    private String name;
     private String hash;
-    private List<GitGraphCommit> commits = new ArrayList<>();
+    private List<GitGraphCommit> children = new ArrayList<>();
 
     protected boolean canEqual(final Object other) {
         return other instanceof GitGraphBranch;
@@ -30,6 +30,6 @@ public class GitGraphBranch implements Comparable<GitGraphBranch> {
     }
 
     private Date getLowestCommitDate() {
-        return commits.stream().map(GitGraphCommit::getCommitTime).min(Date::compareTo).get();
+        return children.stream().map(GitGraphCommit::getCommitTime).min(Date::compareTo).get();
     }
 }

@@ -5,6 +5,9 @@ import {NotifierService} from "angular-notifier";
 import {RequestInterceptorService} from "../request-interceptor.service";
 import {Observable} from "rxjs";
 import {GitPlotService} from "../git-plot.service";
+import ReactDOM from 'react-dom';
+import * as React from "react";
+import {TreeComponent} from "./tree";
 
 @Component({
   selector: 'app-project-git-graph',
@@ -12,9 +15,13 @@ import {GitPlotService} from "../git-plot.service";
   styleUrls: ['./project-git-graph.component.scss']
 })
 export class ProjectGitGraphComponent implements OnInit {
+  get data(): any {
+    return this._data;
+  }
 
   @Input() projectId: number;
-  @ViewChild('divElement', {static: false}) public gitGraphCanvas: ElementRef;
+  @ViewChild('divElement', {static: false}) public divElement: ElementRef;
+
 
   endpoint = '/api/project/';
   changes: any;
@@ -32,6 +39,7 @@ export class ProjectGitGraphComponent implements OnInit {
       // …
     }
   }
+  private _data: any;
 
 
   constructor(private http: HttpClient, private route: ActivatedRoute, private notifierService: NotifierService, private gitPlotService: GitPlotService, private renderer: Renderer2) {
@@ -44,7 +52,14 @@ export class ProjectGitGraphComponent implements OnInit {
   }
 
   private drawPlot(value) {
-    this.gitPlotService.draw(this.gitGraphCanvas.nativeElement, value, this.eveentMethods);
+    this._data = value;
+
+
+    // @ts-ignore
+    let detailedReactHTMLElement = React.createElement(TreeComponent, {data: {name:"test",children:this._data}},null);
+    ReactDOM.render(detailedReactHTMLElement, this.divElement.nativeElement);
+
+    // this.gitPlotService.draw(this.react.nativeElement, value, this.eveentMethods);
   }
 
   restoreCommit(commit: any) {

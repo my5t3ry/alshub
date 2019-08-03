@@ -151,7 +151,7 @@ public class GitService {
             for (Ref branch : branches) {
                 final List<RevCommit> commits = getCommits(newLocalRepository, branch);
                 List<GitGraphCommit> scrapedCommits = convertToGitGraphCommit(commits, newLocalRepository);
-                result.add(GitGraphBranch.builder().hash(branch.getObjectId().getName()).commits(scrapedCommits).subject(branch.getName()).build());
+                result.add(GitGraphBranch.builder().hash(branch.getObjectId().getName()).children(scrapedCommits).name(branch.getName()).build());
             }
             Collections.sort(result);
             return result;
@@ -171,7 +171,7 @@ public class GitService {
                         .dotText("V")
                         .hash(parseCommit.toObjectId().getName())
                         .commitTime(parseCommit.getAuthorIdent().getWhen())
-                        .subject(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(parseCommit.getAuthorIdent().getWhen()) + " - " + parseCommit.getFullMessage())
+                        .name(parseCommit.toObjectId().getName() + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(parseCommit.getAuthorIdent().getWhen()) + " - " + parseCommit.getFullMessage())
                         .build());
             }
             Ref head = git.getRepository().getAllRefs().get("HEAD");
