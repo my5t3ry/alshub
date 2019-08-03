@@ -25,6 +25,8 @@ import {TagInputModule} from "ngx-chips";
 import {PictureGalleryComponent} from "./picture-gallery/picture-gallery.component";
 import {NgbModalModule} from "@ng-bootstrap/ng-bootstrap";
 import { ProjectGitGraphComponent } from './project-git-graph/project-git-graph.component';
+import {ContextMenuModule, ContextMenuService} from "ngx-contextmenu";
+import {NbThemeModule} from "@nebular/theme";
 
 declare var fs: any;
 
@@ -70,13 +72,18 @@ declare var fs: any;
     TagInputModule,
     NgbModalModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NbThemeModule.forRoot(),
+    ContextMenuModule.forRoot({
+      useBootstrap4: true,
+    })
   ],
 
   providers: [HttpClient,
     {provide: HTTP_INTERCEPTORS, useClass: RequestInterceptorService, multi: true},
     SpinnerService,
     NotifierService,
+    ContextMenuService,
     {
       provide: APP_INITIALIZER,
       useFactory: initializer,
