@@ -61,7 +61,7 @@ body {
 
 
 .srd-demo-workspace {
-  background: black;
+  background: #545454;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -102,26 +102,26 @@ body {
   min-height: 300px;
   background-color: rgb(60, 60, 60) !important;
   $color: rgba(white, .05);
-  background-image: linear-gradient(0deg,
-    transparent 24%,
-    $color 25%,
-    $color 26%,
-    transparent 27%,
-    transparent 74%,
-    $color 75%,
-    $color 76%,
-    transparent 77%,
-    transparent),
-  linear-gradient(90deg,
-      transparent 24%,
-      $color 25%,
-      $color 26%,
-      transparent 27%,
-      transparent 74%,
-      $color 75%,
-      $color 76%,
-      transparent 77%,
-      transparent);
+  //background-image: linear-gradient(0deg,
+  //  transparent 24%,
+  //  $color 25%,
+  //  $color 26%,
+  //  transparent 27%,
+  //  transparent 74%,
+  //  $color 75%,
+  //  $color 76%,
+  //  transparent 77%,
+  //  transparent),
+  //linear-gradient(90deg,
+  //    transparent 24%,
+  //    $color 25%,
+  //    $color 26%,
+  //    transparent 27%,
+  //    transparent 74%,
+  //    $color 75%,
+  //    $color 76%,
+  //    transparent 77%,
+  //    transparent);
   background-size: 50px 50px;
 
   .pointui {
