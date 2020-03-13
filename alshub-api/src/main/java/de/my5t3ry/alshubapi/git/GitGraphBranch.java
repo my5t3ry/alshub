@@ -16,9 +16,13 @@ import java.util.List;
 @Builder
 public class GitGraphBranch implements Comparable<GitGraphBranch> {
 
-    private String name;
-    private String hash;
+    private String label;
+    private String id;
     private List<GitGraphCommit> children = new ArrayList<>();
+
+    private final String color = "#7aa3e5";
+    private final String width = "200";
+    private final String height = "250";
 
     protected boolean canEqual(final Object other) {
         return other instanceof GitGraphBranch;

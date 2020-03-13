@@ -7,9 +7,6 @@ import de.my5t3ry.alshubapi.project.ProjectChange;
 import de.my5t3ry.alshubapi.project.ProjectChangeType;
 import de.my5t3ry.alshubapi.project.ProjectChanges;
 import kong.unirest.Unirest;
-import net.nemerosa.ontrack.git.GitRepository;
-import net.nemerosa.ontrack.git.GitRepositoryClient;
-import net.nemerosa.ontrack.git.support.GitRepositoryClientFactoryImpl;
 import org.eclipse.jgit.api.*;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.lib.Constants;
@@ -143,15 +140,15 @@ public class GitService {
     public List<GitGraphBranch> plotGitGraph(final Project project) {
         final List<GitGraphBranch> result = new ArrayList<GitGraphBranch>();
         final Git newLocalRepository = getGit(project);
-        final GitRepositoryClient source = new GitRepositoryClientFactoryImpl(new File(project.getPath())).getClient(new GitRepository("source", project.getGitUuid(), GIT_REPO_URL.concat(project.getGitUuid()), "", ""));
-        source.getBranches();
-        List<Ref> branches = null;
+//        final GitRepositoryClient source = new GitRepositoryClientFactoryImpl(new File(project.getPath())).getClient(new GitRepository("source", project.getGitUuid(), GIT_REPO_URL.concat(project.getGitUuid()), "", ""));
+//        source.getBranches();
         try {
-            branches = newLocalRepository.branchList().setListMode(ListBranchCommand.ListMode.ALL).call();
+            List<Ref> branches = branches = newLocalRepository.branchList().setListMode(ListBranchCommand.ListMode.ALL).call();
             for (Ref branch : branches) {
                 final List<RevCommit> commits = getCommits(newLocalRepository, branch);
+
                 List<GitGraphCommit> scrapedCommits = convertToGitGraphCommit(commits, newLocalRepository);
-                result.add(GitGraphBranch.builder().hash(branch.getObjectId().getName()).children(scrapedCommits).name(branch.getName()).build());
+                result.add(GitGraphBranch.builder().id(branch.getObjectId().getName()).children(scrapedCommits).label(branch.getName()).build());
             }
             Collections.sort(result);
             return result;
@@ -160,6 +157,18 @@ public class GitService {
         }
     }
 
+    //    public Ref findParentBranch (final Ref branch,Git git){
+//        try( RevWalk revWalk = new RevWalk( git.getRepository() ) ) {
+//            revWalk.setRevFilter( AndRevFilter.create( new FirstParentFilter(), RevFilter.NO_MERGES ) );
+//            revWalk.sort( RevSort.TOPO );
+//            Ref headRef = git.getRepository().getRef( Constants.HEAD );
+//            RevCommit headCommit = revWalk.parseCommit( headRef.getObjectId() );
+//            revWalk.markStart( headCommit );
+//            for( RevCommit revCommit : revWalk ) {
+//                System.out.println( revCommit.getShortMessage() );
+//            }
+//        }
+//    }
     private List<GitGraphCommit> convertToGitGraphCommit(List<RevCommit> commits, Git git) {
         final List<GitGraphCommit> result = new ArrayList<GitGraphCommit>();
         try {
