@@ -39,7 +39,7 @@
     "gitgraph-core": "^2.0.0-alpha.73bd2e56",
     "gojs": "^2.0.15",
     "install": "^0.13.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "keycloak-angular": "^7.0.1",
     "keycloak-js": "^6.0.1",
     "ngx-bootstrap": "^5.1.0",
